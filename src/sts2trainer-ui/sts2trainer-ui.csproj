@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>STS2Trainer</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <!-- 复用控制台版的侦查层与注入层，避免两份实现漂移 -->
+  <ItemGroup>
+    <Compile Include="..\sts2trainer\Game.cs" Link="Game.cs" />
+    <Compile Include="..\sts2trainer\Hook.cs" Link="Hook.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Diagnostics.Runtime" Version="4.2.751201" />
+  </ItemGroup>
+
+</Project>

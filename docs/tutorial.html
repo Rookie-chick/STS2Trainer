@@ -1,0 +1,3257 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>杀戮尖塔2 · Plus20 Trainer 全解 + 复刻教程</title><style>:root{--bg:#f6f8fb;--card:#fff;--line:#e3e8ef;--fg:#1f2937;--dim:#64748b;--acc:#2563eb;
+--ok:#15803d;--okbg:#eaf7ee;--bad:#dc2626;--badbg:#fdecec;--warn:#b45309;--warnbg:#fdf6e7;--code:#f1f5f9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.8 "Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:36px 22px 90px}
+h1{font-size:28px;margin:0 0 8px;color:#111827}
+h2{font-size:20px;margin:50px 0 14px;padding-bottom:9px;border-bottom:2px solid var(--line);color:#111827}
+h3{font-size:16px;margin:28px 0 10px;color:var(--acc)}
+.sub{color:var(--dim);font-size:13px;margin-bottom:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:16px 0;
+box-shadow:0 1px 2px rgba(16,24,40,.04),0 4px 12px rgba(16,24,40,.03)}
+table{width:100%;border-collapse:separate;border-spacing:0;font-size:13.5px;margin:14px 0;background:var(--card);
+border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th,td{border-bottom:1px solid var(--line);padding:10px 13px;text-align:left;vertical-align:top}
+th{background:#eef2f7;color:#334155;font-weight:700;font-size:13px;white-space:nowrap}
+tr:last-child td{border-bottom:none} tr:hover td{background:#f8fafc}
+code{background:var(--code);border:1px solid #e2e8f0;border-radius:5px;padding:1px 6px;
+font:13px/1.55 Consolas,"Cascadia Mono",monospace;color:#b91c1c}
+pre{background:#fbfdff;border:1px solid var(--line);border-left:4px solid #bfdbfe;border-radius:10px;padding:14px 16px;
+overflow:auto;font:12.8px/1.7 Consolas,"Cascadia Mono",monospace;color:#0f172a}
+pre code{background:none;border:none;padding:0;color:#0f172a}
+.toc{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);
+padding:11px 0;margin-bottom:10px;z-index:9}
+.toc a{color:var(--dim);text-decoration:none;margin-right:15px;font-size:13px;display:inline-block;padding:3px 0}
+.toc a:hover{color:var(--acc);border-bottom:2px solid var(--acc)}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 9px;border-radius:99px;margin-right:6px}
+.tag.ok{background:var(--okbg);color:var(--ok);border:1px solid #bfe3cb}
+.tag.bad{background:var(--badbg);color:var(--bad);border:1px solid #f6c9c9}
+.tag.warn{background:var(--warnbg);color:var(--warn);border:1px solid #f3dfb0}
+blockquote{margin:16px 0;padding:13px 18px;border-left:4px solid #93c5fd;background:#eff6ff;border-radius:0 10px 10px 0;color:#1e3a5f}
+.foot{margin-top:64px;color:var(--dim);font-size:12.5px;border-top:1px solid var(--line);padding-top:18px}
+a{color:var(--acc);text-decoration:none} a:hover{text-decoration:underline}
+</style></head><body><div class="wrap">
+<h1>杀戮尖塔 2 · Plus20 Trainer 全解 + 复刻教程</h1>
+<div class="sub">静态分析（<b>全程未运行样本</b>）· 生成 2026-10-31 · 单文件 · 知识库同步版（08 总纲 + 功能篇 09~28 全 20 篇）</div>
+
+<nav class="toc">
+<b style="color:#111827;margin-right:14px;font-size:13px">目录</b>
+<a href="#a">0 结论</a><a href="#b">1 样本事实</a><a href="#c">2 原理</a><a href="#d">3 20 功能表</a>
+<a href="#e">4 AA 骨架</a><a href="#f">5 代码库</a><a href="#g">6 操作步骤</a><a href="#h">7 界面与边框</a>
+<a href="#i">8 三类结论</a><a href="#j">9 工具</a><a href="#k">10 环境搭建</a><a href="#l">11 进度与下一步</a>
+<a href="#m">12 无限血</a><a href="#n">13 金币锁</a><a href="#o">14 无限护盾</a><a href="#p">15 无限能量</a><a href="#q">16 无限星星</a><a href="#r">17 奖励必给药水</a><a href="#s">18 卡牌奖励必升级</a><a href="#t">19 卡牌奖励最高稀有度</a><a href="#u">20 未知点必给宝箱</a><a href="#v">21 敌人不额外行动</a><a href="#w">22 超级伤害/一击必杀</a><a href="#x">23 伤害倍率</a><a href="#y">24 防御倍率</a><a href="#z">25 金币倍率</a><a href="#aa">26 商店免费</a><a href="#ab">27 最大能量</a><a href="#ac">28 药水槽数量</a><a href="#ad">29 最高分数</a><a href="#ae">30 分数倍率</a><a href="#af">31 游戏速度</a><a href="#ag">32 踩坑附录</a>
+</nav>
+
+<h2 id="a">结论</h2>
+<div class="card">
+<p><span class="tag ok">✅ 已验证</span>它<b>不用固定偏移</b>，靠 <b>.NET 元数据（ClrMD）按「类型::方法名」实时定位</b>，再用 <b>CE AutoAssembler</b> 改写方法入口。</p>
+<p><span class="tag ok">✅ 已验证</span>所以<b>跨版本可用</b>：认方法名，不认偏移。</p>
+<p><span class="tag warn">⏳ 待验证</span>界面代码在 <code>\FLiNGTrainer.tmp</code> 载荷里（本 exe 明文无 UI 框架痕迹）；各方法的返回类型与字段偏移需 ILSpy 逐个确认。</p>
+</div>
+
+<h2 id="b">一、样本事实</h2>
+<table>
+<tr><th>项</th><th>值</th></tr>
+<tr><td>文件</td><td><code>Slay+the+Spire+2+Early+Access+Plus+20+Trainer+Updated+2026.0(1).exe</code></td></tr>
+<tr><td>大小 / SHA256</td><td>3.34 MB ／ <code>246df6690d54e621374b6b073f86bdecf060ab2f107ffc35902ee3dcb99618b6</code></td></tr>
+<tr><td>架构</td><td>x64 ／ GUI ／ 基址 0x140000000 ／ 7 节（含异常节 <code>.fptable</code>）</td></tr>
+<tr><td>身份</td><td><b>FLiNG</b>（<code>Credit : FLiNG|FLiNGTrainer.com</code>）· <code>Updated 2026.06.29</code></td></tr>
+<tr><td>运行时 / 权限</td><td>.NET Framework 4.6.2+（<code>mscoree</code>）／ 清单含 <code>requireAdministrator</code></td></tr>
+<tr><td>导入</td><td>KERNEL32(115) USER32(3) ADVAPI32(4) SHELL32(2) ole32(2) OLEAUT32(6) mscoree(1) VERSION(3) WINMM(1)</td></tr>
+</table>
+
+<h2 id="c">二、原理：为什么"按方法名"改游戏有效</h2>
+<div class="card"><pre><code>游戏启动
+└─ .NET 运行时加载 sts2.dll（8.93 MB 托管程序集）
+   └─ 元数据保存：命名空间 / 类 / 方法名 / 签名
+      └─ 方法首次调用 → JIT 成机器码（得到代码地址）
+         └─ 「方法描述符 ↔ 机器码地址」运行时一直持有
+            └─ ClrMD / CE 的 Mono 接口能读出来  ⇒  名字→地址</code></pre></div>
+<table>
+<tr><th>路线</th><th>做什么</th><th>抗更新</th><th>样本用了吗</th></tr>
+<tr><td>① 改值</td><td>直接改字段（如引擎时间缩放）</td><td>★★</td><td>用了（游戏速度）</td></tr>
+<tr><td>② 打补丁（AA）</td><td>方法入口 jmp 到自己的代码</td><td>★★★★</td><td><b>主力</b>：17 define / 12 alloc</td></tr>
+<tr><td>③ Harmony</td><td>Prefix/Postfix，不碰机器码</td><td>★★★★★</td><td>没用（但游戏自带 <code>0Harmony.dll</code>）</td></tr>
+</table>
+<h3>为什么"改这个方法"就有效</h3>
+<table>
+<tr><th>改什么</th><th>为什么游戏会认</th></tr>
+<tr><td>属性的 setter（set_CurrentHp / set_Block / set_Gold）</td><td>所有改血/盾/钱的代码都走它 ⇒ 在入口拦一道，任何来源的改动都经过你</td></tr>
+<tr><td>扣减方法（LoseEnergy / LoseStars）</td><td>唯一减少入口 ⇒ 让它扣 0 就是无限</td></tr>
+<tr><td>Hook 的返回值（ModifyDamage / ModifyMerchantPrice / ModifyMaxEnergy）</td><td>游戏把数值交给 Hook 算 ⇒ 改返回值 = 改结算</td></tr>
+<tr><td>概率 roll（PotionRewardOdds::Roll / CardRarityOdds::GetBaseOdds）</td><td>掉落与稀有度都从这里出结果 ⇒ 改成必中</td></tr>
+<tr><td>奖励上下限（get_MinGoldReward / get_MaxGoldReward）</td><td>结算金币区间被改 ⇒ 金币倍率</td></tr>
+</table>
+<blockquote><b>反面教材</b>（我在 Brotato 上真踩过）：直接每帧回写"金币余额" ⇒ 无效甚至闪退 ✗（余额由信号驱动、UI 重新拉值）。
+<b>结论：改"真值的产生处"，别改"显示出来的副本"。</b></blockquote>
+
+<h2 id="d">三、20 个功能总表</h2>
+<table><tr><th>类</th><th>热键</th><th>功能</th><th>方法（前缀 MegaCrit.Sts2.Core.）</th><th>改法</th></tr>
+<tr><td><b>A 资源</b></td><td><code>Num 1</code></td><td>Infinite HP</td><td><code>Entities.Creatures.Creature::set_CurrentHp</code></td><td class='sub'>setter 补丁：写入前拉回上限</td></tr>
+<tr><td><b>A 资源</b></td><td><code>Num 2</code></td><td>Infinite Shield</td><td><code>Entities.Creatures.Creature::set_Block</code></td><td class='sub'>同上</td></tr>
+<tr><td><b>A 资源</b></td><td><code>Num 3</code></td><td>Infinite Energy</td><td><code>Entities.Players.PlayerCombatState::LoseEnergy</code></td><td class='sub'>扣减函数直接 ret</td></tr>
+<tr><td><b>A 资源</b></td><td><code>Num 4</code></td><td>Infinite Stars</td><td><code>Entities.Players.PlayerCombatState::LoseStars</code></td><td class='sub'>同上</td></tr>
+<tr><td><b>B 概率</b></td><td><code>Num 5</code></td><td>Always Reward Potion</td><td><code>Odds.PotionRewardOdds::Roll</code></td><td class='sub'>强制返回成功</td></tr>
+<tr><td><b>B 概率</b></td><td><code>Num 6</code></td><td>Always Upgrade Card Rewards</td><td><code>Hooks.Hook::ModifyCardRewardUpgradeOdds</code></td><td class='sub'>返回 1.0（100%）</td></tr>
+<tr><td><b>B 概率</b></td><td><code>Num 7</code></td><td>Max Card Reward Rarity</td><td><code>Odds.CardRarityOdds::GetBaseOdds</code></td><td class='sub'>权重改成最高档</td></tr>
+<tr><td><b>B 概率</b></td><td><code>Num 8</code></td><td>Unknown Map Points Give Treasures</td><td><code>Odds.UnknownMapPointOdds::Roll</code></td><td class='sub'>强制目标结果</td></tr>
+<tr><td><b>C 经济</b></td><td><code>Ctrl+Num 1</code></td><td>Edit Gold</td><td><code>Entities.Players.Player::set_Gold(Int32)</code></td><td class='sub'>setter 补丁写死数值</td></tr>
+<tr><td><b>C 经济</b></td><td><code>Ctrl+Num 2</code></td><td>Gold Multiplier</td><td><code>Models.EncounterModel::get_MinGoldReward / get_MaxGoldReward</code></td><td class='sub'>返回值 ×N</td></tr>
+<tr><td><b>C 经济</b></td><td><code>Ctrl+Num 3</code></td><td>Free Purchase In Shop</td><td><code>Hooks.Hook::ModifyMerchantPrice</code></td><td class='sub'>返回 0</td></tr>
+<tr><td><b>D 数值</b></td><td><code>Num 0</code></td><td>Super Damage / One Hit Kill</td><td><code>Hooks.Hook::ModifyDamage(…ICombatState…)</code></td><td class='sub'>返回值改成极大</td></tr>
+<tr><td><b>D 数值</b></td><td><code>Num .</code></td><td>Damage Multiplier</td><td><code>Hooks.Hook::ModifyDamage(…CombatState…)</code></td><td class='sub'>返回值 ×N（★两个重载都要挂）</td></tr>
+<tr><td><b>D 数值</b></td><td><code>Num +</code></td><td>Defense Multiplier</td><td><code>Hooks.Hook::ModifyDamage（减伤分支）</code></td><td class='sub'>减伤比例改小</td></tr>
+<tr><td><b>E 上限</b></td><td><code>Ctrl+Num 4</code></td><td>Edit Max Energy</td><td><code>Hooks.Hook::ModifyMaxEnergy</code></td><td class='sub'>返回值改成 N</td></tr>
+<tr><td><b>E 上限</b></td><td><code>Ctrl+Num 5</code></td><td>Edit Potion Slot Count</td><td><code>Entities.Players.Player::SetMaxPotionCountInternal</code></td><td class='sub'>入参改成 N</td></tr>
+<tr><td><b>F 其他</b></td><td><code>Num 9</code></td><td>Enemies Can't Move</td><td><code>Hooks.Hook::ShouldTakeExtraTurn</code></td><td class='sub'>返回 false</td></tr>
+<tr><td><b>F 其他</b></td><td><code>Ctrl+Num 6</code></td><td>Max Score</td><td><code>Runs.ScoreUtility::CalculateScore(…)</code></td><td class='sub'>返回值写死</td></tr>
+<tr><td><b>F 其他</b></td><td><code>Ctrl+Num 7</code></td><td>Score Multiplier</td><td><code>同上</code></td><td class='sub'>返回值 ×N</td></tr>
+<tr><td><b>F 其他</b></td><td><code>Ctrl+Num 8</code></td><td>Set Game Speed</td><td><code>无补丁 → Godot Engine.time_scale</code></td><td class='sub'>直接写值</td></tr>
+</table>
+
+<h2 id="e">四、补丁脚本骨架（从样本还原）</h2>
+<pre><code>define(address,MegaCrit.Sts2.Core.Entities.Creatures.Creature::set_CurrentHp)   ; 按方法全名取址
+label(code)
+label(return)
+label(health)
+registersymbol(health)          ; 注册成符号 → UI 侧靠它读/写
+alloc(newmem,$1000,MegaCrit.Sts2.Core.Entities.Creatures.Creature::set_CurrentHp)
+
+newmem:
+  ; ……你的改写逻辑（读 health / 判断开关 / 改值）……
+  ; ……补回被 jmp 覆盖的原指令……
+  jmp return
+
+MegaCrit.Sts2.Core.Entities.Creatures.Creature::set_CurrentHp:
+  jmp newmem                    ; 方法入口被改成跳到我们的代码
+  nop
+
+return:
+dealloc(newmem)                 ; 关功能时回收</code></pre>
+<table><tr><th>指标</th><th>数量</th></tr>
+<tr><td><code>define(address,…)</code></td><td><b>17 处</b>（按名取址）</td></tr>
+<tr><td><code>alloc(newmem,$1000,…)</code></td><td><b>12 处</b>（分配并挂跳转）</td></tr>
+<tr><td><code>aobscanregion</code></td><td><b>1 处</b>（在 <code>NEnergyCounter::_Process</code> 里找字段，特征码兜底）</td></tr>
+<tr><td>label 命名</td><td><code>health</code> <code>shield</code> <code>edit_gold</code> <code>goldmul_f</code> <code>freeshopping</code> <code>max_energy</code> <code>max_potion_slots</code> <code>cardrewardupgrade</code> <code>dmg dmgmul_f defmul_f</code> <code>score scoremul_f</code></td></tr>
+</table>
+
+<h2 id="f">五、代码库（可直接粘进 CE / 或 Harmony）</h2>
+<h3>A 类 · 无限血（setter 补丁）</h3><pre><code>[ENABLE]
+define(address,MegaCrit.Sts2.Core.Entities.Creatures.Creature::set_CurrentHp)
+label(code)
+label(return)
+label(health)
+registersymbol(health)
+alloc(newmem,$1000,MegaCrit.Sts2.Core.Entities.Creatures.Creature::set_CurrentHp)
+
+newmem:
+  cmp dword ptr [inf_hp_on], 0
+  je code
+  mov rdx, [rcx + HP_MAX_OFFSET]     ; rcx=this(Creature*)  rdx=新血量
+  mov [rcx + HP_CUR_OFFSET], rdx
+code:
+  mov [rcx + HP_CUR_OFFSET], rdx     ; 补回原指令（以 CE 里看到的方法头为准）
+  jmp return
+
+MegaCrit.Sts2.Core.Entities.Creatures.Creature::set_CurrentHp:
+  jmp newmem
+  nop
+return:
+
+[DISABLE]
+MegaCrit.Sts2.Core.Entities.Creatures.Creature::set_CurrentHp:
+  db 48 89 91 ?? ?? ?? ??            ; ← CE「恢复原始代码」会自动填
+dealloc(newmem)
+unregistersymbol(health)</code></pre>
+<h3>A 类 · 无限能量/星星（扣减函数直接 ret，最稳）</h3><pre><code>[ENABLE]
+define(address,MegaCrit.Sts2.Core.Entities.Players.PlayerCombatState::LoseEnergy)
+label(return)
+alloc(newmem,$1000,MegaCrit.Sts2.Core.Entities.Players.PlayerCombatState::LoseEnergy)
+newmem:
+  ret                        ; 直接返回 = 永远不扣能量
+MegaCrit.Sts2.Core.Entities.Players.PlayerCombatState::LoseEnergy:
+  jmp newmem
+  nop
+return:
+[DISABLE]
+MegaCrit.Sts2.Core.Entities.Players.PlayerCombatState::LoseEnergy:
+  db &lt;原字节&gt;
+dealloc(newmem)
+; 无限星星同理：把方法换成 …::LoseStars</code></pre>
+<h3>B 类 · 必给药水（概率 roll 强制成功）</h3><pre><code>[ENABLE]
+define(address,MegaCrit.Sts2.Core.Odds.PotionRewardOdds::Roll)
+label(return)
+alloc(newmem,$1000,MegaCrit.Sts2.Core.Odds.PotionRewardOdds::Roll)
+newmem:
+  mov al, 1                  ; 强制 true（⏳ 先看 ILSpy 确认返回类型）
+  ret
+MegaCrit.Sts2.Core.Odds.PotionRewardOdds::Roll:
+  jmp newmem
+  nop
+return:
+[DISABLE]
+MegaCrit.Sts2.Core.Odds.PotionRewardOdds::Roll:
+  db &lt;原字节&gt;
+dealloc(newmem)</code></pre>
+<h3>C 类 · 改金币（setter 写死数值）</h3><pre><code>[ENABLE]
+define(address,MegaCrit.Sts2.Core.Entities.Players.Player::set_Gold(Int32))
+label(return)
+alloc(newmem,$1000,MegaCrit.Sts2.Core.Entities.Players.Player::set_Gold(Int32))
+newmem:
+  mov edx, #999999           ; 忽略游戏传来的值，永远写 999999
+  jmp return
+MegaCrit.Sts2.Core.Entities.Players.Player::set_Gold(Int32):
+  jmp newmem
+  nop
+return:</code></pre>
+<h3>C 类 · 商店免费</h3><pre><code>[ENABLE]
+define(address,MegaCrit.Sts2.Core.Hooks.Hook::ModifyMerchantPrice)
+label(freeshopping) registersymbol(freeshopping)
+alloc(newmem,$1000,MegaCrit.Sts2.Core.Hooks.Hook::ModifyMerchantPrice)
+newmem:
+  xor eax, eax               ; 价格 = 0
+  ret
+MegaCrit.Sts2.Core.Hooks.Hook::ModifyMerchantPrice:
+  jmp newmem
+  nop</code></pre>
+<h3>C# / Harmony 版（游戏自带 0Harmony.dll）</h3><pre><code>using HarmonyLib;
+
+[HarmonyPatch(typeof(MegaCrit.Sts2.Core.Hooks.Hook), nameof(MegaCrit.Sts2.Core.Hooks.Hook.ModifyMerchantPrice))]
+public static class FreeShopPatch
+{
+    public static void Postfix(ref int __result) =&gt; __result = 0;   // 商店免费
+}
+
+[HarmonyPatch(typeof(MegaCrit.Sts2.Core.Entities.Creatures.Creature), "set_CurrentHp")]
+public static class InfiniteHpPatch
+{
+    public static void Prefix(MegaCrit.Sts2.Core.Entities.Creatures.Creature __instance, ref int value)
+    {
+        value = __instance.MaxHp;      // 永远写满（字段名以 ILSpy 实际为准）
+    }
+}
+
+// 入口
+var harmony = new Harmony("yg.sts2.trainer");
+harmony.PatchAll();</code></pre>
+<blockquote><span class="tag warn">⏳</span>AA 代码为<b>按样本语法手写的模板</b>，未在本机游戏上运行；
+字段偏移 <code>HP_MAX_OFFSET/HP_CUR_OFFSET</code>、原字节、返回类型需用 ILSpy + CE 确认（第 6 节 1~3 步）。
+Harmony 的<b>加载方式</b>（怎么塞进这个 Godot C# 游戏）也还是 ⏳ —— 三个候选方案见知识库 73 篇。</blockquote>
+
+<h2 id="g">六、操作步骤（零基础，工具级）</h2>
+<table><tr><th>步</th><th>工具</th><th>操作</th><th>预期看到</th></tr><tr><td>1</td><td><b>ILSpy</b></td><td>打开 data_sts2_windows_x86_64\sts2.dll → 搜 Creature</td><td class='sub'>看到类 Creature 与 CurrentHp/Block 属性</td></tr>
+<tr><td>2</td><td><b>ILSpy</b></td><td>搜 Hook → 找 ModifyDamage</td><td class='sub'>看到两个重载（ICombatState / CombatState）⇒ 印证要挂两处</td></tr>
+<tr><td>3</td><td><b>ILSpy</b></td><td>搜 Odds → PotionRewardOdds → 看 Roll() 返回类型</td><td class='sub'>决定 AA 里写 mov al,1 还是改结构体</td></tr>
+<tr><td>4</td><td><b>Cheat Engine</b></td><td>附加游戏 → 菜单 Mono → Dissect mono → 找 MegaCrit.Sts2.Core → Creature</td><td class='sub'>字段偏移 + 方法是否带地址</td></tr>
+<tr><td>5</td><td><b>Cheat Engine</b></td><td>Memory View → Tools → Auto Assemble → 粘贴代码 → Assign to cheat table</td><td class='sub'>脚本出现在表格里，勾选即生效</td></tr>
+<tr><td>6</td><td><b>游戏内</b></td><td>打开功能 → 让怪打你 / 看血量金钱</td><td class='sub'>画面/数值变化 = 成功（脚本无报错不算）</td></tr>
+<tr><td>7</td><td><b>记录</b></td><td>把方法名+原字节+版本号写进知识库</td><td class='sub'>下次更新照同法重做</td></tr></table>
+
+<h2 id="h">七、界面与边框</h2>
+<table><tr><th>证据</th><th>含义</th></tr>
+<tr><td>导入 <code>mscoree</code> + "requires .NET Framework 4.6.2"</td><td>外壳是 .NET 程序</td></tr>
+<tr><td>USER32 仅 3 个函数；无 gdi32/gdiplus/d3d</td><td>不是 Win32 裸窗、不是 GDI 自绘、不是 DX 自绘</td></tr>
+<tr><td>无 <code>PresentationFramework</code>/<code>XAML</code>/<code>CornerRadius</code>/<code>WinForms</code> 串</td><td>UI 代码不在明文 ⇒ 在载荷里</td></tr>
+<tr><td><code>\FLiNGTrainer.tmp</code>、<code>\trainer-logs\</code>、节 <code>.fptable</code></td><td>启动器 + 运行期释放载荷</td></tr>
+</table>
+<table><tr><th>边框三种做法</th><th>关键技术</th><th>一眼判断</th></tr>
+<tr><td>A. WPF 无边框 + 圆角 Border</td><td><code>WindowStyle=None</code> + <code>AllowsTransparency</code> + <code>Border.CornerRadius</code></td><td>反编译见 XAML / CornerRadius；无 gdi32 圆角函数</td></tr>
+<tr><td>B. Win32 区域裁剪</td><td><code>CreateRoundRectRgn</code> + <code>SetWindowRgn</code></td><td>导入表有这两函数；圆角有锯齿</td></tr>
+<tr><td>C. 分层窗口 + PNG</td><td><code>UpdateLayeredWindow</code></td><td>有分层窗口函数 + 整窗位图资源</td></tr>
+</table>
+<p class="sub">本例已排除 B、C（导入表都没有）；A 仍需解载荷证实。</p>
+
+<h2 id="i">八、三类结论</h2>
+<table>
+<tr><td><span class="tag ok">✅</span></td><td>身份/哈希 · x64 .NET · 请求管理员 · 20 条热键文本 · <b>20 个功能的方法名</b> · 17 define/12 alloc/1 aobscan · label=功能名 · 无 gdi32/gdiplus/d3d · 有载荷释放痕迹 · 游戏自带 0Harmony.dll</td></tr>
+<tr><td><span class="tag bad">❌</span></td><td>不靠固定偏移（无硬编码偏移常量）· 无自建 ReadProcessMemory 通道 · 不是 Win32 区域裁剪 · 不是 GDI+ 自绘 · 只挂 ModifyDamage 一处会漏</td></tr>
+<tr><td><span class="tag warn">⏳</span></td><td>各方法返回类型/寄存器 · 字段偏移 · AA 脚本实机效果 · Harmony 加载方式 · Ctrl+Num 8 的具体地址 · 载荷是否 WPF</td></tr>
+</table>
+
+<h2 id="j">九、工具清单</h2>
+<table><tr><th>工具</th><th>用途</th><th>链接</th></tr>
+<tr><td>ILSpy</td><td>反编译 sts2.dll，看签名/返回类型</td><td><a href="https://github.com/icsharpcode/ILSpy">github.com/icsharpcode/ILSpy</a></td></tr>
+<tr><td>Cheat Engine</td><td>Mono 支持 + AA 脚本 + 内存搜索</td><td><a href="https://www.cheatengine.org/">cheatengine.org</a></td></tr>
+<tr><td>dnSpyEx</td><td>反编译/调试/看 XAML</td><td><a href="https://github.com/dnSpyEx/dnSpy">github.com/dnSpyEx/dnSpy</a></td></tr>
+<tr><td>Detect It Easy</td><td>查语言/壳</td><td><a href="https://github.com/horsicq/Detect-It-Easy">github.com/horsicq/Detect-It-Easy</a></td></tr>
+<tr><td>Process Monitor</td><td>看载荷释放</td><td><a href="https://learn.microsoft.com/sysinternals/downloads/procmon">Sysinternals</a></td></tr>
+<tr><td>本项目脚本</td><td>trainer_analyze / trainer_full / trainer_scripts</td><td><code>D:\sts2\</code></td></tr>
+</table>
+
+<h2 id="k">十、环境搭建：让游戏在这台机器上跑起来</h2>
+<div class="card">
+<p><span class="tag bad">❌ 踩过的坑</span>这台是 <b>VMware 虚拟机</b>，没有可用 Vulkan/D3D12。直接双击 exe 会弹
+<code>Unable to initialize video driver</code>，进程虽然活着但 <b>.NET 永远不加载</b> ⇒ 任何托管侧分析都不成立。</p>
+<p><span class="tag ok">✅ 解法</span>游戏目录自带 <code>launch_opengl.bat</code>，实质就是加一个参数：</p>
+</div>
+<pre><code>"D:\Games\Slay the Spire 2\SlayTheSpire2.exe" --rendering-driver opengl3 --rendering-method gl_compatibility</code></pre>
+<h3>前后对比（真实轮询输出）</h3>
+<table>
+<tr><th>状态</th><th>进程模块数</th><th>coreclr</th><th>sts2.dll</th><th>能不能改</th></tr>
+<tr><td>直接启动</td><td>64</td><td class="bad">False</td><td class="bad">False</td><td class="bad">不能（引擎初始化就死了）</td></tr>
+<tr><td>加 <code>opengl3</code>（2 秒后）</td><td><b>100</b></td><td class="ok">True</td><td class="ok">True</td><td class="ok">可以 ✓</td></tr>
+</table>
+<h3>操作步骤（零基础）</h3>
+<table>
+<tr><th>步</th><th>工具</th><th>操作</th><th>预期</th></tr>
+<tr><td>1</td><td>资源管理器</td><td>双击 <code>launch_opengl.bat</code></td><td>游戏窗口出现（不是 454×370 的错误框）</td></tr>
+<tr><td>2</td><td><code>sts2_wait.py</code></td><td><code>python D:\sts2\sts2_wait.py</code></td><td>打印 <code>coreclr=True godotsharp=True sts2=True</code></td></tr>
+<tr><td>3</td><td><code>sts2_recon.py</code></td><td><code>python D:\sts2\sts2_recon.py</code></td><td>打印 pid / 模块数 / <code>读 PE 头: OK</code></td></tr>
+<tr><td>4</td><td>命令行</td><td>要换后端：<code>--rendering-driver vulkan|d3d12|opengl3</code></td><td>对应 <code>launch_*.bat</code> 就是这三种</td></tr>
+</table>
+<blockquote><b>两个前置条件</b>：① <b>64 位 Python</b>（`python -c "import struct;print(struct.calcsize('P')*8)"` 要输出 64）② 读内存需<b>管理员权限</b>（`OpenProcess` 返回 0 = 权限不够）。</blockquote>
+<blockquote><b>判定"托管侧起来了没有"的硬指标</b>：进程模块里有没有 <code>coreclr.dll</code> + <code>sts2.dll</code>。没有 ⇒ 别急着改，先解决启动。</blockquote>
+
+<h2 id="l">十一、进度与下一步（一个一个功能做）</h2>
+<table>
+<tr><th>#</th><th>功能</th><th>状态</th><th>做法</th></tr>
+<tr><td>0</td><td>环境搭建 / 启动</td><td class="ok">✅ 完成</td><td>opengl3 后端 + 模块自检（见第十节）</td></tr>
+<tr><td>1</td><td>无限血 Num 1</td><td class="ok">✅ 完成</td><td>帧钩子：<code>NTargetManager._Process</code> 代码洞写满血 + 调 <code>NTopBarHp.UpdateHealth</code>（见第十二节 / 知识库 09 篇）</td></tr>
+<tr><td>2</td><td>无限护盾 Num 2</td><td class="ok">✅ 完成</td><td>真 setter 钩子：<code>Creature.set_Block</code> 入口强制 <code>edx=9999</code>（this 门禁，见第十四节 / 知识库 11 篇）</td></tr>
+<tr><td>3</td><td>无限能量 Num 3</td><td class="ok">✅ 完成</td><td>帧钩子第 4 个动作：锁 <code>PlayerCombatState._energy</code> + 调 <code>NEnergyCounter.RefreshLabel</code>（见第十五节 / 知识库 12 篇）</td></tr>
+<tr><td>3'</td><td>无限星星 Num 4</td><td class="ok">✅ 完成</td><td>帧钩子第 5 个动作：锁 <code>_stars</code> + 触发一次 <code>OnStarsChanged</code>（见第十六节 / 知识库 13 篇）</td></tr>
+<tr><td>4</td><td>改金币 Ctrl+Num 1</td><td class="ok">✅ 完成</td><td>帧钩子第 2 个动作：写 <code>_gold</code> + 调 <code>UpdateGold</code>（见第十三节 / 知识库 10 篇）</td></tr>
+<tr><td>5</td><td>游戏速度 Ctrl+Num 8</td><td>待做</td><td>搜 float 1.0 → 改 0.5/2.0 验证</td></tr>
+<tr><td>6</td><td>概率类（药水/稀有度/未知点）</td><td>待做</td><td>需方法级（AA/Harmony）⇒ 进到高级篇</td></tr>
+</table>
+<blockquote>每个功能都按同一模板产出：<b>目标 → 我是怎么做的（命令+真实输出）→ 你该怎么做（工具级步骤+预期）→ 三类结论 → 回滚方式</b>。</blockquote>
+
+<h2 id="m">十二、功能篇 1/20：无限血</h2>
+<p style="color:#6b7280;font-size:13px">上接：76-复刻-CE手把手与NET(ClrMD)手把手 · 下接：10-复刻-金币无限</p>
+<blockquote>这篇怎么用<br>你不是"读"，是"照着敲"。<b>每一步都有：用什么软件 → 点哪里/敲什么 → 应该看到什么</b>。<br>文末的两份代码（<code>Program.cs</code> / <code>Hook.cs</code>）是<b>已经在本机编译并实跑通过</b>的原文，<br>直接复制粘贴就能得到同样的结果（工程在 <code>D:\sts2\教程代码\sts2hp\</code>）。<br>预计耗时：第一次做 60~90 分钟（装环境占一半）。</blockquote>
+<hr>
+<h3>0. 先看全貌：我们要干的事只有 4 步</h3>
+<pre><code>① 让程序知道&quot;玩家在哪、血量字段在对象的第几个字节&quot;     → 用 ClrMD 问活着的游戏进程
+② 知道&quot;血变了画面才变&quot;这句话是错的/对的                → 读反编译源码（ILSpy）
+③ 找一个&quot;每帧都会执行的方法&quot;，在它入口插一段自己的机器码 → 传统 inline hook
+④ 自己的代码里：血不满就写满 → 调游戏自己的刷新方法 → 跳回原方法</code></pre>
+<p><b>结果</b>：顶栏血量恒为 <code>9999/9999</code>，外部把血改成 1，一帧内被补回。</p>
+<table>
+<tr><th>你会学到</th><th>对应小节</th></tr>
+<tr><td>装 .NET SDK / ILSpy / 建 C# 工程</td><td>第 2~4 节</td></tr>
+<tr><td>怎么拿游戏 pid、怎么确认"能附加"</td><td>第 3、6 节</td></tr>
+<tr><td>怎么"按类型名"找对象、读字段、验证偏移对不对</td><td>第 7 节</td></tr>
+<tr><td>为什么直接改内存没用（做实验看）</td><td>第 8 节</td></tr>
+<tr><td>怎么在反编译源码里找"刷新 UI 的那个方法"</td><td>第 9 节</td></tr>
+<tr><td>怎么写机器码、为什么必须保存/还原寄存器</td><td>第 10 节</td></tr>
+<tr><td>怎么验证、崩了怎么办、怎么全撤</td><td>第 11~13 节</td></tr>
+</table>
+<hr>
+<h3>1. 四个名词，用类比讲清楚</h3>
+<table>
+<tr><th>名词</th><th>类比</th><th>在这个游戏里具体指什么</th></tr>
+<tr><td><b>进程 / pid</b></td><td>一间正在营业的店铺，pid 是门牌号</td><td><code>SlayTheSpire2.exe</code> 的进程号，如 12596</td></tr>
+<tr><td><b>对象 / 字段 / 偏移</b></td><td>一个储物柜（对象）里有很多格子，<b>偏移</b>就是"第 0x84 号格子"</td><td>玩家角色 = 一个 <code>Creature</code> 对象；<code>+0x84</code> 格子里放的就是当前血量（int32，4 字节）</td></tr>
+<tr><td><b>JIT</b></td><td>厨师第一次接到这道菜才现学做法</td><td>C# 方法第一次被调用时才编译成机器码；没调用过就<b>没有地址</b>（ClrMD 会显示 <code>0xFFFFFFFFFFFFFFFF</code>）</td></tr>
+<tr><td><b>inline hook</b></td><td>在别人家门口贴一张"先到隔壁房间"的纸条</td><td>把方法开头 5 个字节改成 <code>jmp 我们的代码</code>，我们的代码干完活再跳回去</td></tr>
+</table>
+<hr>
+<h3>你该怎么做（零基础照抄：从装软件到验证，就是第 2~13 节）</h3>
+<h3>2. 需要装什么软件（一次性，逐个来）</h3>
+<blockquote>装之前确认<br>你在 <b>Windows 10/11 64 位</b>，有<b>管理员权限</b>（读写别的进程内存需要）。</blockquote>
+<h4>2.1 .NET 8 SDK（写代码 + 编译 + 运行我们的工具）</h4>
+<ol><li>打开 &lt;https://dotnet.microsoft.com/download/dotnet/8.0&gt;</li><li>下载 <b>SDK 8.0.x → Windows → x64</b>（<b>是 SDK，不是 Runtime</b>）</li><li>双击安装，一路下一步</li><li>打开 PowerShell（开始菜单搜 <code>PowerShell</code>），输入：</li></ol>
+<pre><code>dotnet --version</code></pre>
+<p><b>应该看到</b>：<code>8.0.xxx</code>（只要 8 开头就算成功；9 也可以，但本教程按 8 写）</p>
+<blockquote>如果提示"无法识别 dotnet"<br>关掉 PowerShell 重新开一个（环境变量要重开窗口才生效）。还不行就重启电脑。</blockquote>
+<p>本机实测情况：SDK 装在<b>用户目录</b>（<code>%LOCALAPPDATA%\Microsoft\dotnet</code>），apphost 找不到时会报</p>
+<p><code>You must install .NET</code>，这时要设 <code>DOTNET_ROOT</code>（见 2.4）。</p>
+<h4>2.2 ILSpy（看游戏源码用，图形界面，新手友好）</h4>
+<ol><li>打开 &lt;https://github.com/icsharpcode/ILSpy/releases&gt;</li><li>下载最新的 <code>ILSpy_binaries_*.zip</code> → 解压到任意目录 → 运行 <code>ILSpy.exe</code>（绿色版，不用安装）</li><li>菜单 <b>File → Open</b> → 选</li></ol>
+<p>   <code>D:\Games\Slay the Spire 2\data_sts2_windows_x86_64\sts2.dll</code></p>
+<ol><li>左侧出现程序集树，<b>Assembly Explorer 里直接搜类名</b>，比如 <code>NTopBarHp</code></li></ol>
+<blockquote>为什么不用命令行版<br>命令行版 <code>ilspycmd</code> 适合批量导出（本仓库 <code>decomp\full\</code> 就是它导出的 3425 个 .cs），<br>但<b>新手用 GUI 点着看更快</b>。想装命令行版：<pre><code><br>dotnet tool install --global ilspycmd --version 8.2.0.7535</code></pre></blockquote>
+<h4>2.3 PowerShell（所有命令都在这里敲）</h4>
+<p>开始菜单搜 <code>PowerShell</code> → <b>右键 → 以管理员身份运行</b>。</p>
+<p>后面所有命令都在这一个窗口里敲（保持不关）。</p>
+<h4>2.4 （本机特有）让 <code>dotnet</code> 工具能找到 .NET</h4>
+<p>如果 .NET 装在用户目录，命令行工具会报 <code>You must install .NET</code>，先执行这两行：</p>
+<pre><code>$env:DOTNET_ROOT=&quot;$env:LOCALAPPDATA\Microsoft\dotnet&quot;
+$env:DOTNET_ROLL_FORWARD=&quot;LatestMajor&quot;</code></pre>
+<h4>2.5 （可选）Cheat Engine</h4>
+<p>只想"看数值、改数值"时很方便（也方便验证"改数值不改画面"）。&lt;https://cheatengine.org&gt;</p>
+<p>本教程<b>不需要</b>它，但装了有助于你自己玩。</p>
+<hr>
+<h3>3. 先把游戏跑起来，并确认"能附加"</h3>
+<h4>3.1 启动方式（本机是 VMware，必须指定 OpenGL 后端）</h4>
+<pre><code>Start-Process -FilePath &quot;D:\Games\Slay the Spire 2\SlayTheSpire2.exe&quot; `
+  -ArgumentList &quot;--rendering-driver&quot;,&quot;opengl3&quot;,&quot;--rendering-method&quot;,&quot;gl_compatibility&quot; `
+  -WorkingDirectory &quot;D:\Games\Slay the Spire 2&quot;</code></pre>
+<blockquote>不这么启动会怎样<br>直接双击 <code>SlayTheSpire2.exe</code> 会弹 <code>Unable to initialize video driver</code>（本机无 Vulkan/D3D12），<br>而且 <b>.NET 部分不会加载</b> ⇒ 后面 ClrMD 附加会失败。</blockquote>
+<h4>3.2 进到"有角色在场"的画面</h4>
+<p>主菜单 → 按 <b>空格</b>（不是回车，回车只移焦点）→ 进入存档的战斗画面。</p>
+<p>看到左上角有心形血量（例如 <code>38/82</code>）就对了。</p>
+<h4>3.3 拿到 pid（门牌号）</h4>
+<pre><code>Get-Process SlayTheSpire2 | Select-Object Id</code></pre>
+<p><b>应该看到</b>：</p>
+<pre><code>   Id
+   ----
+ 12596</code></pre>
+<p>记下这个数字，后面命令里的 <code>12596</code> 都换成你自己的。</p>
+<h4>3.4 确认"托管代码已经加载"（关键判据）</h4>
+<pre><code>Get-Process SlayTheSpire2 | ForEach-Object { $_.Modules | Where-Object { $_.ModuleName -match &quot;coreclr|sts2\.dll&quot; } | Select-Object ModuleName }</code></pre>
+<p><b>必须看到</b> <code>coreclr.dll</code> 和 <code>sts2.dll</code> 两行。</p>
+<p>没有 ⇒ 说明你没用 3.1 的方式启动（或游戏还没加载完），后面全都做不了。</p>
+<hr>
+<h3>4. 建一个自己的工程（4 条命令）</h3>
+<pre><code>cd D:\sts2
+mkdir 教程代码\sts2hp
+cd 教程代码\sts2hp
+dotnet new console        # 生成 Program.cs 和 sts2hp.csproj
+dotnet add package Microsoft.Diagnostics.Runtime --version 4.2.751201   # 读 .NET 进程的库(ClrMD)</code></pre>
+<p><b>应该看到</b>：最后一条打印 <code>已将包 "Microsoft.Diagnostics.Runtime" 添加到项目 …</code>。</p>
+<p>然后用记事本 / VS Code 打开这个目录，把下面两个文件<b>整个替换</b>成第 5 节的内容：</p>
+<table>
+<tr><th>文件</th><th>作用</th></tr>
+<tr><td><code>sts2hp.csproj</code></td><td>工程配置（照抄，只多了那个 PackageReference）</td></tr>
+<tr><td><code>Program.cs</code></td><td>主程序：找玩家/找方法/安装补丁/验证</td></tr>
+<tr><td><code>Hook.cs</code></td><td>注入器：往游戏进程里写机器码</td></tr>
+</table>
+<hr>
+<h3>5. 代码（原样复制，已实跑通过）</h3>
+<h4>5.1 <code>sts2hp.csproj</code></h4>
+<pre><code>&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+  &lt;PropertyGroup&gt;
+    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+    &lt;TargetFramework&gt;net8.0&lt;/TargetFramework&gt;
+    &lt;Nullable&gt;disable&lt;/Nullable&gt;
+    &lt;ImplicitUsings&gt;enable&lt;/ImplicitUsings&gt;
+    &lt;AssemblyName&gt;sts2hp&lt;/AssemblyName&gt;
+  &lt;/PropertyGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;!-- 读取 .NET 游戏进程里的类型/字段/方法：只需要这一个包 --&gt;
+    &lt;PackageReference Include=&quot;Microsoft.Diagnostics.Runtime&quot; Version=&quot;4.2.751201&quot; /&gt;
+  &lt;/ItemGroup&gt;
+
+&lt;/Project&gt;</code></pre>
+<h4>5.2 <code>Program.cs</code></h4>
+<pre><code>// ============================================================================
+//  sts2hp —— 杀戮尖塔 2「无限血」最小示例（零基础可照抄）
+//
+//  用法（在 PowerShell 里，先 cd 到本工程所在目录）：
+//      dotnet run -- &lt;游戏pid&gt;            安装：血量锁 9999
+//      dotnet run -- &lt;游戏pid&gt; 50000      安装：血量锁 50000
+//      dotnet run -- &lt;游戏pid&gt; poke 1     验证：把血强行写成 1，看会不会被补回
+//
+//  它做三件事：
+//      ① 找到&quot;玩家对象&quot;和它身上的&quot;血量字段&quot;
+//      ② 找到&quot;顶栏血量文字&quot;的刷新方法（NTopBarHp.UpdateHealth）
+//      ③ 找一个每帧都会执行的方法当&quot;挂点&quot;（NTargetManager._Process），
+//         在它的入口打一个 5 字节跳转，跳到我们自己的代码里，
+//         代码里：血不满 → 写满 → 调一次刷新方法 → 再跳回原方法
+// ============================================================================
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Microsoft.Diagnostics.Runtime;
+
+class Prog
+{
+    // ---- 这两个类型名是从反编译源码里抄来的（decomp\full 下搜类名） ----
+    const string T_PLAYER = &quot;MegaCrit.Sts2.Core.Entities.Players.Player&quot;;
+    const string T_CREATURE = &quot;MegaCrit.Sts2.Core.Entities.Creatures.Creature&quot;;
+    const string T_HPBAR = &quot;MegaCrit.sts2.Core.Nodes.TopBar.NTopBarHp&quot;;   // 注意命名空间是小写 sts2
+    const string T_TARGETMGR = &quot;MegaCrit.Sts2.Core.Nodes.Combat.NTargetManager&quot;;
+
+    // ---- 字段真实偏移 = ClrMD 报的 offset + 8（为什么 +8 见教程第 7.3 节） ----
+    const int OFF_PLAYER_CREATURE = 0x68;  // Player.Creature
+    const int OFF_CUR_HP = 0x84;           // Creature._currentHp
+    const int OFF_MAX_HP = 0x88;           // Creature._maxHp
+    const int OFF_BAR_PLAYER = 0x58;       // NTopBarHp._player
+
+    static DataTarget dt;
+    static ClrRuntime rt;
+    static Dictionary&lt;string, List&lt;ClrObject&gt;&gt; heap;
+
+    static void Main(string[] args)
+    {
+        Console.OutputEncoding = Encoding.UTF8;
+        if (args.Length &lt; 1)
+        {
+            Console.WriteLine(&quot;用法: dotnet run -- &lt;游戏pid&gt; [血量]&quot;);
+            Console.WriteLine(&quot;      dotnet run -- &lt;游戏pid&gt; poke &lt;值&gt;&quot;);
+            return;
+        }
+        int pid = int.Parse(args[0]);
+
+        Console.WriteLine(&quot;【1】连接游戏进程 pid=&quot; + pid);
+        dt = DataTarget.AttachToProcess(pid, suspend: false);
+        rt = dt.ClrVersions[0].CreateRuntime();
+        Console.WriteLine(&quot;     CLR 版本 = &quot; + dt.ClrVersions[0].Version + &quot;（能打印出来就说明连上了）&quot;);
+
+        Console.WriteLine(&quot;【2】扫描托管堆（第一次会花几秒）&quot;);
+        BuildHeap();
+        Console.WriteLine(&quot;     堆里共 &quot; + heap.Count + &quot; 种类型&quot;);
+
+        if (args.Length &gt; 2 &amp;&amp; args[1] == &quot;poke&quot;)
+        {
+            Poke(pid, int.Parse(args[2]));
+            return;
+        }
+        int hpValue = args.Length &gt; 1 ? int.Parse(args[1]) : 9999;
+        Install(pid, hpValue);
+    }
+
+    // ---------------------------------------------------------------- 堆缓存
+    static void BuildHeap()
+    {
+        heap = new Dictionary&lt;string, List&lt;ClrObject&gt;&gt;();
+        foreach (var obj in rt.Heap.EnumerateObjects())
+        {
+            var t = obj.Type;
+            if (t == null || t.Name == null) continue;
+            if (!heap.TryGetValue(t.Name, out var list)) { list = new List&lt;ClrObject&gt;(); heap[t.Name] = list; }
+            list.Add(obj);
+        }
+    }
+
+    static List&lt;ClrObject&gt; Of(string typeName)
+    {
+        return heap.TryGetValue(typeName, out var l) ? l : new List&lt;ClrObject&gt;();
+    }
+
+    // ---------------------------------------------------------------- 读内存小工具
+    static long ReadI64(ulong addr)
+    {
+        var buf = new byte[8];
+        if (dt.DataReader.Read(addr, buf) != 8) return 0;
+        return BitConverter.ToInt64(buf, 0);
+    }
+
+    static int ReadI32(ulong addr)
+    {
+        var buf = new byte[4];
+        if (dt.DataReader.Read(addr, buf) != 4) return -1;
+        return BitConverter.ToInt32(buf, 0);
+    }
+
+    // ---------------------------------------------------------------- 找玩家
+    static ulong FindPlayerAndCreature(out ulong creature)
+    {
+        creature = 0;
+        int n = 0;
+        foreach (var obj in Of(T_PLAYER))
+        {
+            n++;
+            ulong p = obj.Address;
+            ulong c = (ulong)ReadI64(p + OFF_PLAYER_CREATURE);
+            Console.WriteLine(&quot;     Player#&quot; + n + &quot; 地址=0x&quot; + p.ToString(&quot;X&quot;) + &quot;  Creature=0x&quot; + c.ToString(&quot;X&quot;));
+            if (c &gt; 0x10000 &amp;&amp; creature == 0) creature = c;
+        }
+        if (creature == 0) return 0;
+        foreach (var obj in Of(T_PLAYER)) return obj.Address;
+        return 0;
+    }
+
+    static ulong FindBar(ulong player)
+    {
+        foreach (var obj in Of(T_HPBAR))
+        {
+            var t = obj.Type;
+            if (t == null || t.Name != T_HPBAR) continue;
+            ulong pl = (ulong)ReadI64(obj.Address + OFF_BAR_PLAYER);
+            Console.WriteLine(&quot;     NTopBarHp 实例=0x&quot; + obj.Address.ToString(&quot;X&quot;) + &quot;  _player=0x&quot; + pl.ToString(&quot;X&quot;));
+            if (pl == player) return obj.Address;
+        }
+        return 0;
+    }
+
+    static ulong MethodAddr(string typeName, string methodName)
+    {
+        if (!heap.TryGetValue(typeName, out var list) || list.Count == 0)
+        {
+            Console.WriteLine(&quot;     ✗ 堆里找不到类型 &quot; + typeName);
+            return 0;
+        }
+        foreach (var m in list[0].Type.Methods)
+        {
+            if (m.Name != methodName) continue;
+            Console.WriteLine(&quot;     &quot; + methodName + &quot; native=0x&quot; + m.NativeCode.ToString(&quot;X&quot;));
+            if (m.NativeCode &gt; 0x10000 &amp;&amp; m.NativeCode != ulong.MaxValue) return (ulong)m.NativeCode;
+            Console.WriteLine(&quot;       （0xFFFFFFFFFFFFFFFF = 这个方法还没被 JIT，换个方法或等它被调用过）&quot;);
+        }
+        return 0;
+    }
+
+    // ---------------------------------------------------------------- 安装
+    static void Install(int pid, int hpValue)
+    {
+        Console.WriteLine(&quot;【3】找玩家对象&quot;);
+        ulong player;
+        ulong creature;
+        ulong p = FindPlayerAndCreature(out creature);
+        if (creature == 0) { Console.WriteLine(&quot;     ✗ 没找到 Player/Creature（是不是还没进战斗？）&quot;); return; }
+        player = p;
+        Console.WriteLine(&quot;     ✓ 玩家 Creature = 0x&quot; + creature.ToString(&quot;X&quot;));
+        Console.WriteLine(&quot;     当前血量 = &quot; + ReadI32(creature + OFF_CUR_HP) + &quot;/&quot; + ReadI32(creature + OFF_MAX_HP)
+                          + &quot;（应该和画面上的数字一致，不一致就是偏移算错了）&quot;);
+
+        Console.WriteLine(&quot;【4】找顶栏血量节点 + 它的刷新方法&quot;);
+        ulong bar = FindBar(player);
+        if (bar == 0) { Console.WriteLine(&quot;     ✗ 没找到 NTopBarHp 实例&quot;); return; }
+        ulong updateHealth = MethodAddr(T_HPBAR, &quot;UpdateHealth&quot;);
+        if (updateHealth == 0) { Console.WriteLine(&quot;     ✗ 没拿到刷新方法地址&quot;); return; }
+
+        Console.WriteLine(&quot;【5】找每帧执行的挂点 NTargetManager._Process&quot;);
+        ulong proc = MethodAddr(T_TARGETMGR, &quot;_Process&quot;);
+        if (proc == 0)
+        {
+            Console.WriteLine(&quot;     ✗ 没拿到挂点（这个类型要在战斗里才有实例；也可手动传地址）&quot;);
+            return;
+        }
+
+        Console.WriteLine(&quot;【6】先把血量上限改成 &quot; + hpValue);
+        var h = Hook.Open(pid);
+        Hook.WriteI32(h, creature + OFF_MAX_HP, hpValue);
+        Console.WriteLine(&quot;     回读 = &quot; + Hook.ReadI32(h, creature + OFF_CUR_HP) + &quot;/&quot; + Hook.ReadI32(h, creature + OFF_MAX_HP));
+
+        Console.WriteLine(&quot;【7】在挂点上打补丁（跳转到我们的代码）&quot;);
+        Hook.InstallFrameHook(pid, proc, creature + OFF_CUR_HP, hpValue, bar, updateHealth);
+
+        Console.WriteLine(&quot;【8】完成。现在看游戏：顶栏应该是 &quot; + hpValue + &quot;/&quot; + hpValue);
+        Console.WriteLine(&quot;     验证：dotnet run -- &quot; + pid + &quot; poke 1&quot;);
+    }
+
+    // ---------------------------------------------------------------- 验证
+    static void Poke(int pid, int v)
+    {
+        ulong creature;
+        FindPlayerAndCreature(out creature);
+        if (creature == 0) { Console.WriteLine(&quot;✗ 没找到 Creature&quot;); return; }
+        var h = Hook.Open(pid);
+        ulong addr = creature + OFF_CUR_HP;
+        Console.WriteLine(&quot;写入前 血=&quot; + Hook.ReadI32(h, addr));
+        Hook.WriteI32(h, addr, v);
+        Console.WriteLine(&quot;已强行写成 &quot; + v + &quot;，立刻回读=&quot; + Hook.ReadI32(h, addr));
+        System.Threading.Thread.Sleep(500);
+        Console.WriteLine(&quot;500ms 后回读 血=&quot; + Hook.ReadI32(h, addr) + &quot;  ← 被我们的补丁补回 = 成功&quot;);
+    }
+}</code></pre>
+<h4>5.3 <code>Hook.cs</code>（注入器，逐行都有注释）</h4>
+<pre><code>// ============================================================================
+//  Hook.cs —— 往别人的进程里写机器码（inline hook）
+//
+//  原理（一张图）：
+//
+//    游戏原来的方法:                   打完补丁之后:
+//    NTargetManager._Process            NTargetManager._Process
+//      53                push rbx        E9 xx xx xx xx   jmp 我们的代码洞
+//      48 83 EC 20       sub rsp,20      （剩下的字节被 nop 掉）
+//      ... 方法正文 ...                   ...
+//
+//    我们分配的&quot;代码洞&quot;（在挂点附近 2GB 以内，保证 jmp 跳得到）:
+//      push rcx / rdx / r8 / r9          ; ★保存现场（被挂钩方法的参数）
+//      sub rsp,38h
+//      mov rax, 血量字段地址
+//      mov edx, [rax]                    ; 读出当前血量
+//      cmp edx, 期望值
+//      je 跳过
+//      mov dword [rax], 期望值            ; ← 把血写满
+//      movups [rsp+20h], xmm0            ; 保存浮点参数（_Process 有 double delta）
+//      mov rcx, 顶栏节点
+//      mov edx, 0 / xor r8d, r8d
+//      mov rax, UpdateHealth             ; ← 调游戏的刷新方法
+//      call rax
+//      movups xmm0, [rsp+20h]
+//    跳过:
+//      add rsp,38h / pop r9/r8/rdx/rcx    ; ★还原现场（漏了这步游戏会崩！）
+//      push rbx                          ; 把被我们覆盖的原指令补回来
+//      sub rsp,20
+//      jmp 回 挂点+5
+// ============================================================================
+
+using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+
+static class Hook
+{
+    const int PAGE_EXECUTE_READWRITE = 0x40;
+    const int MEM_COMMIT = 0x1000, MEM_RESERVE = 0x2000;
+
+    [DllImport(&quot;kernel32.dll&quot;, SetLastError = true)] static extern IntPtr OpenProcess(int access, bool inherit, int pid);
+    [DllImport(&quot;kernel32.dll&quot;, SetLastError = true)] static extern bool ReadProcessMemory(IntPtr h, IntPtr addr, byte[] buf, IntPtr size, out IntPtr read);
+    [DllImport(&quot;kernel32.dll&quot;, SetLastError = true)] static extern bool WriteProcessMemory(IntPtr h, IntPtr addr, byte[] buf, IntPtr size, out IntPtr written);
+    [DllImport(&quot;kernel32.dll&quot;, SetLastError = true)] static extern IntPtr VirtualAllocEx(IntPtr h, IntPtr addr, IntPtr size, int type, int prot);
+    [DllImport(&quot;kernel32.dll&quot;, SetLastError = true)] static extern bool VirtualProtectEx(IntPtr h, IntPtr addr, IntPtr size, int newProt, out int oldProt);
+    [DllImport(&quot;kernel32.dll&quot;, SetLastError = true)] static extern bool FlushInstructionCache(IntPtr h, IntPtr addr, IntPtr size);
+
+    public static IntPtr Open(int pid) { return OpenProcess(0x1F0FFF, false, pid); }
+
+    public static byte[] Read(IntPtr h, ulong addr, int n)
+    {
+        var b = new byte[n];
+        IntPtr got;
+        if (!ReadProcessMemory(h, (IntPtr)(long)addr, b, (IntPtr)n, out got)) return null;
+        return b;
+    }
+
+    public static int ReadI32(IntPtr h, ulong addr)
+    {
+        var b = Read(h, addr, 4);
+        return b == null ? -1 : BitConverter.ToInt32(b, 0);
+    }
+
+    public static void WriteI32(IntPtr h, ulong addr, int value)
+    {
+        IntPtr w;
+        WriteProcessMemory(h, (IntPtr)(long)addr, BitConverter.GetBytes(value), (IntPtr)4, out w);
+    }
+
+    public static string Hex(byte[] b)
+    {
+        if (b == null) return &quot;&lt;读不到&gt;&quot;;
+        var sb = new System.Text.StringBuilder();
+        foreach (var x in b) sb.Append(x.ToString(&quot;X2&quot;)).Append(&#x27; &#x27;);
+        return sb.ToString().Trim();
+    }
+
+    // 在目标地址附近（±2GB 内，保证 E9 相对跳转够得着）分配可执行内存
+    static ulong AllocNear(IntPtr h, ulong target, int size)
+    {
+        long t = (long)target;
+        for (long d = 0; d &lt; 0x7000_0000L; d += 0x10000)
+        {
+            for (int s = 0; s &lt; 2; s++)
+            {
+                long cand = s == 0 ? t - d : t + d;
+                if (cand &lt; 0x10000) continue;
+                IntPtr p = VirtualAllocEx(h, (IntPtr)cand, (IntPtr)size, MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+                if (p != IntPtr.Zero) return (ulong)p;
+            }
+        }
+        return 0;
+    }
+
+    // 一条 x86 指令有多长？只认 .NET 方法序言里常见的那几种（够用）
+    static int InsnLen(byte[] b, int i)
+    {
+        byte op = b[i];
+        if (op &gt;= 0x50 &amp;&amp; op &lt;= 0x57) return 1;                                   // push/pop r64
+        if (op == 0x41 &amp;&amp; b[i + 1] &gt;= 0x50 &amp;&amp; b[i + 1] &lt;= 0x57) return 2;         // push/pop r8-r15
+        if (op == 0x48 &amp;&amp; b[i + 1] == 0x83 &amp;&amp; (b[i + 2] == 0xEC || b[i + 2] == 0xC4)) return 4;  // sub/add rsp,imm8
+        if (op == 0x48 &amp;&amp; b[i + 1] == 0x81 &amp;&amp; (b[i + 2] == 0xEC || b[i + 2] == 0xC4)) return 7;  // sub/add rsp,imm32
+        if (op == 0x48 &amp;&amp; b[i + 1] &gt;= 0xB8 &amp;&amp; b[i + 1] &lt;= 0xBF) return 10;         // mov r64,imm64
+        if (op == 0x4C &amp;&amp; b[i + 1] == 0x8B &amp;&amp; b[i + 2] == 0xDC) return 3;          // mov r11,rsp
+        return -1;
+    }
+
+    static int PrologueLen(byte[] head)
+    {
+        int n = 0;
+        while (n &lt; 5)
+        {
+            int len = InsnLen(head, n);
+            if (len &lt;= 0) return -1;
+            n += len;
+            if (n &gt; 15) return -1;
+        }
+        return n;
+    }
+
+    // ---------------------------------------------------------------- 主入口
+    public static void InstallFrameHook(int pid, ulong patchAddr, ulong fieldAddr, int value, ulong callThis, ulong callFn)
+    {
+        var h = Open(pid);
+        if (h == IntPtr.Zero) { Console.WriteLine(&quot;     ✗ OpenProcess 失败（用管理员运行 PowerShell）&quot;); return; }
+
+        // 安全闸：地址不像话就别写，否则游戏会崩
+        if (patchAddr &lt; 0x10000 || patchAddr == ulong.MaxValue ||
+            fieldAddr &lt; 0x10000 || callThis &lt; 0x10000 || callFn &lt; 0x10000 || callFn == ulong.MaxValue)
+        {
+            Console.WriteLine(&quot;     ✗ 地址不合法，已中止（不写任何补丁）&quot;); return;
+        }
+
+        var head = Read(h, patchAddr, 16);
+        int n = PrologueLen(head);
+        if (n &lt; 5)
+        {
+            Console.WriteLine(&quot;     ✗ 读不到能整段覆盖的序言: &quot; + Hex(head)); return;
+        }
+        var original = new byte[n];
+        Array.Copy(head, 0, original, 0, n);
+        Console.WriteLine(&quot;     挂点前 &quot; + n + &quot; 字节 = &quot; + Hex(original));
+
+        ulong cave = AllocNear(h, patchAddr, 0x1000);
+        if (cave == 0) { Console.WriteLine(&quot;     ✗ 分配代码洞失败&quot;); return; }
+
+        // ---------------- 拼机器码 ----------------
+        var code = new List&lt;byte&gt;();
+        void B(params byte[] bs) { code.AddRange(bs); }
+        void I32(int v) { code.AddRange(BitConverter.GetBytes(v)); }
+        void I64(ulong v) { code.AddRange(BitConverter.GetBytes(v)); }
+
+        // ★★★ 必须先保存现场：rcx/rdx/r8/r9 是&quot;被挂钩方法自己的参数&quot;，
+        //     我们借用了它们去调刷新方法，用完必须原样还回去，否则游戏会崩
+        B(0x51);                            // push rcx   （this）
+        B(0x52);                            // push rdx
+        B(0x41, 0x50);                      // push r8
+        B(0x41, 0x51);                      // push r9
+        B(0x48, 0x83, 0xEC, 0x38);          // sub rsp,38h（0x20 影子空间 + 0x10 存 xmm0 + 对齐）
+
+        B(0x48, 0xB8); I64(fieldAddr);      // mov rax, &amp;_currentHp
+        B(0x8B, 0x10);                      // mov edx,[rax]
+        B(0x81, 0xFA); I32(value);          // cmp edx, value
+        int jeAt = code.Count; B(0x74, 0x00);  // je skip（位移待会补）
+        B(0xC7, 0x00); I32(value);          // mov dword [rax], value
+        B(0x0F, 0x11, 0x44, 0x24, 0x20);    // movups [rsp+20h], xmm0（_Process 的 double 参数）
+        B(0x48, 0xB9); I64(callThis);       // mov rcx, 顶栏节点
+        B(0x31, 0xD2);                      // xor edx,edx
+        B(0x45, 0x31, 0xC0);                // xor r8d,r8d
+        B(0x48, 0xB8); I64(callFn);         // mov rax, UpdateHealth
+        B(0xFF, 0xD0);                      // call rax
+        B(0x0F, 0x10, 0x44, 0x24, 0x20);    // movups xmm0,[rsp+20h]
+        int skipAt = code.Count;
+        code[jeAt + 1] = (byte)(skipAt - (jeAt + 2));   // 补 je 的位移
+
+        // ★ 还原现场
+        B(0x48, 0x83, 0xC4, 0x38);          // add rsp,38h
+        B(0x41, 0x59);                      // pop r9
+        B(0x41, 0x58);                      // pop r8
+        B(0x5A);                            // pop rdx
+        B(0x59);                            // pop rcx
+
+        foreach (var b in original) B(b);    // 补回被覆盖的原指令
+
+        int jmpAt = code.Count;
+        B(0xE9); I32(0);                     // jmp 回 patchAddr+n
+        int back = (int)((long)(patchAddr + (ulong)n) - (long)(cave + (ulong)jmpAt + 5));
+        var rb = BitConverter.GetBytes(back);
+        code[jmpAt + 1] = rb[0]; code[jmpAt + 2] = rb[1]; code[jmpAt + 3] = rb[2]; code[jmpAt + 4] = rb[3];
+
+        IntPtr w;
+        if (!WriteProcessMemory(h, (IntPtr)(long)cave, code.ToArray(), (IntPtr)code.Count, out w))
+        { Console.WriteLine(&quot;     ✗ 写代码洞失败&quot;); return; }
+
+        // ---------------- 打补丁 ----------------
+        var patch = new byte[n];
+        patch[0] = 0xE9;
+        var d = BitConverter.GetBytes((int)((long)cave - (long)(patchAddr + 5)));
+        patch[1] = d[0]; patch[2] = d[1]; patch[3] = d[2]; patch[4] = d[3];
+        for (int i = 5; i &lt; n; i++) patch[i] = 0x90;      // 多出来的补 nop
+
+        int oldProt;
+        VirtualProtectEx(h, (IntPtr)(long)patchAddr, (IntPtr)n, PAGE_EXECUTE_READWRITE, out oldProt);
+        WriteProcessMemory(h, (IntPtr)(long)patchAddr, patch, (IntPtr)n, out w);
+        int tmp;
+        VirtualProtectEx(h, (IntPtr)(long)patchAddr, (IntPtr)n, oldProt, out tmp);
+        FlushInstructionCache(h, (IntPtr)(long)patchAddr, (IntPtr)n);   // 告诉 CPU 指令变了
+
+        Console.WriteLine(&quot;     代码洞 0x&quot; + cave.ToString(&quot;X&quot;) + &quot;（&quot; + code.Count + &quot; 字节）&quot;);
+        Console.WriteLine(&quot;     代码洞内容: &quot; + Hex(code.ToArray()));
+        Console.WriteLine(&quot;     补丁: &quot; + Hex(patch) + &quot;   回读: &quot; + Hex(Read(h, patchAddr, n)));
+        Console.WriteLine(&quot;     ✓ 补丁已生效&quot;);
+    }
+}</code></pre>
+<h4>5.4 编译</h4>
+<pre><code>cd D:\sts2\教程代码\sts2hp
+dotnet build</code></pre>
+<p><b>应该看到</b>：<code>已成功生成。</code></p>
+<hr>
+<h3>6. 跑起来（真机实测输出，逐行对照）</h3>
+<pre><code>dotnet run -- 12596</code></pre>
+<p>把 <code>12596</code> 换成你自己的 pid。<b>真实输出</b>：</p>
+<pre><code>【1】连接游戏进程 pid=12596
+     CLR 版本 = 9.0.725.31616（能打印出来就说明连上了）
+【2】扫描托管堆（第一次会花几秒）
+     堆里共 5356 种类型
+【3】找玩家对象
+     Player#1 地址=0x2084586E020  Creature=0x2084586E268
+     ✓ 玩家 Creature = 0x2084586E268
+     当前血量 = 38/82（应该和画面上的数字一致，不一致就是偏移算错了）
+【4】找顶栏血量节点 + 它的刷新方法
+     NTopBarHp 实例=0x20848000D00  _player=0x2084586E020
+     UpdateHealth native=0x7FF7CD2CD670
+【5】找每帧执行的挂点 NTargetManager._Process
+     _Process native=0x7FF7CD2F7040
+【6】先把血量上限改成 9999
+     回读 = 38/9999
+【7】在挂点上打补丁（跳转到我们的代码）
+     挂点前 5 字节 = 53 48 83 EC 20
+     代码洞 0x7FF7CD820000（93 字节）
+     代码洞内容: 51 52 41 50 41 51 48 83 EC 38 48 B8 EC E2 86 45 08 02 00 00 8B 10 81 FA 0F 27 00 00 74 2B C7 00 0F 27 00 00 0F 11 44 24 20 48 B9 00 0D 00 48 08 02 00 00 31 D2 45 31 C0 48 B8 70 D6 2C CD F7 7F 00 00 FF D0 0F 10 44 24 20 48 83 C4 38 41 59 41 58 5A 59 53 48 83 EC 20 E9 E8 6F AD FF
+     补丁: E9 BB 8F 52 00   回读: E9 BB 8F 52 00
+     ✓ 补丁已生效
+【8】完成。现在看游戏：顶栏应该是 9999/9999
+     验证：dotnet run -- 12596 poke 1</code></pre>
+<p><b>这时候抬头看游戏</b>：左上角心形血量已经变成 <code>9999/9999</code>。</p>
+<h4>每一行在说什么（看懂这几行，你就懂了一半）</h4>
+<table>
+<tr><th>输出</th><th>含义</th><th>怎么判断对错</th></tr>
+<tr><td><code>CLR 版本 = 9.0.…</code></td><td>成功附加到 .NET 运行时</td><td>报异常 ⇒ 游戏没加载 .NET（见 3.1）</td></tr>
+<tr><td><code>堆里共 5356 种类型</code></td><td>扫描到多少个类型</td><td>几千就算对</td></tr>
+<tr><td><code>Player#1 地址=…</code></td><td>找到玩家对象及其角色对象</td><td>只有 1 个 Player</td></tr>
+<tr><td><code>当前血量 = 38/82</code></td><td><b>从内存读出来的血量</b></td><td><b>必须和画面数字一模一样</b>，否则偏移错了</td></tr>
+<tr><td><code>NTopBarHp 实例=… _player=…</code></td><td>找到顶栏血量控件，且它的 <code>_player</code> 正好是同一个 Player</td><td>两个地址要能对上</td></tr>
+<tr><td><code>UpdateHealth native=0x7FF7…</code></td><td>刷新方法在内存里的地址</td><td>不是 <code>0xFFFF…</code> 就行</td></tr>
+<tr><td><code>_Process native=0x7FF7…</code></td><td>我们选的挂点地址</td><td>不是 <code>0xFFFF…</code> 就行</td></tr>
+<tr><td><code>挂点前 5 字节 = 53 48 83 EC 20</code></td><td>挂点开头的机器码（5 字节整）</td><td>不同版本会变，但必须能整段覆盖 ≥5 字节</td></tr>
+<tr><td><code>补丁已生效</code></td><td>已经写进游戏内存</td><td>之后游戏不能崩、顶栏必须变 9999</td></tr>
+</table>
+<hr>
+<h3>7. 关键概念：怎么"按名字"找到数据（这段是外挂的核心）</h3>
+<h4>7.1 为什么要问"活着的进程"</h4>
+<pre><code>sts2.dll（磁盘文件）   只有：类名 / 字段名 / 方法名 / 签名
+                        ✗ 没有&quot;字段在对象里的第几个字节&quot;（那是运行时才能算的）
+游戏跑起来以后         CLR 给每个类型算好内存布局 → 对象被分配在托管堆上
+⇒ 想要&quot;偏移&quot;和&quot;地址&quot;，只能问活着的进程</code></pre>
+<h4>7.2 ClrMD 怎么回答我们</h4>
+<pre><code>dt = DataTarget.AttachToProcess(pid, suspend: false);   // 附加（不暂停游戏）
+rt = dt.ClrVersions[0].CreateRuntime();                 // 拿到运行时
+foreach (var obj in rt.Heap.EnumerateObjects())         // 遍历堆上所有对象
+    obj.Type.Name;                                      // 每个对象的类型名（字符串）</code></pre>
+<ul><li>想要某个类型的所有实例：遍历一遍，比对 <code>obj.Type.Name == "全名"</code></li><li>想要实例里的字段：<code>obj.Address + 偏移</code> 然后用 <code>ReadProcessMemory</code> 读 4/8 字节</li><li>想要方法地址：<code>type.Methods</code> 里找 <code>m.Name == "方法名"</code>，看 <code>m.NativeCode</code></li></ul>
+<h4>7.3 ★ 最容易踩的坑：ClrMD 报的偏移要 +8</h4>
+<p>上一版教程直接把 ClrMD 的 offset 当真实偏移，结果<b>一次都没打中</b>。原因：</p>
+<pre><code>托管对象的内存布局：
+  +0x00  MethodTable 指针（类型信息）   ← ClrObject.Address 指向这里
+  +0x08  第一个字段
+  +0x0C  第二个字段 …
+
+ClrMD 的 ClrInstanceField.Offset 是&quot;相对字段区起点(+8)&quot;算的 ⇒ 真实偏移 = 报的值 + 8</code></pre>
+<p><b>怎么自己验证（必做，30 秒）</b>：</p>
+<ol><li>用 ClrMD 找到 <code>Creature</code> 实例，记下它的地址 <code>A</code></li><li>读 <code>A+0x84</code> 的 int32，打印出来</li><li>把程序和游戏画面上的血量对一下：<b>一样 ⇒ 你的偏移对了</b></li></ol>
+<p>本作用真实数字验证过的对照表：</p>
+<pre><code>Creature  +0x84 _currentHp   +0x88 _maxHp   +0x80 _block
+Player    +0x68 &lt;Creature&gt;   +0xE8 _gold
+NTopBarHp +0x58 _player
+（ClrMD 分别报 0x7C / 0x80 / 0x78 / 0x60 / 0xE0 / 0x50，都要 +8）</code></pre>
+<blockquote>还有一条铁证：机器码<br>反编译里 <code>Creature.set_Block</code> 的机器码是 <code>44 8B 81 80 00 00 00</code>（= <code>mov r8d,[rcx+0x80]</code>），<br>而 ClrMD 说 <code>_block</code> 在 <code>0x78</code> —— 差的正是 8。<b>代码不会说谎。</b></blockquote>
+<hr>
+<h3>8. 实验：为什么"直接改内存"没用（先做这一步再看代码）</h3>
+<h4>8.1 用我们的工具直接改血</h4>
+<pre><code>dotnet run -- 12596 poke 1</code></pre>
+<pre><code>写入前 血=9999
+已强行写成 1，立刻回读=1        ← 确实写进去了
+500ms 后回读 血=9999            ← 但被补丁补回来了（因为我们装了钩子）</code></pre>
+<p><b>如果没装钩子</b>（重启游戏后只跑 poke），你会看到：<code>已强行写成 1，回读=1</code>，<b>但游戏画面还是 38/82</b>。</p>
+<p>这就是本功能第一版失败的现场。</p>
+<h4>8.2 为什么画面不动？读反编译源码就明白了</h4>
+<p>用 ILSpy 打开 <code>sts2.dll</code>，搜 <code>NTopBarHp</code>，看到：</p>
+<pre><code>public void Initialize(Player player)
+{
+    _player = player;
+    _player.Creature.CurrentHpChanged += UpdateHealth;   // ① 只在事件里刷新
+    _player.Creature.MaxHpChanged   += UpdateHealth;
+    UpdateHealth(0, 0);
+}
+
+private void UpdateHealth(int _, int __)
+{
+    var c = _player.Creature;
+    int cur = c.CurrentHp;                               // ② 每次被叫到才读字段
+    int max = c.MaxHp;
+    _hpLabel.SetTextAutoSize($&quot;{cur}/{max}&quot;);             // ③ 把字符串塞进 Label 就完事
+}</code></pre>
+<p>再看 <code>Creature.CurrentHp</code> 的 setter：</p>
+<pre><code>if (_currentHp != value)          // ④ 值没变就不发事件
+{
+    _currentHp = value;
+    this.CurrentHpChanged?.Invoke(old, _currentHp);
+}</code></pre>
+<p><b>结论</b>：UI 不会"每帧去看字段"。它是"事件来了 → 读一次字段 → 写进 Label → 之后再不管"。</p>
+<p>我们用 <code>WriteProcessMemory</code> 改字段，<b>等于绕过了 setter，事件不会发</b>，Label 里永远是上次那个字符串。</p>
+<blockquote>所以外挂只有两条路<br>1. <b>让 setter 跑一遍</b>（改参数/改返回值）—— 适用于"值从参数进来"的方法（见 11-复刻-无限护盾）<br>2. <b>替它调一次刷新方法</b> —— 本功能用这条（<code>set_CurrentHp</code> 被 JIT 内联了，挂不了）</blockquote>
+<hr>
+<h3>9. 怎么找到"刷新方法"和"挂点"（ILSpy 操作级）</h3>
+<h4>9.1 找刷新方法 <code>NTopBarHp.UpdateHealth</code></h4>
+<ol><li>ILSpy 左侧树：<code>sts2</code> → <code>MegaCrit.sts2.Core.Nodes.TopBar</code> → <code>NTopBarHp</code></li><li>右侧代码区按 <code>Ctrl+F</code> 搜 <code>SetTextAutoSize</code></li><li>你会看到 <code>UpdateHealth</code> 里那一行 <code>_hpLabel.SetTextAutoSize($"{currentHp}/{maxHp}")</code></li></ol>
+<p>   ⇒ <b>这个方法就是"改文字"的地方</b>，名字记下来</p>
+<h4>9.2 找挂点 <code>NTargetManager._Process</code></h4>
+<p>要求：<b>每帧都会被调用</b> + <b>序言能整段覆盖 ≥5 字节</b>。</p>
+<ol><li>ILSpy 搜 <code>_Process</code>（<code>override void _Process(double delta)</code> 那一类）</li><li>挑一个"战斗期间一直活着"的节点，本作用 <code>NTargetManager</code></li><li>用我们的工具确认它有机器码 + 序言长度：</li></ol>
+<pre><code># 本仓库完整工具的命令（教程工程没有这条，看第 12 节怎么手动查）
+dotnet run --project D:\sts2\clr\sts2clr -- 12596 methods MegaCrit.Sts2.Core.Nodes.Combat.NTargetManager _Process</code></pre>
+<pre><code>NTargetManager::_Process native=0x7FF7CD2F7040
+  bytes: 53 48 83 EC 20 48 8B D9 48 8B 43 30 ...
+         └63┘ └ 4字节 ┘
+         push rbx; sub rsp,20h        ← 1+4 = 5 字节，正好够放一个 jmp</code></pre>
+<blockquote>"5 字节"是怎么来的<br>x86-64 的 <code>jmp 相对地址</code>指令固定 <b>5 字节</b>（<code>E9</code> + 4 字节位移）。<br>所以挂点的开头必须是<b>若干条完整指令加起来 ≥5 字节</b>（不能从指令中间切开，否则跳回去时执行到半条指令就崩）。<br>本工程的 <code>PrologueLen()</code> 就是干这个：一条一条量，累加到 ≥5 为止。</blockquote>
+<h4>9.3 顺手要记的 3 个地址</h4>
+<table>
+<tr><th>地址</th><th>从哪来</th><th>干什么用</th></tr>
+<tr><td>血量字段地址 <code>Creature+0x84</code></td><td>ClrMD 找 Creature 实例 + 0x84</td><td>我们要锁的东西</td></tr>
+<tr><td>顶栏节点实例 <code>NTopBarHp</code></td><td>ClrMD 找 <code>_player == 我们那个 Player</code> 的实例</td><td>调刷新方法时当 <code>this</code></td></tr>
+<tr><td><code>UpdateHealth</code> 地址</td><td><code>type.Methods</code> 里名字匹配</td><td>要调的方法</td></tr>
+</table>
+<hr>
+<h3>10. 代码怎么实现（<code>Hook.cs</code> 逐段讲解）</h3>
+<h4>10.1 四个 Windows API（全部只要名字看懂）</h4>
+<table>
+<tr><th>API</th><th>一句话作用</th></tr>
+<tr><td><code>OpenProcess</code></td><td>拿到操作游戏进程的"句柄"（要管理员）</td></tr>
+<tr><td><code>VirtualAllocEx</code></td><td>在<b>游戏进程里</b>申请一块内存（放我们的机器码）</td></tr>
+<tr><td><code>WriteProcessMemory</code></td><td>往游戏内存写字节</td></tr>
+<tr><td><code>VirtualProtectEx</code></td><td>改内存保护属性（代码段默认只读，要改成可写才能打补丁）</td></tr>
+<tr><td><code>FlushInstructionCache</code></td><td>告诉 CPU"这段指令缓存作废了，重新读"（不改这个，补丁可能不生效）</td></tr>
+</table>
+<h4>10.2 为什么代码洞要"分配在挂点附近"</h4>
+<p><code>E9</code> 后面跟的是<b>相对位移（4 字节有符号）</b>，最多跳 ±2GB。</p>
+<p>如果代码洞被分配到很远的地方，<code>jmp</code> 会算错 → 崩。</p>
+<p>所以 <code>AllocNear()</code> 从挂点开始，以 64KB 为步长向两边试，第一个成功的就用。</p>
+<h4>10.3 为什么要"补回原指令"</h4>
+<p>我们只借用了方法开头 5 个字节。执行完自己的逻辑后，方法还得继续跑它原来的代码，</p>
+<p>所以必须把那 5 个字节（可能是 <code>push rbx; sub rsp,20h</code>）<b>原样执行一遍</b>，再 <code>jmp</code> 回"第 5 字节之后"。</p>
+<h4>10.4 ★ 为什么必须保存 <code>rcx/rdx/r8/r9</code> 和 <code>xmm0</code>（我在这里崩过一次游戏）</h4>
+<p><code>NTargetManager._Process</code> 的 <code>this</code> 在 <code>rcx</code> 里，方法正文还要用它。</p>
+<p>我们的代码洞里为了调 <code>UpdateHealth</code>，把 <code>rcx</code> 改成了"顶栏节点"——</p>
+<p><b>如果不还回去，方法正文就会拿错 this，直接崩。</b></p>
+<p>我第一次写精简版时就漏了这步，测试时游戏<b>当场退出</b>。加上 push/pop 之后一切正常。</p>
+<p>同理 <code>xmm0</code> 里放着 <code>_Process</code> 的 <code>double delta</code> 参数，我们调用别的托管方法会覆盖它，</p>
+<p>所以也要 <code>movups</code> 存到栈上再读回。</p>
+<h4>10.5 栈对齐（为什么 <code>sub rsp,38h</code>）</h4>
+<p>Windows x64 约定：<code>call</code> 之前 <code>rsp</code> 必须是 16 的倍数，且要给被调函数留 0x20 字节"影子空间"。</p>
+<p>我们的代码：</p>
+<ul><li>进代码洞时 <code>rsp % 16 == 8</code>（因为是被 <code>call/jmp</code> 进来的）</li><li>push 4 个寄存器 → 还是 8</li><li><code>sub rsp,0x38</code>（56）→ 变 0（对齐了，其中 0x20 影子空间 + 0x10 存 xmm0 + 8 填充）</li><li>于是 <code>call rax</code> 进去时被调函数看到 <code>rsp % 16 == 8</code>，符合约定 ✓</li></ul>
+<blockquote>不对齐会怎样<br>被调方法里一旦用到 SSE 对齐指令（<code>vmovdqa</code>）就会崩，而且崩得很随机，很难查。</blockquote>
+<h4>10.6 安全闸（为什么先检查地址）</h4>
+<pre><code>if (patchAddr &lt; 0x10000 || patchAddr == ulong.MaxValue || ...) { 中止 }</code></pre>
+<p>ClrMD 用 <code>0xFFFFFFFFFFFFFFFF</code> 表示"这个方法没有机器码（没 JIT）"。</p>
+<p>我第一版没判断，把这个值当成地址去 <code>call</code>，<b>游戏立刻崩溃</b>。</p>
+<p>现在任何"要 call 的地址"都会先过一遍这种检查，不合法就一个字节都不写。</p>
+<hr>
+<h3>11. 验证（这步过了才算成功）</h3>
+<pre><code>dotnet run -- 12596 poke 1</code></pre>
+<p><b>真实输出</b>：</p>
+<pre><code>写入前 血=9999
+已强行写成 1，立刻回读=1
+500ms 后回读 血=9999  ← 被我们的补丁补回 = 成功</code></pre>
+<p>再看画面（<code>shots\f01_hp_9999_834x652.png</code>）：顶栏 <code>9999/9999</code>。</p>
+<blockquote>验收判据（三条全中才算成功）<br>1. 顶栏文字变成 <code>9999/9999</code><br>2. <code>poke</code> 把血写成 1 后，<b>500ms 内回到 9999</b><br>3. 游戏还能正常玩（不崩、能点卡、能出牌）</blockquote>
+<hr>
+<h3>12. 出错了怎么办（按现象查）</h3>
+<table>
+<tr><th>现象</th><th>原因</th><th>怎么办</th></tr>
+<tr><td><code>DataTarget.AttachToProcess</code> 抛异常</td><td>游戏没加载 .NET / 权限不够</td><td>用 3.1 的参数启动；PowerShell 用管理员</td></tr>
+<tr><td><code>堆里共 0 种类型</code></td><td>附加到了错的进程</td><td>确认 pid 是 <code>SlayTheSpire2.exe</code></td></tr>
+<tr><td><code>当前血量 = 38/82</code> 和画面不一致</td><td>偏移错了</td><td>记住 <b>ClrMD 报的 +8</b>；用 <code>Player+0xE8</code> 金币交叉验证</td></tr>
+<tr><td><code>UpdateHealth native=0xFFFFFFFFFFFFFFFF</code></td><td>方法还没被 JIT</td><td>让游戏进一次战斗、让血量变一次，再跑</td></tr>
+<tr><td><code>✗ 读不到能整段覆盖的序言</code></td><td>挂点开头指令太短/不认识</td><td>换一个 <code>_Process</code>；或自己补 <code>InsnLen</code> 的规则</td></tr>
+<tr><td>打完补丁游戏<b>立刻退出</b></td><td>地址非法（常见：把 <code>0xFFFF…</code> 当地址）/ 没保存寄存器</td><td>看第 10.4、10.6 节；确认安全闸生效</td></tr>
+<tr><td>补丁装了但画面不变</td><td>挂点没被调用 / 刷新方法选错</td><td>换挂点（换成每帧必跑的）；确认刷新方法里真的 <code>SetTextAutoSize</code></td></tr>
+<tr><td>一切正常但过一会儿失效</td><td>.NET <b>分层编译</b>把它重新 JIT 到别处</td><td>重新跑一次工具；或换更稳定的挂点</td></tr>
+<tr><td>想验证"到底打中没打中"</td><td>——</td><td>读完 <code>补丁: E9 …</code> 那行，再 <code>poke</code> 看回读</td></tr>
+</table>
+<hr>
+<h3>13. 回滚（不留痕迹）</h3>
+<table>
+<tr><th>想怎么退</th><th>怎么做</th></tr>
+<tr><td>最彻底</td><td><b>重启游戏</b>（所有内存补丁消失，存档不受影响）</td></tr>
+<tr><td>只撤这个钩子</td><td>把挂点前 <code>n</code> 个字节写回去（本工程把原字节打印出来了：<code>挂点前 5 字节 = 53 48 83 EC 20</code>）</td></tr>
+</table>
+<blockquote>想做成"可开关"<br>把 <code>jmp</code> 那 5 个字节在"<code>E9 …</code>"和"原指令"之间来回写，就是开关；<br>想更稳就在代码洞里加一个 <code>if (开关变量) 干活 else 原样跳回</code>。</blockquote>
+<hr>
+<h3>我是怎么做的（本篇的真实过程：崩了两次才写成）</h3>
+<blockquote>这一节是"作者视角"的过程记录，方便你知道<b>哪一步最容易翻车</b>。操作步骤在上面第 2~13 节。</blockquote>
+<h4>时间线（全部真实，不是示意）</h4>
+<table>
+<tr><th>轮次</th><th>我做了什么</th><th>结果</th></tr>
+<tr><td>1</td><td>用 ClrMD 找 <code>Creature</code>，按 ClrMD 报的 offset 写 <code>_currentHp</code>（0x7C）</td><td>写成功、回读 9999，<b>画面一直 38/82</b> ✗</td></tr>
+<tr><td>2</td><td>反编译 <code>sts2.dll</code>（3425 个 .cs），读 <code>NTopBarHp</code> 源码</td><td>搞清"UI 只在事件里刷新"✗ 纯写值路线判死</td></tr>
+<tr><td>3</td><td>想挂 <code>Creature.set_CurrentHp</code></td><td>native=<code>0xFFFFFFFFFFFFFFFF</code>（被 JIT 内联）⇒ 挂不了 ✗</td></tr>
+<tr><td>4</td><td>对照 <code>set_Block</code> 的机器码 <code>44 8B 81 80 00 00 00</code>，发现 ClrMD 报的偏移<b>全部差 8</b></td><td>真实偏移：<code>_currentHp 0x84 / _maxHp 0x88</code> ✓</td></tr>
+<tr><td>5</td><td>第一版 hook：挂在 <code>NTopBarHp.UpdateHealth</code> 入口</td><td>能装上，但<b>它只在事件里跑</b> ⇒ 没机会触发 ✗</td></tr>
+<tr><td>6</td><td>第二版：挂每帧都跑的 <code>NTargetManager._Process</code>，代码洞里"写满血 + 调 UpdateHealth"</td><td>顶栏变 <code>9999/9999</code> ✓</td></tr>
+<tr><td>7</td><td>写这篇教程时，我另做了一个<b>精简版工程</b>（就是第 5 节的代码）做验证</td><td>精简版<b>忘了保存 rcx</b>⇒ 游戏当场崩溃 ✗</td></tr>
+<tr><td>8</td><td>加上 <code>push rcx/rdx/r8/r9</code> + <code>push/pop xmm0</code> + 栈对齐</td><td>重新跑：<code>38/82 → 9999/9999</code>，<code>poke 1</code> 500ms 回 9999 ✓</td></tr>
+</table>
+<h4>关键真实输出（精简版工程，pid=12596）</h4>
+<pre><code>【3】找玩家对象
+     Player#1 地址=0x2084586E020  Creature=0x2084586E268
+     当前血量 = 38/82（应该和画面上的数字一致，不一致就是偏移算错了）
+【4】找顶栏血量节点 + 它的刷新方法
+     NTopBarHp 实例=0x20848000D00  _player=0x2084586E020
+     UpdateHealth native=0x7FF7CD2CD670
+【5】找每帧执行的挂点 NTargetManager._Process
+     _Process native=0x7FF7CD2F7040
+【7】在挂点上打补丁（跳转到我们的代码）
+     挂点前 5 字节 = 53 48 83 EC 20
+     补丁: E9 BB 8F 52 00   回读: E9 BB 8F 52 00
+     ✓ 补丁已生效</code></pre>
+<pre><code>&gt; dotnet run -- 12596 poke 1
+写入前 血=9999
+已强行写成 1，立刻回读=1
+500ms 后回读 血=9999  ← 被我们的补丁补回 = 成功</code></pre>
+<h4>两次崩溃的教训（都写进第 12 节排错表了）</h4>
+<ol><li><b>把 ClrMD 的"未 JIT"哨兵 <code>0xFFFFFFFFFFFFFFFF</code> 当成地址去 <code>call</code></b> ⇒ 进程直接退出。</li></ol>
+<p>   ⇒ 任何要 <code>call</code> 的地址，先判断 <code>&gt;= 0x10000</code> 且 <code>!= ulong.MaxValue</code>。</p>
+<ol><li><b>代码洞里改了 <code>rcx</code> 没还回去</b> ⇒ 被挂钩的方法拿错 <code>this</code> ⇒ 崩溃。</li></ol>
+<p>   ⇒ 入口处 <code>push rcx/rdx/r8/r9</code>，出口 <code>pop</code> 回来。</p>
+<h3>14. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td>本教程两份代码<b>可直接编译运行</b></td><td><code>dotnet build</code> 成功；<code>dotnet run -- 12596</code> 全流程输出与文中一致</td></tr>
+<tr><td><code>_currentHp</code> 真实偏移 <b>0x84</b>、<code>_maxHp</code> <b>0x88</b></td><td>读出 38/82 与画面一致；机器码 <code>8B 9A 84 00 00 00</code></td></tr>
+<tr><td>只写字段不改画面（UI 事件驱动）</td><td>未装钩子时 poke 后画面不动；源码 <code>UpdateHealth</code> 只在事件里调</td></tr>
+<tr><td>帧钩子方案可行</td><td>顶栏变 <code>9999/9999</code>，poke 1 秒回 9999</td></tr>
+<tr><td>不保存 <code>rcx</code> 会崩游戏</td><td>精简版第一次测试：游戏当场退出；补上 push/pop 后正常</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<table>
+<tr><th>结论</th><th>现象</th></tr>
+<tr><td>ClrMD 报的 offset 能直接用</td><td>全部差 8，写 0x7C/0x80 打不中血</td></tr>
+<tr><td>挂 <code>Creature.set_CurrentHp</code></td><td>native=<code>0xFFFFFFFFFFFFFFFF</code>（被 JIT 内联），没有入口可挂</td></tr>
+<tr><td><code>PostMessage</code> 发鼠标能点按钮</td><td>Godot 用 raw input，只有 <code>SendInput</code> 真点击有效（顺带经验）</td></tr>
+</table>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>分层编译导致补丁"过一会儿失效"</td><td>挂上后放置 5~10 分钟再看顶栏是否仍 9999</td></tr>
+<tr><td>换成"每秒调用一次"的挂点是否更稳</td><td>用 <code>RefreshValues</code> 之类低频方法对照</td></tr>
+</table>
+<hr>
+<h3>15. 配套文件与下一步</h3>
+<table>
+<tr><th>东西</th><th>路径</th></tr>
+<tr><td>本教程工程（可直接编译）</td><td><code>D:\sts2\教程代码\sts2hp\</code></td></tr>
+<tr><td>全量反编译源码（3425 个 .cs）</td><td><code>D:\sts2\decomp\full\</code></td></tr>
+<tr><td>完整工具（含金币/护盾/能量/星星/统计命令）</td><td><code>D:\sts2\clr\sts2clr\</code></td></tr>
+<tr><td>成功截图</td><td><code>D:\sts2\shots\f01_hp_9999_834x652.png</code></td></tr>
+</table>
+<p><b>下一步</b>：10-复刻-金币无限 —— 同样的流程，但多了两个坑（刷新方法查不到地址、刷新是动画）。</p>
+<h3>关联</h3>
+<ul><li>环境与启动：74-入门-环境搭建与启动（虚拟机无GPU也能跑）</li><li>ClrMD / CE 两条路的基础：76-复刻-CE手把手与NET(ClrMD)手把手</li><li>为什么"按方法名"改有效：72-原理-为什么按方法名改游戏有效</li><li>下一个功能：10-复刻-金币无限</li><li>子库索引：00-杀戮尖塔2 索引 MOC</li></ul>
+
+<h2 id="n">十三、功能篇 2/20：金币锁</h2>
+<p style="color:#6b7280;font-size:13px">上接：09-复刻-无限血 · 下接：11-复刻-无限护盾</p>
+<blockquote>这篇讲的不是"一个小脚本"，而是"<b>往 Trainer 里加一个功能</b>"<br>终点成品和 Plus20 Trainer 一样：<b>一个程序、热键开关、20 个功能</b>。<br>本项目的 Trainer 骨架在 <code>D:\sts2\教程代码\sts2trainer\</code>，<br>结构：<code>Game.cs</code>（只读：找对象/字段/方法）+ <code>Hook.cs</code>（注入：帧钩子/setter 钩子）+ <code>Program.cs</code>（热键与开关）。<br>每篇教程 = 教你在 <code>Program.cs</code> 里加<b>一组 Action</b>，再加一个热键。</blockquote>
+<hr>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>金币锁在 9999999；买东西不掉钱；顶栏数字同步显示</td></tr>
+<tr><td>验收标准</td><td>① 顶栏金币显示 <code>9999999</code> ② 外部把 <code>_gold</code> 改成 1，600ms 内回 9999999 ③ 与其它功能同时生效不崩</td></tr>
+<tr><td>热键（对齐原版）</td><td><code>Ctrl + Num 1</code></td></tr>
+</table>
+<h3>2. 原理：金币这条链的四个事实</h3>
+<p>用 ILSpy 打开 <code>sts2.dll</code>，搜 <code>Player</code> / <code>NTopBarGold</code>，能看到（<code>decomp\full</code> 里有同样内容）：</p>
+<pre><code>// ① 数据：Player.cs:145
+public int Gold { get =&gt; _gold; private set { if (value != Gold) { _gold = value; GoldChanged?.Invoke(); } } }
+
+// ② 事件订阅：NTopBarGold.cs:123
+public void Initialize(Player player)
+{ _player = player; _currentGold = _player.Gold; _goldLabel.SetTextAutoSize($&quot;{_currentGold}&quot;); _player.GoldChanged += UpdateGold; }
+
+// ③ &quot;刷新&quot;其实是动画：NTopBarGold.cs:136
+private async Task UpdateGoldAnim()
+{
+    int currentGold = _player.Gold - _currentGold;      // delta
+    _additionalGold = (_currentGold = currentGold);
+    _currentGold = _player.Gold;
+    while (_additionalGold != 0) { ... 每帧滚 1/10/75 ... _goldLabel.SetTextAutoSize($&quot;{_player.Gold - _additionalGold}&quot;); }
+    _goldLabel.SetTextAutoSize($&quot;{_player.Gold}&quot;);      // 滚完落到真实值
+}</code></pre>
+<table>
+<tr><th>事实</th><th>影响</th></tr>
+<tr><td><b>写字段不会发事件</b></td><td>和血量一样：纯写 <code>_gold</code> 画面不动</td></tr>
+<tr><td><b>刷新是"数字滚动动画"</b></td><td>直接调 <code>UpdateGold</code> 且 delta=90 万时，要<b>滚 5 小时</b>，还会把 <code>_alreadyRunning</code> 卡死</td></tr>
+<tr><td><b><code>UpdateGold</code> 在 ClrMD 里常报 <code>0xFFFF…</code></b>（未 JIT）</td><td>要另找入口：<b>从 <code>GoldChanged</code> 委托对象里抠</b></td></tr>
+<tr><td><b>动画最后一行读实时字段</b></td><td>所以"先把 <code>_currentGold</code> 设成 目标-1"就能让 delta=1，一帧滚完</td></tr>
+</table>
+<h4>2.1 委托内存布局（关键的"备用法门"）</h4>
+<pre><code>System.Delegate（.NET 9）：
+  +0x00 MethodTable
+  +0x08 _target        ← 订阅者对象（这里就是顶栏金币节点）
+  +0x10 _methodPtr
+  +0x18 _methodPtrAux  ← 本项目这里才是真入口（_methodPtr 为 0）</code></pre>
+<p><code>Player.GoldChanged</code> 字段真实偏移 <b>0x40</b>（ClrMD 报 0x38，+8）。</p>
+<h3>3. 我是怎么做的（真实输出）</h3>
+<pre><code>$ dotnet run -- &lt;pid&gt; 4 31        # 第2个参数=能量锁值, 第3个=开关掩码(31=全开)
+[2] 找对象/字段/方法
+  Player    = 0x229A942DC50
+  Creature  = 0x229A942DEB0   hp=38/82  block=0
+  Combat    = 0x229A94B6D28   energy=4  stars=0
+  Gold      = 9998808
+  UI nodes  : hp=0x229A942BE48 gold=0x229A942CF68 energy=0x229A94B73A0 star=0x229A94B35A8
+  methods   : UpdateHealth=0x7FFD057B0C80 UpdateGold=0x7FFD0580A2A0 RefreshLabel=0x7FFD057D2C10 StarVisible=0x7FFD057D1F60 set_Block=0x7FFD057A1010 _Process=0x7FFD05713EC0
+[3] 开关变量区 0x1F0B8E30000
+[4] 装帧钩子（挂点 NTargetManager._Process）
+  帧钩子: 挂点 0x7FFD05713EC0 → 代码洞 0x7FFD05BE0000（310 字节，4 个动作）
+[5] 装护盾 setter 钩子（Creature.set_Block）
+  setter 钩子: 0x7FFD057A1010 → 代码洞 0x7FFD05BF0000（this==0x229A942E218 时 edx=9999）
+  初始开关 mask=31 → 血:开 盾:开 能量:开 星星:开 金币:开
+
+================= 热键 =================
+  Num 1       无限血      当前 38/9999
+  Num 2       无限护盾    当前 0
+  Num 3       无限能量    锁定 4
+  Num 4       无限星星    锁定 99
+  Ctrl+Num 1  金币锁      锁定 9999999
+  Q           退出（自动还原补丁）
+=======================================</code></pre>
+<p>画面：顶栏金币 <code>9999999</code>、血量 <code>9999/9999</code>、能量 <code>4/4</code>、星星 <code>99</code>，游戏稳定不崩。</p>
+<p>验证（把金币强行写成 1）：</p>
+<pre><code># 用本仓库完整工具（教程工程里也可加同样的 poke 命令）
+dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; pokegold 1</code></pre>
+<pre><code>写入前 gold=9999999
+已强行写成 1，立刻回读=1
+600ms 后回读 gold=9999999   ← 被帧钩子补回</code></pre>
+<h3>4. 你该怎么做（在 Trainer 里加"金币锁"）</h3>
+<h4>4.1 六步配方（以后每个功能都照这个做）</h4>
+<pre><code>① 反编译里找到&quot;谁显示这个数字&quot;（NTopBarGold）→ 记下刷新方法的**真实行为**
+② 用 ClrMD 找到：数据字段偏移 / UI 节点实例 / 刷新方法地址（拿不到就用委托抠）
+③ 在 Game.cs 的常量区登记偏移，在 Resolve() 里找到节点和方法
+④ 在 Program.cs 的 actions 里加一条 Action（含开关变量）
+⑤ 在热键表里加一个键
+⑥ 编译 → 跑 → 看画面 → 强写值验证</code></pre>
+<h4>4.2 第 ③ 步：<code>Game.cs</code> 里要登记的东西</h4>
+<pre><code>// 偏移（真实 = ClrMD 报的 + 8）
+public const int OFF_PLAYER_GOLD = 0xE8;        // Player._gold
+public const int OFF_PLAYER_GOLDCHANGED = 0x40; // Player.GoldChanged（委托）
+public const int OFF_GOLDBAR_CURGOLD = 0x54;    // NTopBarGold._currentGold
+public const int OFF_BAR_PLAYER = 0x58;         // NTopBarGold._player
+
+// Resolve() 里：
+GoldBar = FindNodeOwnedBy(T_GOLDBAR, OFF_BAR_PLAYER, OFF_BAR_PLAYER);
+FnUpdateGold = Method(T_GOLDBAR, &quot;UpdateGold&quot;);
+if (FnUpdateGold == 0) FnUpdateGold = DelegateFn(Player, OFF_PLAYER_GOLDCHANGED, out _);  // ★备用法门</code></pre>
+<h4>4.3 第 ④ 步：<code>Program.cs</code> 里加一条 Action（<b>这就是"功能本体"</b>）</h4>
+<pre><code>new Hook.Action{
+    Name      = &quot;金币锁&quot;,
+    FlagAddr  = F(1),                                   // 开关变量（1=开 0=关）
+    CheckAddr = g.Player + Game.OFF_PLAYER_GOLD,        // 读这里判断
+    Target    = GOLD_VALUE,                             // 期望 9999999
+    WriteAddr = g.Player + Game.OFF_PLAYER_GOLD,        // 不等于就写回
+    PreAddr   = g.GoldBar + Game.OFF_GOLDBAR_CURGOLD,   // ★调用前把 _currentGold 设成 目标-1
+    PreValue  = GOLD_VALUE - 1,                         //   让&quot;滚动动画&quot;delta=1，一帧滚完
+    CallThis  = g.GoldBar,
+    CallFn    = g.FnUpdateGold,                         // 调刷新方法
+},</code></pre>
+<h4>4.4 第 ⑤ 步：热键</h4>
+<pre><code>// keys 数组里加一项（顺序和 names、state 对应）
+(VK_NUMPAD1, true),      // Ctrl + Num1
+// names 数组里加 &quot;金币锁&quot;</code></pre>
+<p>热键轮询很简单：主线程 <code>while(true)</code> 里每 40ms 用 <code>GetAsyncKeyState(vk)</code> 查一次按键，</p>
+<p><b>只在"从没按到按下"的那一瞬</b>翻转开关变量：<code>Hook.WriteI32(h, F(i), state ? 1 : 0)</code>。</p>
+<blockquote>为什么"开关"只是写一个 int<br>代码洞里每个动作都以 <code>mov rax,开关地址; cmp dword [rax],0; je 跳过</code> 开头。<br>所以开/关功能 = 往那 4 个字节写 1/0，<b>不用重新打补丁</b>，也不会因为反复打补丁把游戏搞崩。</blockquote>
+<h3>5. 验证</h3>
+<table>
+<tr><th>步骤</th><th>命令</th><th>期望</th></tr>
+<tr><td>看字段</td><td>Trainer 启动时打印的 <code>Gold =</code></td><td>等于画面金币</td></tr>
+<tr><td>看画面</td><td>截图顶栏</td><td>金币 <code>9999999</code></td></tr>
+<tr><td>强写验证</td><td><code>pokegold 1</code></td><td>600ms 后回 9999999</td></tr>
+<tr><td>开关验证</td><td>按 <code>Ctrl+Num1</code></td><td>控制台打印 <code>[关] 金币锁</code>，再把金币写成 1 不会被补回</td></tr>
+</table>
+<h3>6. 排错</h3>
+<table>
+<tr><th>现象</th><th>原因</th><th>怎么办</th></tr>
+<tr><td>启动就报 <code>✗ 这个挂点已经被别的补丁占用了</code></td><td>上次 Trainer 被强杀，补丁还在游戏里</td><td><b>重启游戏</b>（或按 09 篇第 13 节把原字节写回）</td></tr>
+<tr><td>金币数字"滚"很久才停</td><td>忘了 <code>PreAddr/PreValue</code> 那一步</td><td>补上：<code>_currentGold = 目标-1</code></td></tr>
+<tr><td><code>UpdateGold=0xFFFF…</code></td><td>方法没 JIT</td><td>用 <code>DelegateFn(Player, 0x40, ...)</code> 从委托抠</td></tr>
+<tr><td>开了功能但画面不变</td><td>挂点没被调用（进战斗才有 <code>NTargetManager</code>）</td><td>进战斗后再开</td></tr>
+<tr><td>一开某项功能游戏就退出</td><td>我们调的刷新方法内部抛异常（裸机器码没有 unwind 信息）</td><td>换更轻的方法（见 13-复刻-无限星星 的踩坑）</td></tr>
+</table>
+<h3>7. 回滚</h3>
+<ul><li>Trainer 里按 <code>Q</code>：会 <code>Hook.Restore()</code> 把两个挂点写回原指令；</li><li>直接关窗口 / 强杀：<b>补丁会留在游戏里</b>，直到重启游戏（内存补丁不落盘，重启即恢复）。</li></ul>
+<h3>8. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>_gold</code> 真实偏移 <b>0xE8</b></td><td>机器码 <code>8B 89 E8 00 00 00</code>（<code>NTopBarGold.Initialize</code>）+ 画面一致</td></tr>
+<tr><td><code>_currentGold</code> <b>0x54</b>、<code>GoldChanged</code> <b>0x40</b></td><td>同上机器码 <code>89 4B 54</code>；委托 <code>_target</code> = 顶栏节点</td></tr>
+<tr><td>委托 <code>_methodPtrAux</code> 可当调用入口</td><td>Trainer 里 <code>UpdateGold</code> 就是这么拿到的，画面立刻变 9999999</td></tr>
+<tr><td>动画 delta 花招有效</td><td><code>_currentGold = 目标-1</code> 后一帧到位，无长时间滚动</td></tr>
+<tr><td>一个帧钩子可挂多个功能且互相独立</td><td>310 字节代码洞、4 个动作 + 1 个 setter 钩子同时生效</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<table>
+<tr><th>结论</th><th>现象</th></tr>
+<tr><td>ClrMD 一定能给 <code>UpdateGold</code> 地址</td><td>常常是 <code>0xFFFFFFFFFFFFFFFF</code>（未 JIT）</td></tr>
+<tr><td>直接调 <code>UpdateGold</code> 刷大额</td><td>delta 90 万 → 每帧滚 75 → 要滚 5 小时</td></tr>
+<tr><td>只写 <code>_gold</code> 就能改画面</td><td>顶栏文字不动（事件没发）</td></tr>
+</table>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>商店真实扣钱后能否立刻补回</td><td>进商店买一张卡，看金币是否掉一下又回满</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（本套教程的起点，含装环境/建工程/反编译）：09-复刻-无限血</li><li>下一篇（用 setter 钩子）：11-复刻-无限护盾</li><li>20 个功能总表：70-拆解-Plus20 Trainer 的 20 个功能与改法</li><li>子库索引：00-杀戮尖塔2 索引 MOC</li></ul>
+
+<h2 id="o">十四、功能篇 3/20：无限护盾</h2>
+<p style="color:#6b7280;font-size:13px">上接：10-复刻-金币无限 · 下接：12-复刻-无限能量</p>
+<blockquote>这篇教第二种钩子：<b>setter 钩子</b><br>前两个功能都是"帧钩子 + 轮询"（每帧检查血/金币，不对就写回去）。<br>护盾能用更漂亮的办法：<code>Creature.set_Block</code> 是<b>有独立机器码的真方法</b>，<br>直接在它入口把"新值"参数 <code>edx</code> 改成 9999 就行 —— <b>事件照发、UI 自动刷、零轮询</b>。<br>热键：<code>Num 2</code></blockquote>
+<hr>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>护盾永远 9999，敌人打不穿；显示在角色血条左边的盾牌数字上</td></tr>
+<tr><td>验收标准</td><td>① 盾牌数字 <code>9999</code> ② 外部把 <code>_block</code> 改成 1，600ms 内回 9999 ③ 敌人<b>不会</b>跟着变 9999</td></tr>
+<tr><td>热键</td><td><code>Num 2</code></td></tr>
+</table>
+<h3>2. 原理：为什么这次能"拦参数"</h3>
+<pre><code>// Creature.cs:44
+public int Block
+{
+    get =&gt; _block;
+    private set
+    {
+        if (value &lt; 0) throw new ArgumentException(&quot;Block must be positive&quot;, &quot;value&quot;);
+        if (_block != value) { int b = _block; _block = value; this.BlockChanged?.Invoke(b, _block); }
+    }
+}
+// 护盾被打：Creature.cs:430
+public decimal DamageBlockInternal(decimal amount, ValueProp props)
+{ decimal num = (props.HasFlag(ValueProp.Unblockable) ? 0m : Math.Min(Block, amount)); Block -= (int)num; ... }</code></pre>
+<ul><li>所有护盾变化最终都走 <code>set_Block</code> ⇒ <b>拦它一个就够</b>。</li><li>它是"值从参数进来"的方法 ⇒ 把 <code>edx</code>（第 2 个参数）改成 9999，方法自己会：写字段 → 值变了 → 发 <code>BlockChanged</code> → UI 自动更新。</li></ul>
+<blockquote>为什么 <code>set_Block</code> 能挂、<code>set_CurrentHp</code> 不能<br>两者代码几乎一样，但 <code>set_CurrentHp</code> 的所有调用点被 JIT <b>内联</b>了（ClrMD 报 <code>0xFFFFFFFFFFFFFFFF</code>，没有独立机器码）；<br><code>set_Block</code> 调用点多、函数体更大，JIT <b>保留成独立方法</b> ⇒ 入口存在，可以挂。<br>判断办法：<code>Game.Method(...)</code> 返回 0 就是挂不了。</blockquote>
+<h4>2.1 setter 钩子长什么样</h4>
+<pre><code>; 挂在 Creature.set_Block 入口（原 6 字节：56 53 48 83 EC 28 = push rsi;push rbx;sub rsp,28h）
+50                        push rax
+48 B8 &lt;开关变量地址&gt;       mov  rax,&amp;flag
+83 38 00                  cmp  dword [rax],0
+74 xx                     je   原样执行              ; 功能关着 → 什么都不做
+48 B8 &lt;玩家Creature&gt;       mov  rax,玩家Creature
+48 39 C1                  cmp  rcx,rax
+75 xx                     jne  原样执行              ; 不是玩家 → 放行（敌人/宠物不受影响）
+BA 0F 27 00 00            mov  edx,9999             ; ★把&quot;新护盾值&quot;改成 9999
+原样执行:
+58                        pop  rax
+56 53 48 83 EC 28         原 6 字节（补回来）
+E9 &lt;rel32&gt;                jmp  回 set_Block+6</code></pre>
+<h3>3. 我是怎么做的（真实输出）</h3>
+<pre><code>[5] 装护盾 setter 钩子（Creature.set_Block）
+  setter 钩子: 0x7FFD057A1010 → 代码洞 0x7FFD05BF0000（this==0x229A942E218 时 edx=9999）
+  初始开关 mask=31 → 血:开 盾:开 能量:开 星星:开 金币:开</code></pre>
+<p>验证（强写护盾）：</p>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; pokesh 1</code></pre>
+<pre><code>写入前 block=9999
+已强行写成 1，立刻回读=1
+600ms 后回读 block=9999   ← 被 set_Block 钩子补回</code></pre>
+<p>画面：角色血条左边金色盾牌 <b>9999</b>；敌人（234/234）没有盾牌数字 ⇒ this 门禁有效。</p>
+<h3>4. 你该怎么做（在 Trainer 里加 setter 钩子）</h3>
+<h4>4.1 第 ①-③ 步：确认方法可挂 + 登记</h4>
+<pre><code># 用完整工具确认它有独立机器码（不是 0xFFFF）
+dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Entities.Creatures.Creature set_Block</code></pre>
+<pre><code>Creature::set_Block native=0x7FF7CA3C3950
+  bytes: 56 53 48 83 EC 28 85 D2 7C 3C 44 8B 81 80 00 00 00 ...
+         └push rsi/push rbx/sub rsp,28h┘ └test edx,edx;jl┘ └mov r8d,[rcx+80h]┘</code></pre>
+<p>一次读三种信息：① 序言 6 字节可整段覆盖 ② <code>[rcx+0x80]</code> 就是 <code>_block</code>（ClrMD 报 0x78，<b>+8</b>）③ 事件委托在 <code>[rcx+0x08]</code>。</p>
+<p><code>Game.cs</code> 里登记：</p>
+<pre><code>public const int OFF_BLOCK = 0x80;   // Creature._block
+// Resolve() 里：
+FnSetBlock = Method(T_CREATURE, &quot;set_Block&quot;);</code></pre>
+<h4>4.2 第 ④ 步：装钩子（<code>Program.cs</code>）</h4>
+<pre><code>// 护盾不用&quot;帧动作&quot;，直接装 setter 钩子；开关变量用 F(4)
+var blockOrig = Hook.InstallSetterHook(h, g.FnSetBlock, g.Creature, SHIELD_VALUE, F(4));</code></pre>
+<p><code>Hook.InstallSetterHook</code> 干的事：</p>
+<ol><li>读入口 16 字节 → <code>PrologueLen()</code> 算出能覆盖 ≥5 字节的整指令长度（这里 6）</li><li>附近分配代码洞 → 拼上面那段机器码</li><li>把入口前 n 字节改成 <code>E9 &lt;rel32&gt; + nop…</code>，<code>FlushInstructionCache</code></li><li>返回<b>原始字节</b>，退出时 <code>Hook.Restore()</code> 写回去</li></ol>
+<h4>4.3 第 ⑤ 步：热键</h4>
+<pre><code>(VK_NUMPAD2, false),   // Num 2 → 护盾</code></pre>
+<h4>4.4 为什么还要"帧钩子的第 5 个动作"？</h4>
+<p>护盾初始是 0，<code>set_Block</code> 只在"值变了"时发事件 ⇒ 界面一开始没有盾牌。</p>
+<p>所以本项目里还有一条<b>踢一脚</b>的动作（<code>FlagAddr=F(4)</code>，<code>CheckAddr=_block</code>，<code>WriteAddr=0</code>，<code>CallFn=set_Block</code>），</p>
+<p>它发现护盾不是 9999 就<b>调一次 <code>set_Block</code></b> 让 setter 自己写 + 发事件。</p>
+<blockquote>注意别写成死循环<br>如果这条动作"先写字段再调 set_Block"，setter 会看到值没变直接 return，事件永远不发；<br>正确做法是 <b><code>WriteAddr = 0</code></b>（不写），把写入交给 <code>set_Block</code> 自己做。</blockquote>
+<h3>5. 验证</h3>
+<table>
+<tr><th>步骤</th><th>命令/操作</th><th>期望</th></tr>
+<tr><td>看画面</td><td>截图血条左侧</td><td>盾牌 <code>9999</code></td></tr>
+<tr><td>强写</td><td><code>pokesh 1</code></td><td>600ms 后回 9999</td></tr>
+<tr><td>敌人对照</td><td>看敌人血条</td><td><b>没有</b>盾牌数字</td></tr>
+<tr><td>开关</td><td>按 <code>Num 2</code></td><td>控制台 <code>[关] 无限护盾</code>；再强写就不会被补回</td></tr>
+</table>
+<h3>6. 排错</h3>
+<table>
+<tr><th>现象</th><th>原因</th><th>怎么办</th></tr>
+<tr><td><code>FnSetBlock = 0</code></td><td>方法没 JIT（这一局还没人加过护盾）</td><td>进战斗打一回合再来</td></tr>
+<tr><td>盾牌数字出来了但敌人也有</td><td>this 门禁没写对</td><td>检查 <code>cmp rcx,rax</code> 那两行</td></tr>
+<tr><td>装完盾牌不显示</td><td>少了"踢一脚"的动作</td><td>加 <code>WriteAddr=0</code> 的帧动作</td></tr>
+<tr><td>一开就崩</td><td>代码洞没保存 <code>rax</code></td><td>入口 <code>push rax</code>、出口 <code>pop rax</code>（本项目已带）</td></tr>
+</table>
+<h3>7. 回滚</h3>
+<p>按 <code>Q</code>（会 <code>Restore</code> 两个挂点）；强杀则重启游戏。</p>
+<h3>8. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>set_Block</code> 有独立机器码，可挂</td><td><code>native</code> 非 0；入口 <code>56 53 48 83 EC 28</code></td></tr>
+<tr><td><code>_block</code> 真实偏移 <b>0x80</b></td><td>机器码 <code>44 8B 81 80 00 00 00</code> / <code>89 91 80 00 00 00</code></td></tr>
+<tr><td>this 门禁有效</td><td>装上后只有玩家出现盾牌 9999</td></tr>
+<tr><td>强写护盾会被补回</td><td><code>pokesh 1</code> → 600ms 回 9999</td></tr>
+<tr><td>setter 钩子 + 帧钩子可共存</td><td>同一进程里 4 个帧动作 + 1 个 setter 钩子稳定运行</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<table>
+<tr><th>结论</th><th>现象</th></tr>
+<tr><td><code>set_CurrentHp</code> 也能用同样办法挂</td><td>它是 <code>0xFFFF…</code>（被内联），只有没被内联的 setter 才行</td></tr>
+<tr><td>只写 <code>_block</code> 就长期有效</td><td>下一次 <code>set_Block</code>（清空/消耗）会覆盖掉</td></tr>
+</table>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>敌人真打过来时护盾不掉</td><td>结束一回合让敌人攻击，看盾牌是否保持 9999</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（帧钩子 / 轮询）：10-复刻-金币无限</li><li>为什么有的 setter 挂不了：09-复刻-无限血</li><li>20 个功能总表：70-拆解-Plus20 Trainer 的 20 个功能与改法</li><li>子库索引：00-杀戮尖塔2 索引 MOC</li></ul>
+
+<h2 id="p">十五、功能篇 4/20：无限能量</h2>
+<p style="color:#6b7280;font-size:13px">上接：11-复刻-无限护盾 · 下接：13-复刻-无限星星</p>
+<blockquote>这篇的核心是<b>一个判断</b>：类里有一堆 <code>XxxChanged</code> 回调，但<b>改文字的不一定是它</b><br>能量只有 3 个相关方法：<code>OnEnergyChanged</code>（事件回调，只放特效）、<code>RefreshLabel</code>（真正 <code>SetTextAutoSize</code>）、<code>_Process</code>（只转圈）。<br>调错了 = 白忙。所以第 3 节教你<b>怎么在反编译里一眼认出哪个是刷新方法</b>。<br>热键：<code>Num 3</code></blockquote>
+<hr>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>能量永远满，出牌不消耗；左下能量球数字同步</td></tr>
+<tr><td>验收标准</td><td>① 能量球显示 <code>4/4</code> ② 外部把 <code>_energy</code> 写成 0，600ms 内回 4 ③ 与其它功能同时生效</td></tr>
+<tr><td>热键</td><td><code>Num 3</code>（锁定值 = 启动时读到/命令行指定，默认取"界面上的上限"）</td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// ① 数据：PlayerCombatState.cs:90
+public int Energy { get =&gt; _energy; private set { if (_energy != value) { ... EnergyChanged?.Invoke(old,new); } } }
+
+// ② 扣能量入口：PlayerCombatState.cs:178
+public void LoseEnergy(decimal amount) { if (amount &lt; 0m) throw ...; Energy = (int)Math.Clamp((decimal)Energy - amount, 0m, 999999999m); }
+
+// ③ 事件回调（★它不刷数字！）：NEnergyCounter.cs:235
+private void OnEnergyChanged(int oldEnergy, int newEnergy)
+{ if (oldEnergy &lt; newEnergy) { _backVfx?.Restart(); _frontVfx?.Restart(); } }
+
+// ④ 真正刷数字的：NEnergyCounter.cs:217
+private void RefreshLabel()
+{
+    var pcs = _player.PlayerCombatState;
+    _label.SetTextAutoSize($&quot;{pcs.Energy}/{pcs.MaxEnergy}&quot;);   // ← 读实时字段
+    ...
+}
+
+// ⑤ 每帧只转圈，不刷数字：NEnergyCounter.cs:244
+public override void _Process(double delta) { float num = (Energy == 0) ? 5f : 30f; ...RotationDegrees += ... }
+
+// ⑥ 上限是算出来的，不是字段！
+public int MaxEnergy =&gt; (int)Hook.ModifyMaxEnergy(_player.Creature.CombatState, _player, _player.MaxEnergy);</code></pre>
+<h4>2.1 怎么一眼认出"哪个方法才刷文字"</h4>
+<p>在 ILSpy 里打开这个类，按 <code>Ctrl+F</code> 搜 <b><code>SetTextAutoSize</code></b> 或 <b><code>Text =</code></b>：</p>
+<ul><li>命中的那个方法 = 真正改文字的方法（这里是 <code>RefreshLabel</code>）</li><li>只在 <code>if (oldEnergy &lt; newEnergy)</code> 里放特效的 = 没用，别调</li><li>记住：<b>"名字里带 Changed" 不等于 "刷新 UI"</b></li></ul>
+<h4>2.2 上限是算出来的：锁值该填多少</h4>
+<table>
+<tr><th>来源</th><th>值</th></tr>
+<tr><td>字段 <code>Player.MaxEnergy</code>（ClrMD 0xE8 → 真实 0xF0）</td><td><b>3</b></td></tr>
+<tr><td>界面上显示的 <code>x/4</code></td><td><b>4</b>（有遗物通过 <code>Hook.ModifyMaxEnergy</code> 加了 1）</td></tr>
+</table>
+<p>所以锁值要用"界面上的上限"。本项目默认 <code>max(4, 当前能量)</code>，也可以用命令行第 2 个参数指定。</p>
+<h3>3. 我是怎么做的（真实输出）</h3>
+<pre><code>methods   : UpdateHealth=0x7FFD057B0C80 UpdateGold=0x7FFD0580A2A0 RefreshLabel=0x7FFD057D2C10 ...
+  Num 3       无限能量    锁定 4</code></pre>
+<p>验证（强写能量）：</p>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; pokeenergy 0</code></pre>
+<pre><code>写入前 energy=4
+已强行写成 0，立刻回读=0
+600ms 后回读 energy=4   ← 被帧钩子补回</code></pre>
+<p>画面：左下能量球 <code>4/4</code>（<code>shots\f04_energy_zoom.png</code>）。</p>
+<h3>4. 你该怎么做（在 Trainer 里加"能量锁"）</h3>
+<h4>4.1 登记（<code>Game.cs</code>）</h4>
+<pre><code>public const int OFF_PCS_ENERGY = 0x68;   // PlayerCombatState._energy（ClrMD 0x60 + 8）
+public const int OFF_PLAYER_PCS = 0x98;   // Player.&lt;PlayerCombatState&gt;（ClrMD 0x90 + 8）
+public const int OFF_COUNTER_PLAYER = 0x20; // NEnergyCounter._player（ClrMD 0x18 + 8）
+
+// Resolve() 里：
+Pcs = (ulong)ReadI64(Player + OFF_PLAYER_PCS);
+EnergyUi = FindNodeOwnedBy(T_ENERGY, OFF_COUNTER_PLAYER, OFF_COUNTER_PLAYER);
+FnRefreshLabel = Method(T_ENERGY, &quot;RefreshLabel&quot;);</code></pre>
+<h4>4.2 加一条 Action（<code>Program.cs</code>）</h4>
+<pre><code>new Hook.Action{
+    Name      = &quot;无限能量&quot;,
+    FlagAddr  = F(2),                       // Num 3 → 开关
+    CheckAddr = g.Pcs + Game.OFF_PCS_ENERGY,
+    Target    = energyLock,                 // 锁定值（界面上限）
+    WriteAddr = g.Pcs + Game.OFF_PCS_ENERGY,
+    CallThis  = g.EnergyUi,                 // NEnergyCounter 实例
+    CallFn    = g.FnRefreshLabel,           // ★RefreshLabel，不是 OnEnergyChanged
+},</code></pre>
+<h4>4.3 热键</h4>
+<pre><code>(VK_NUMPAD3, false),   // Num 3</code></pre>
+<h3>5. 验证</h3>
+<table>
+<tr><th>步骤</th><th>命令/操作</th><th>期望</th></tr>
+<tr><td>字段</td><td>Trainer 打印 <code>Combat = ... energy=4</code></td><td>与画面一致</td></tr>
+<tr><td>画面</td><td>截图左下能量球</td><td><code>4/4</code></td></tr>
+<tr><td>强写</td><td><code>pokeenergy 0</code></td><td>600ms 后回 4</td></tr>
+<tr><td>开关</td><td><code>Num 3</code></td><td><code>[关] 无限能量</code>；此时强写不会被补回</td></tr>
+</table>
+<h3>6. 排错</h3>
+<table>
+<tr><th>现象</th><th>原因</th><th>怎么办</th></tr>
+<tr><td>开了功能但数字不动</td><td>调了 <code>OnEnergyChanged</code>（它只放特效）</td><td>换成 <code>RefreshLabel</code></td></tr>
+<tr><td>显示 <code>3/4</code> 很怪</td><td>锁值取了字段 <code>Player.MaxEnergy</code>（=3）</td><td>用界面上的上限（4）</td></tr>
+<tr><td>一开就崩</td><td>调的刷新方法内部抛异常</td><td>见 13-复刻-无限星星 的排查与替代法</td></tr>
+<tr><td><code>RefreshLabel=0</code></td><td>没 JIT</td><td>进战斗打一张牌后再装</td></tr>
+</table>
+<h3>7. 回滚</h3>
+<p>按 <code>Q</code> 还原补丁；强杀则重启游戏。</p>
+<h3>8. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>_energy</code> 真实偏移 <b>0x68</b></td><td>字段 dump + 锁值后界面同步</td></tr>
+<tr><td>刷数字的是 <code>RefreshLabel</code>，不是 <code>OnEnergyChanged</code></td><td>反编译 <code>NEnergyCounter.cs:217 / 235</code></td></tr>
+<tr><td>锁字段 + 调 <code>RefreshLabel</code> 能上屏</td><td>能量球 <code>4/4</code></td></tr>
+<tr><td>强写 0 会 600ms 内回满</td><td><code>pokeenergy 0</code></td></tr>
+<tr><td>上限是算出来的</td><td>字段 3 / 界面 4</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<table>
+<tr><th>结论</th><th>现象</th></tr>
+<tr><td>调 <code>OnEnergyChanged</code> 能刷数字</td><td>只放粒子特效，文字不动</td></tr>
+<tr><td>用字段 <code>Player.MaxEnergy</code> 当锁值</td><td>显示 <code>3/4</code>，很怪</td></tr>
+</table>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>真打出一张牌时能量不掉</td><td>拖拽出牌的自动化在这台机器上没打通，需人工打一张</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（setter 钩子）：11-复刻-无限护盾</li><li>下一篇（把"刷新方法选错"讲透）：13-复刻-无限星星</li><li>20 个功能总表：70-拆解-Plus20 Trainer 的 20 个功能与改法</li><li>子库索引：00-杀戮尖塔2 索引 MOC</li></ul>
+
+<h2 id="q">十六、功能篇 5/20：无限星星</h2>
+<p style="color:#6b7280;font-size:13px">上接：12-复刻-无限能量 · 下接：00-杀戮尖塔2 索引 MOC</p>
+<blockquote>这篇除了做功能，还讲一个<b>血泪教训</b><br>我在 Trainer 里打开"无限星星"的瞬间，<b>游戏进程直接消失</b>，没有任何托管异常日志。<br>根因：我们的代码洞里"调用游戏方法"时，如果那个方法<b>抛异常</b>，异常穿不过我们这段<b>没有 unwind 信息</b>的裸机器码 ⇒ 进程被杀。<br>结论：<b>代码洞里只调"最轻、最不可能抛"的方法</b>。这篇教你怎么判断和替换。<br>热键：<code>Num 4</code></blockquote>
+<hr>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>星星锁在 99，星费卡永远够用；左下金色星星显示 99</td></tr>
+<tr><td>验收标准</td><td>① 星星图标出现并显示 <code>99</code> ② 外部把 <code>_stars</code> 写成 0，600ms 内回 99 ③ 游戏不崩</td></tr>
+<tr><td>热键</td><td><code>Num 4</code></td></tr>
+</table>
+<h3>2. 原理：三层，三种刷新方式</h3>
+<pre><code>// ① PlayerCombatState._stars（ClrMD 0x64 → 真实 0x6C）
+public int Stars { get =&gt; _stars; private set { if (_stars != value) { ... StarsChanged?.Invoke(old,new); } } }
+
+// ② NStarCounter._Process：★每帧轮询刷数字（和血/金/能量相反！）
+public override void _Process(double delta)
+{
+    _lerpingStarCount = MathHelper.SmoothDamp(_lerpingStarCount, _player.PlayerCombatState.Stars, ref _velocity, 0.1f, delta);
+    SetStarCountText(Mathf.RoundToInt(_lerpingStarCount));      // ← 数字自己会刷
+}
+
+// ③ 但&quot;显隐&quot;只在事件里更新
+private void OnStarsChanged(int oldStars, int newStars) { UpdateStarCount(old,new); RefreshVisibility(); }
+
+// ④ ★RefreshVisibility 很轻，只碰 Visible
+private void RefreshVisibility()
+{
+    if (_player == null) { base.Visible = false; return; }
+    int stars = _player.PlayerCombatState.Stars;
+    base.Visible = base.Visible || _player.Character.ShouldAlwaysShowStarCounter || stars &gt; 0;
+}
+
+// ⑤ 而 OnStarsChanged 会走 UpdateStarCount → SetStarCountText → 碰 _hsv（ShaderMaterial）
+private void SetStarCountText(int stars)
+{
+    if (_displayedStarCount != stars)
+    {
+        _displayedStarCount = stars;
+        _label.AddThemeColorOverride(...);
+        _label.Text = $&quot;[center]{stars}[/center]&quot;;
+        if (stars == 0) { _hsv.SetShaderParameter(_s, 0.5f); ... }   // ← _hsv 某些时刻是 null
+        else { _hsv.SetShaderParameter(_s, 1f); ... }
+    }
+}</code></pre>
+<h4>2.1 崩溃现场（真实）</h4>
+<pre><code>$ python tools\f01_drive.py key 0x64      # 按 Num 4 打开&quot;无限星星&quot;
+游戏存活: False
+trainer 日志: [开] 无限星星
+游戏日志: 无异常、无堆栈 —— 进程直接没了</code></pre>
+<h4>2.2 为什么会这样</h4>
+<pre><code>我们的代码洞 = 手写的机器码，没有 .NET 的&quot;异常展开信息(unwind info)&quot;
+游戏方法内部抛出 NullReferenceException（_hsv 为 null）
+  → CLR 要往上找谁来 catch
+  → 展开到我们这段裸机器码时找不到帧信息
+  → 直接 FailFast / 访问违例：进程被终止</code></pre>
+<h4>2.3 解法：把"调用目标"换成最轻的那个</h4>
+<table>
+<tr><th>候选</th><th>做了什么</th><th>安全性</th></tr>
+<tr><td><code>OnStarsChanged(old,new)</code></td><td>动画 + 刷文字 + 刷显隐（碰 <code>_hsv</code>）</td><td>✗ 会抛 NRE</td></tr>
+<tr><td><code>SetStarCountText(int)</code></td><td>刷文字 + 碰 <code>_hsv</code></td><td>✗ 同样危险</td></tr>
+<tr><td><b><code>RefreshVisibility()</code></b></td><td><b>只碰 <code>Visible</code></b></td><td>✅ 本项目最终用它</td></tr>
+<tr><td>不调（只写字段）</td><td>——</td><td>✅ 但星星图标可能一直不显示（显隐没刷新过）</td></tr>
+</table>
+<p>数字本来由 <code>_Process</code> 每帧刷，所以我们只需要"让它显形" ⇒ 调 <code>RefreshVisibility</code> 就够。</p>
+<h3>3. 我是怎么做的（修复后的真实结果）</h3>
+<pre><code>methods   : ... StarVisible=0x7FFD057D1F60 ...
+  Num 4       无限星星    锁定 99</code></pre>
+<p>画面：左下能量球左边出现<b>金色星星 99</b>（<code>shots\f05_stars_99_zoom.png</code>）；按键开关反复切换，游戏稳定。</p>
+<p>验证（强写星星）：</p>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; pokestar 0</code></pre>
+<pre><code>写入前 stars=99 → 强行写成 0 → 600ms 后回读 stars=99</code></pre>
+<h3>4. 你该怎么做（在 Trainer 里加"无限星星"）</h3>
+<h4>4.1 登记（<code>Game.cs</code>）</h4>
+<pre><code>public const int OFF_PCS_STARS = 0x6C;          // PlayerCombatState._stars（ClrMD 0x64 + 8）
+public const int OFF_PCS_STARSCHANGED = 0x30;   // StarsChanged 委托（ClrMD 0x28 + 8）
+
+StarUi = FindNodeOwnedBy(T_STAR, OFF_COUNTER_PLAYER, OFF_COUNTER_PLAYER);
+FnStarVisible = Method(T_STAR, &quot;RefreshVisibility&quot;);       // ★优先用轻的
+FnOnStarsChanged = Method(T_STAR, &quot;OnStarsChanged&quot;);       // 备查（不安全）
+if (FnOnStarsChanged == 0) FnOnStarsChanged = DelegateFn(Pcs, OFF_PCS_STARSCHANGED, out _);</code></pre>
+<blockquote>又一个"委托取入口"的用处<br><code>OnStarsChanged</code> 常常是 <code>0xFFFF…</code>（未 JIT）。这时读 <code>PlayerCombatState.StarsChanged</code>（真实偏移 <b>0x30</b>）的委托对象，<br><code>+0x08</code> 是 <code>_target</code>（真正在场景里的那个节点），<code>+0x18</code> 是入口。<b>调一次 precode 还会促使它 JIT</b>，下次 ClrMD 就能直接查到。</blockquote>
+<h4>4.2 加一条 Action（<code>Program.cs</code>）</h4>
+<pre><code>new Hook.Action{
+    Name      = &quot;无限星星&quot;,
+    FlagAddr  = F(3),                        // Num 4
+    CheckAddr = g.Pcs + Game.OFF_PCS_STARS,
+    Target    = STAR_VALUE,                  // 99
+    WriteAddr = g.Pcs + Game.OFF_PCS_STARS,
+    CallThis  = g.StarUi,
+    CallFn    = g.FnStarVisible,             // ★RefreshVisibility（不要用 OnStarsChanged）
+},</code></pre>
+<h4>4.3 热键</h4>
+<pre><code>(VK_NUMPAD4, false),   // Num 4</code></pre>
+<h3>5. 验证</h3>
+<table>
+<tr><th>步骤</th><th>命令/操作</th><th>期望</th></tr>
+<tr><td>画面</td><td>截图左下</td><td>金色星星 <code>99</code></td></tr>
+<tr><td>强写</td><td><code>pokestar 0</code></td><td>600ms 后回 99</td></tr>
+<tr><td>开关</td><td><code>Num 4</code> 反复按几次</td><td>控制台 <code>[关]/[开]</code>，<b>游戏不死</b></td></tr>
+</table>
+<h3>6. 排错</h3>
+<table>
+<tr><th>现象</th><th>原因</th><th>怎么办</th></tr>
+<tr><td>一开星星游戏就消失（无日志）</td><td>代码洞里调到了会抛异常的方法</td><td>换成 <code>RefreshVisibility</code>；见 2.3 表格</td></tr>
+<tr><td>数字不出现</td><td>只写了字段、显隐没刷新</td><td>补一次"轻量调用"</td></tr>
+<tr><td>数字出现但不是 99</td><td><code>_Process</code> 用 SmoothDamp 追值</td><td>等 0.3~1 秒自然追上</td></tr>
+<tr><td><code>StarVisible=0</code></td><td>方法没 JIT</td><td>进战斗后再装，或改用委托法</td></tr>
+</table>
+<h3>7. 回滚</h3>
+<p>按 <code>Q</code> 还原补丁；强杀则重启游戏（补丁不落盘）。</p>
+<h3>8. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>_stars</code> 真实偏移 <b>0x6C</b>、<code>StarsChanged</code> 委托 <b>0x30</b></td><td>字段/委托 dump + 显示 99</td></tr>
+<tr><td>星星数字是<b>每帧轮询</b>刷的</td><td><code>NStarCounter._Process</code> 里 <code>SmoothDamp</code> + <code>SetStarCountText</code></td></tr>
+<tr><td>显隐靠事件 ⇒ 只写字段不显示</td><td>只写 3 时画面无星星；换 <code>RefreshVisibility</code> 后出现</td></tr>
+<tr><td><b>代码洞里调"会抛异常的方法"会直接崩进程</b></td><td>打开 OnStarsChanged 版本后游戏瞬间消失，无异常日志</td></tr>
+<tr><td>换成 <code>RefreshVisibility</code> 就稳定</td><td>反复开关 5 次以上不崩</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<table>
+<tr><th>结论</th><th>现象</th></tr>
+<tr><td>只写 <code>_stars</code> 就能让星星出现</td><td>数值进去了，图标不显示</td></tr>
+<tr><td>所有 HUD 都是纯事件驱动</td><td>星星数字是每帧轮询</td></tr>
+<tr><td>代码洞里调任何托管方法都安全</td><td>只要目标方法抛异常，进程就死（裸机器码没有 unwind 信息）</td></tr>
+</table>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>打星费卡时星星不掉</td><td>需要星费卡组/角色，人工打一张</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（刷新方法选错）：12-复刻-无限能量</li><li>委托取入口的出处：10-复刻-金币无限</li><li>代码洞基本写法（保存寄存器/栈对齐）：09-复刻-无限血</li><li>子库索引：00-杀戮尖塔2 索引 MOC</li></ul>
+
+<h2 id="r">十七、功能篇 6/20：奖励必给药水</h2>
+<p style="color:#6b7280;font-size:13px">上接：13-复刻-无限星星 · 下接：15-复刻-卡牌奖励必升级</p>
+<blockquote>这一篇教第三种钩子：<b>强制返回</b><br>前两个功能用了"帧钩子（轮询写字段）"和"setter 钩子（改参数）"。<br>奖励类功能大多是 <code>bool / int / enum</code> 的"算一下返回个决定"——<br>最省事也最安全的做法：<b>在入口直接 <code>mov eax,值; ret</code></b>，连原方法体都不执行。<br>好处：不调任何托管方法 ⇒ 没有"异常穿过代码洞把进程搞死"的风险（对比 13-复刻-无限星星 的血案）。<br>热键：<code>Num 5</code></blockquote>
+<hr>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>战斗结束后，奖励里<b>一定有药水</b></td></tr>
+<tr><td>验收标准</td><td>① 打完一场，奖励面板出现"药水" ② 连打两场都有 ③ 关掉热键后恢复正常概率</td></tr>
+<tr><td>热键</td><td><code>Num 5</code></td></tr>
+</table>
+<h3>2. 原理：药水是怎么"掷骰子"的</h3>
+<pre><code>// MegaCrit.Sts2.Core.Odds/PotionRewardOdds.cs
+public bool Roll(Player player, AscensionManager ascensionManager, RoomType roomType)
+{
+    float currentValue = base.CurrentValue;                                     // 基础概率 0.4
+    bool flag = Hook.ShouldForcePotionReward(player.RunState, player, roomType);
+    float num  = ((roomType != RoomType.Elite) ? 0f : 0.25f);                    // 精英加成
+    float num3 = currentValue + num * 0.5f;
+    float num4 = _rng.NextFloat();
+    if (flag || num4 &lt; num3) { base.CurrentValue -= 0.1f; return true; }         // ← 给药水
+    base.CurrentValue += 0.1f;  return false;                                   // ← 不给
+}</code></pre>
+<table>
+<tr><th>做法</th><th>效果</th><th>风险</th></tr>
+<tr><td>改 <code>CurrentValue</code> 字段</td><td>只是"概率高一点"（还有 pity 往回拉）</td><td>不绝对</td></tr>
+<tr><td><b>入口 <code>mov eax,1; ret</code></b></td><td><b>恒返回 true = 必给</b></td><td>零（不执行原方法体）</td></tr>
+</table>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① ILSpy 里 Ctrl+F 搜 &quot;potion&quot;（选 All）
+   → 命中 MegaCrit.Sts2.Core.Odds.PotionRewardOdds
+② 类里只有一个&quot;掷骰子&quot;方法：public bool Roll(Player, AscensionManager, RoomType)
+   → 返回 bool ⇒ 典型&quot;强制返回&quot;目标
+③ 搜 &quot;Roll(&quot; 的调用点 → 确认战斗结算时用它决定奖励里放不放药水
+④ ClrMD 看有没有机器码</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Odds.PotionRewardOdds Roll</code></pre>
+<p><b>两种结果都要会处理</b>：</p>
+<pre><code>A. native=0x7FF7xxxxxxxx              → 直接挂
+B. native=0xFFFFFFFFFFFFFFFF          → 还没 JIT（要等第一次算奖励）
+   ⇒ 延迟安装：主循环每 2 秒重查一次，一拿到地址立刻挂上（第一次奖励赶不上，第二次起生效）</code></pre>
+<blockquote>为什么会是 B<br>.NET 是"用到才编译"。<code>Roll</code> 只有"战斗结束算奖励"那一刻才第一次被调用，<br>战斗中途装它时它可能压根还没有机器码。这就是"延迟安装"存在的原因。</blockquote>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<h4>4.1 钩子本体</h4>
+<pre><code>public static byte[] InstallForceReturnHook(IntPtr h, ulong methodAddr, ulong flagAddr, int retValue)
+{
+    var head = Read(h, methodAddr, 16);
+    int n = PrologueLen(head);                        // 覆盖 ≥5 字节的整指令长度
+    var original = new byte[n]; Array.Copy(head, 0, original, 0, n);
+    ulong cave = AllocNear(h, methodAddr, 0x1000);    // E9 只能跳 ±2GB
+
+    var c = new List&lt;byte&gt;();
+    B(0x50);                                  // push rax
+    B(0x48, 0xB8); I64(flagAddr);             // mov rax,&amp;开关
+    B(0x83, 0x38, 0x00);                      // cmp dword [rax],0
+    int jeAt = c.Count; B(0x74, 0x00);        // je  原样
+    B(0x58);                                  // pop rax
+    B(0xB8); I32(retValue);                   // mov eax,返回值
+    B(0xC3);                                  // ret        ← 直接返回
+    int origAt = c.Count;
+    c[jeAt + 1] = (byte)(origAt - (jeAt + 2));
+    foreach (var b in original) B(b);         // 原样路径
+    B(0xE9); I32(back);                       // jmp 回 方法+n
+
+    WriteProcessMemory(h, cave, code);
+    Patch(h, methodAddr, cave, n);            // 入口改 E9 + nop…
+    return original;                          // 退出时还原用
+}</code></pre>
+<p>生成的机器码：</p>
+<pre><code>50                 push rax
+48 B8 &lt;&amp;flag&gt;      mov  rax,&amp;开关
+83 38 00           cmp  dword [rax],0
+74 07              je   原样
+58                 pop  rax
+B8 01 00 00 00     mov  eax,1        ; true
+C3                 ret
+原样: &lt;原 n 字节&gt; ; E9 跳回</code></pre>
+<h4>4.2 接入 Trainer（三处）</h4>
+<pre><code>// ① Game.cs
+public const string T_POTIONODDS = &quot;MegaCrit.Sts2.Core.Odds.PotionRewardOdds&quot;;
+public ulong FnPotionRoll = Method(T_POTIONODDS, &quot;Roll&quot;);      // 可能是 0（未 JIT）
+
+// ② Program.cs：先试一次
+var potionOrig = g.FnPotionRoll &gt;= 0x10000
+    ? Hook.InstallForceReturnHook(h, g.FnPotionRoll, F(5), 1) : null;
+
+// 主循环里每 2 秒重试（等它被第一次 JIT）
+if (potionOrig == null &amp;&amp; TickCount64() - lastTry &gt; 2000)
+{
+    lastTry = TickCount64();
+    ulong addr = g.Method(Game.T_POTIONODDS, &quot;Roll&quot;);
+    if (addr &gt;= 0x10000)
+    {
+        potionOrig = Hook.InstallForceReturnHook(h, addr, F(5), 1);
+        Hook.WriteI32(h, F(5), state[5] ? 1 : 0);
+        Console.WriteLine(&quot;  ✓ 延迟安装成功：奖励必给药水（下一场起）&quot;);
+    }
+}
+
+// ③ 热键 + 退出还原
+(VK_NUMPAD5, false);
+Hook.Restore(h, g.FnPotionRoll, potionOrig);</code></pre>
+<h3>5. 怎么验证（四步）</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td>打完一场（或任何触发结算的场景）</td><td>控制台出现 <code>✓ 延迟安装成功</code></td></tr>
+<tr><td>2</td><td>再 <code>methods … PotionRewardOdds Roll</code></td><td><code>native=0x7FF7…</code>（不再是 0xFFFF）</td></tr>
+<tr><td>3</td><td>再打一场看奖励面板</td><td><b>一定</b>有药水（连打 3 场都有）</td></tr>
+<tr><td>4</td><td>按 <code>Num 5</code> 关掉再打</td><td>恢复概率（可能没有药水）</td></tr>
+</table>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>方法还没 JIT</td><td><code>native=0xFFFF…</code></td><td>延迟安装（4.2 第②段）</td></tr>
+<tr><td>把 <code>0xFFFF…</code> 当地址</td><td>游戏<b>直接崩</b></td><td>任何 <code>call</code>/<code>patch</code> 前先判 <code>&gt;=0x10000 &amp;&amp; != ulong.MaxValue</code></td></tr>
+<tr><td>装了不生效</td><td>你装的时候奖励已算完</td><td>奖励是一次性结算，只对"下一次"生效</td></tr>
+<tr><td>一开就崩</td><td>顺手调了 <code>ShouldForcePotionReward</code> 之类</td><td>回归"只返回"的最简写法</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（方法层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>PotionRewardOdds.Roll(Player, AscensionManager, RoomType)</code> 返回 bool，是"给不给药水"的唯一决定点</td><td>反编译源码，类里只有这一个掷骰方法</td></tr>
+<tr><td>本机这局里 <code>Roll</code> 未 JIT（0xFFFF…）</td><td><code>methods</code> 命令输出</td></tr>
+<tr><td>"强制返回"模板可生成、入口可校验</td><td>同款模板已在其它钩子上跑通</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<table>
+<tr><th>结论</th><th>现象</th></tr>
+<tr><td>改 <code>CurrentValue</code> 能"必给"</td><td>有 pity/上限，只是提高概率</td></tr>
+<tr><td>未 JIT 也能装</td><td>没地址，<code>PrologueLen</code> 直接失败</td></tr>
+</table>
+<h4><span class="tag warn">⏳</span>待验证（需打完一场）</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>装上后奖励 100% 有药水</td><td>打 3 场，每次都看奖励面板</td></tr>
+<tr><td>关掉恢复概率</td><td><code>Num 5</code> 关掉再打</td></tr>
+<tr><td>连打不崩</td><td>打 5 场以上</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇：13-复刻-无限星星</li><li>下一篇（同样是"强制返回"，但返回 decimal）：15-复刻-卡牌奖励必升级</li><li>三种钩子怎么选：08-教程-20个功能总纲与方法论</li><li>原版 20 功能表：70-拆解-Plus20 Trainer 的 20 个功能与改法</li></ul>
+
+<h2 id="s">十八、功能篇 7/20：卡牌奖励必升级</h2>
+<p style="color:#6b7280;font-size:13px">上接：14-复刻-奖励必给药水 · 下接：16-复刻-卡牌奖励最高稀有度</p>
+<blockquote>这一篇解决"decimal 返回值怎么写"<br>上一篇的 <code>bool</code> 走 <code>eax</code>；这一篇的返回值是 <b>decimal（16 字节）</b>——<br>x64 约定下它不走寄存器：调用者先给一块 16 字节缓冲，<b>指针放在 <code>rcx</code></b>，<br>方法把结果写进去，再把指针放回 <code>rax</code>。<br>学会这一条，<b>倍率 / 价格 / 分数</b>那一大类（20、21、23、24、26、27 篇）全都能做。<br>热键：<code>Num 6</code></blockquote>
+<hr>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>战斗奖励里出现的卡牌<b>默认就是升级版</b>（带 <code>+</code>）；商店里卖的卡也是升级版</td></tr>
+<tr><td>验收标准</td><td>① 奖励卡牌左上角有 <code>+</code> ② 商店卡也带 <code>+</code> ③ 关掉恢复</td></tr>
+<tr><td>热键</td><td><code>Num 6</code></td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// MegaCrit.Sts2.Core.Hooks/Hook.cs
+public static decimal ModifyCardRewardUpgradeOdds(IRunState runState, Player player, CardModel card, decimal originalOdds)
+{
+    decimal num = originalOdds;
+    foreach (AbstractModel item in runState.IterateHookListeners(null))
+        num = item.ModifyCardRewardUpgradeOdds(player, card, num);   // 每个模型都能改这个概率
+    return num;                                                      // ← 返回 0~1
+}</code></pre>
+<p>调用方大致是 <code>if (rng.NextFloat() &lt; Hook.ModifyCardRewardUpgradeOdds(...)) 这张卡升级;</code></p>
+<p>⇒ 让它返回 <b>1（100%）</b> 就必升级。</p>
+<blockquote>为什么 hook 汇总点而不是每个模型<br><code>AbstractModel.ModifyCardRewardUpgradeOdds</code> 是虚方法，有多个实现（遗物/诅咒各改各的）。<br><code>Hook.ModifyCardRewardUpgradeOdds</code> 是<b>唯一汇总点</b>，改一个就够。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① ILSpy 搜 &quot;Upgrade&quot; → 命中 Hook.ModifyCardRewardUpgradeOdds(IRunState, Player, CardModel, decimal)
+   → 返回 decimal + 参数里有 originalOdds ⇒ 就是它
+② 搜 &quot;ModifyCardRewardUpgradeOdds(&quot; 的调用点 → 在奖励生成里对每张候选卡算一次
+③ ClrMD 确认地址（重载可能有多个，认准 4 个参数那个）</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Hooks.Hook ModifyCardRewardUpgradeOdds</code></pre>
+<blockquote>注意重载<br><code>Hook</code> 里同名方法可能有多个。<code>methods</code> 会全部列出来，<br>认准参数是 <code>(IRunState, Player, CardModel, decimal)</code> 的那个。</blockquote>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<h4>4.1 decimal 的内存布局（记住这个，一辈子用得上）</h4>
+<pre><code>decimal = 16 字节 = 4 个 int
+  +0x00 lo     低 32 位
+  +0x04 mid    中 32 位
+  +0x08 hi     高 32 位
+  +0x0C flags  bit16~23 = scale（小数点位置），bit31 = 符号
+
+  1     = lo=1,    mid=0, hi=0, flags=0x00000000
+  1.0   = lo=10,   mid=0, hi=0, flags=0x00010000 (scale=1)
+  0     = lo=0,    mid=0, hi=0, flags=0
+  9999  = lo=9999, mid=0, hi=0, flags=0</code></pre>
+<blockquote>想改成 50%？<code>0.5m</code> = <code>[5, 0, 0, 0x00010000]</code>。别手算，用 C# 的 <code>decimal.GetBits(0.5m)</code>。</blockquote>
+<h4>4.2 钩子：把返回值写成 1</h4>
+<pre><code>public static byte[] InstallForceDecimalReturnHook(IntPtr h, ulong methodAddr, ulong flagAddr, decimal value)
+{
+    int[] parts = decimal.GetBits(value);        // [lo, mid, hi, flags]
+    var head = Read(h, methodAddr, 16);
+    int n = PrologueLen(head);
+    var original = new byte[n]; Array.Copy(head, 0, original, 0, n);
+    ulong cave = AllocNear(h, methodAddr, 0x1000);
+
+    var c = new List&lt;byte&gt;();
+    B(0x50);                                     // push rax
+    B(0x48, 0xB8); I64(flagAddr);                // mov rax,&amp;开关
+    B(0x83, 0x38, 0x00);                         // cmp dword [rax],0
+    int jeAt = c.Count; B(0x74, 0x00);           // je 原样
+    B(0x58);                                     // pop rax
+    B(0xC7, 0x01); I32(parts[0]);                // mov dword [rcx],   lo
+    B(0xC7, 0x41, 0x04); I32(parts[1]);          // mov dword [rcx+4], mid
+    B(0xC7, 0x41, 0x08); I32(parts[2]);          // mov dword [rcx+8], hi
+    B(0xC7, 0x41, 0x0C); I32(parts[3]);          // mov dword [rcx+0xC], flags
+    B(0x48, 0x89, 0xC8);                         // mov rax,rcx   ← ★必须
+    B(0xC3);                                     // ret
+    // …原样路径 + jmp 回 方法+n（同 14 篇）…
+    return original;
+}</code></pre>
+<p>关键片段：</p>
+<pre><code>C7 01 01 00 00 00        mov dword [rcx],1       ; lo
+C7 41 04 00 00 00 00     mov dword [rcx+4],0     ; mid
+C7 41 08 00 00 00 00     mov dword [rcx+8],0     ; hi
+C7 41 0C 00 00 00 00     mov dword [rcx+0xC],0   ; flags=0  → 数值 1
+48 89 C8                 mov rax,rcx             ; 返回缓冲指针
+C3                       ret</code></pre>
+<h4>4.3 接入 Trainer</h4>
+<pre><code>// Game.cs
+public ulong FnUpgradeOdds = Method(&quot;MegaCrit.Sts2.Core.Hooks.Hook&quot;, &quot;ModifyCardRewardUpgradeOdds&quot;);
+
+// Program.cs
+var upgradeOrig = g.FnUpgradeOdds &gt;= 0x10000
+    ? Hook.InstallForceDecimalReturnHook(h, g.FnUpgradeOdds, F(6), 1m) : null;
+// keys 加 (VK_NUMPAD6, false) → Num 6；names 加 &quot;卡牌奖励必升级&quot;
+// 退出：Hook.Restore(h, g.FnUpgradeOdds, upgradeOrig);</code></pre>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td><code>methods … ModifyCardRewardUpgradeOdds</code></td><td>有 native 地址</td></tr>
+<tr><td>2</td><td>装完 <code>raw &lt;入口&gt; 16</code></td><td>前 5 字节 <code>E9 …</code></td></tr>
+<tr><td>3</td><td>打完一场看奖励卡</td><td>卡面带 <code>+</code>（升级标记）</td></tr>
+<tr><td>4</td><td>进商店看卡</td><td>商店卡也带 <code>+</code></td></tr>
+<tr><td>5</td><td><code>Num 6</code> 关掉再打</td><td>恢复正常卡</td></tr>
+</table>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>返回值被当成 0</td><td><code>flags</code> 写错（scale 放错位）</td><td>用 <code>decimal.GetBits()</code>，别手算</td></tr>
+<tr><td>找错重载</td><td>没效果甚至崩</td><td>认准 4 参数那个</td></tr>
+<tr><td>忘了 <code>mov rax,rcx</code></td><td>调用方拿到垃圾 decimal → 诡异/崩</td><td>decimal 返回必须把指针放回 rax</td></tr>
+<tr><td>未 JIT</td><td>0xFFFF</td><td>延迟安装（14 篇 4.2）</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（方法层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>Hook.ModifyCardRewardUpgradeOdds(IRunState, Player, CardModel, decimal)</code> 是唯一汇总点，返回 0~1 概率</td><td>反编译源码（遍历 hook listeners 累加）</td></tr>
+<tr><td>decimal = 4×int(lo/mid/hi/flags)，scale 在 flags bit16~23</td><td>.NET 规范；<code>decimal.GetBits()</code> 自测</td></tr>
+<tr><td>x64 上 decimal 返回值走隐藏返回指针 rcx，并需把指针放回 rax</td><td>ABI</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<p>无（未实测）</p>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>奖励卡必带 <code>+</code></td><td>打 3 场看卡面</td></tr>
+<tr><td>商店卡也升级</td><td>进商店看</td></tr>
+<tr><td>关掉恢复</td><td><code>Num 6</code> 关掉再打</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（bool 版强制返回）：14-复刻-奖励必给药水</li><li>下一篇（float 版强制返回）：16-复刻-卡牌奖励最高稀有度</li><li>decimal 的另一种用法（改参数）：19-复刻-超级伤害</li><li>总纲：08-教程-20个功能总纲与方法论</li></ul>
+
+<h2 id="t">十九、功能篇 8/20：卡牌奖励最高稀有度</h2>
+<p style="color:#6b7280;font-size:13px">上接：15-复刻-卡牌奖励必升级 · 下接：17-复刻-未知点必给宝箱</p>
+<blockquote>这一篇补上第三种"返回寄存器"：<b>float 在 <code>xmm0</code></b><br><code>bool/enum/int</code> → <code>eax</code>；<code>decimal</code> → 隐藏指针 <code>rcx</code>；<b><code>float</code> → <code>xmm0</code></b>。<br>三种都学会，遇到任何"算个概率/倍率"的方法都能照抄。<br>热键：<code>Num 7</code></blockquote>
+<hr>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>战斗奖励里出现的卡牌，稀有度必为 <b>Rare</b>（最高）</td></tr>
+<tr><td>验收标准</td><td>① 打完一场，奖励卡都是 Rare ② 连打 3 场都是 ③ 关掉恢复</td></tr>
+<tr><td>热键</td><td><code>Num 7</code></td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// MegaCrit.Sts2.Core.Odds/CardRarityOdds.cs
+private static float GetBaseOdds(CardRarityOddsType type, CardRarity rarity) { ... }   // 返回概率阈值
+
+// 掷骰子处（同一个类）
+float num2 = GetBaseOdds(type, CardRarity.Rare) + offset;
+if (num &lt; num2) return CardRarity.Rare;                                   // ← 先判 Rare
+if (num &lt; GetBaseOdds(type, CardRarity.Uncommon) + num2) return CardRarity.Uncommon;
+return CardRarity.Common;</code></pre>
+<p><code>num</code> 是 0~1 的随机数。<b>让 <code>GetBaseOdds</code> 返回 999</b> ⇒ <code>num &lt; 999</code> 永远成立 ⇒ 一进来就命中 Rare。</p>
+<blockquote>为什么返回 999 而不是 1<br>它返回的是"阈值"不是"概率"。返回 1 时，<code>num</code> 若恰好接近 1 就可能不中；返回 999 必中。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① ILSpy 搜 &quot;rarity&quot; → 命中 CardRarityOdds
+② 类里找&quot;决定稀有度&quot;的方法：GetBaseOdds(type, rarity) 返回 float，被 Roll 比较
+   → 就是它（两个参数、无重载，好认）
+③ ClrMD 确认地址（private static，运行时通常已 JIT）</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Odds.CardRarityOdds GetBaseOdds</code></pre>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<h4>4.1 float 返回值的机器码</h4>
+<pre><code>B8 00 00 7A 44        mov  eax,0x447A0000    ; 999.0f 的 IEEE754 位模式
+66 0F 6E C0           movd xmm0,eax          ; 搬进 xmm0
+C3                    ret                     ; float 返回值就在 xmm0</code></pre>
+<p>常用位模式（拿不准就用 <code>BitConverter.SingleToInt32Bits(v).ToString("X")</code> 现算）：</p>
+<pre><code>0.5f  = 0x3F000000     1.0f = 0x3F800000     2.0f  = 0x40000000
+10.0f = 0x41200000     999f = 0x447A0000</code></pre>
+<h4>4.2 钩子（14 篇的模板，只改返回那 3 条）</h4>
+<pre><code>public static byte[] InstallForceFloatReturnHook(IntPtr h, ulong methodAddr, ulong flagAddr, float value)
+{
+    int bits = BitConverter.SingleToInt32Bits(value);
+    // …
+    B(0x50);                            // push rax
+    B(0x48, 0xB8); I64(flagAddr);       // mov rax,&amp;开关
+    B(0x83, 0x38, 0x00);                // cmp dword [rax],0
+    int jeAt = c.Count; B(0x74, 0x00);  // je 原样
+    B(0x58);                            // pop rax
+    B(0xB8); I32(bits);                 // mov eax,999.0f 的位
+    B(0x66, 0x0F, 0x6E, 0xC0);          // movd xmm0,eax
+    B(0xC3);                            // ret
+    // …原样路径 + jmp 回 方法+n…
+}</code></pre>
+<h4>4.3 接入 Trainer</h4>
+<pre><code>// Game.cs
+public ulong FnRarityOdds = Method(&quot;MegaCrit.Sts2.Core.Odds.CardRarityOdds&quot;, &quot;GetBaseOdds&quot;);
+
+// Program.cs
+var rarityOrig = g.FnRarityOdds &gt;= 0x10000
+    ? Hook.InstallForceFloatReturnHook(h, g.FnRarityOdds, F(7), 999f) : null;
+// keys 加 (VK_NUMPAD7, false) → Num 7；names 加 &quot;奖励最高稀有度&quot;
+// 退出：Hook.Restore(h, g.FnRarityOdds, rarityOrig);</code></pre>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td>装完 <code>raw &lt;入口&gt; 16</code></td><td>前 5 字节 <code>E9 …</code></td></tr>
+<tr><td>2</td><td><code>raw &lt;代码洞地址&gt; 24</code></td><td>能看到 <code>B8 00 00 7A 44 66 0F 6E C0 C3</code></td></tr>
+<tr><td>3</td><td>打完一场看奖励卡</td><td>全是 Rare</td></tr>
+<tr><td>4</td><td>连打 3 场</td><td>每次 Rare</td></tr>
+<tr><td>5</td><td><code>Num 7</code> 关掉再打</td><td>出现 Common/Uncommon</td></tr>
+</table>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>用 <code>mov eax,999</code>（整数值）</td><td>被当 float 位模式解释 ⇒ 是 NaN 或极小值，无效</td><td>必须写<b>位模式</b></td></tr>
+<tr><td>改错方法（改 Roll 而不是 GetBaseOdds）</td><td>可能崩（Roll 里有记录/动画）</td><td>只改"纯计算"的 GetBaseOdds</td></tr>
+<tr><td>未 JIT</td><td>0xFFFF</td><td>延迟安装（14 篇）</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（方法层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td>稀有度阈值由 <code>CardRarityOdds.GetBaseOdds(type, rarity)</code> 的返回值决定</td><td>反编译 <code>Roll</code>：<code>if (num &lt; GetBaseOdds(Rare)+offset) return Rare;</code></td></tr>
+<tr><td>float 返回值在 <code>xmm0</code>，可用 <code>movd xmm0,eax</code> 构造</td><td>x64 ABI</td></tr>
+<tr><td>返回大阈值 ⇒ 必中 Rare</td><td><code>num</code> 是 0~1 随机数</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<p>无（未实测）</p>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>奖励卡必为 Rare</td><td>打 3 场看卡面</td></tr>
+<tr><td>关掉恢复</td><td><code>Num 7</code> 关掉再打</td></tr>
+<tr><td>长局不崩（几十次掷骰）</td><td>连打 5 场</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（decimal 返回）：15-复刻-卡牌奖励必升级</li><li>下一篇（enum 返回）：17-复刻-未知点必给宝箱</li><li>三种返回值写法汇总：08-教程-20个功能总纲与方法论</li></ul>
+
+<h2 id="u">二十、功能篇 9/20：未知点必给宝箱</h2>
+<p style="color:#6b7280;font-size:13px">上接：16-复刻-卡牌奖励最高稀有度 · 下接：18-复刻-敌人不额外行动</p>
+<blockquote>这一篇的关键动作：<b>先查清枚举的数值</b><br>返回值是 <code>RoomType</code>（本质 int）。要它返回"宝箱"，就得知道 <code>Treasure</code> 是第几个。<br><b>枚举值不是猜的，是数出来的</b>——这就是第 2 节要做的事。<br>热键：<code>Num 8</code></blockquote>
+<hr>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>地图上所有 <code>?</code>（Unknown）点，进去必是宝箱房</td></tr>
+<tr><td>验收标准</td><td>① 走一个 <code>?</code> 点是宝箱 ② 连走 3 个都是 ③ 关掉恢复</td></tr>
+<tr><td>热键</td><td><code>Num 8</code></td></tr>
+</table>
+<h3>2. 原理（含"数枚举"）</h3>
+<pre><code>// MegaCrit.Sts2.Core.Odds/UnknownMapPointOdds.cs
+public const float baseMonsterOdds  = 0.1f;
+public const float baseEliteOdds    = -1f;
+public const float baseTreasureOdds = 0.02f;
+public const float baseShopOdds     = 0.03f;
+
+public RoomType Roll(IEnumerable&lt;RoomType&gt; blacklist, IRunState runState)   // ← 返回房间类型
+{ /* 按概率掷骰，返回 Monster / Treasure / Event … */ }</code></pre>
+<pre><code>// MegaCrit.Sts2.Core.Rooms/RoomType.cs  ← ★数出来的顺序
+Monster,   // 0
+Elite,     // 1
+Boss,      // 2
+Treasure,  // 3   ← 让它返回 3
+Shop,      // 4
+Event,     // 5
+RestSite,  // 6</code></pre>
+<blockquote>怎么自己确认枚举值（三种办法）<br>1. <b>读源码按顺序数</b>（没有显式赋值就是从 0 递增）<br>2. 看有没有显式赋值：<code>Treasure = 3</code> 就直接读<br>3. 运行时验证：在游戏里真的进几次 <code>?</code> 点，用 <code>raw</code> 读返回值的实际玩家侧记录（进阶）</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① ILSpy 搜 &quot;UnknownMapPoint&quot; → 命中 UnknownMapPointOdds 类
+② 类里唯一的决策方法：public RoomType Roll(IEnumerable&lt;RoomType&gt; blacklist, IRunState runState)
+   → 返回 RoomType ⇒ 强制返回目标
+③ 打开 RoomType 数顺序 → Treasure = 3
+④ ClrMD 确认地址（若本局还没进过 ? 点，类可能没实例 → 用延迟安装）</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; types  UnknownMapPointOdds
+dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Odds.UnknownMapPointOdds Roll</code></pre>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<h4>4.1 enum 返回（= int，走 eax）</h4>
+<pre><code>B8 03 00 00 00        mov eax,3        ; RoomType.Treasure
+C3                    ret</code></pre>
+<h4>4.2 钩子（直接复用 14 篇的 bool 版本）</h4>
+<pre><code>// bool 和 enum 都从 eax 返回，同一个模板
+var mapOrig = Hook.InstallForceReturnHook(h, g.FnUnknownRoll, F(8), 3);   // 3 = Treasure</code></pre>
+<blockquote>为什么不用新写一个<br><code>enum</code> 在 ABI 上是 4 字节 int，JIT 把它放 <code>eax</code>；<code>bool</code> 也会被规整成 0/1 放 <code>eax</code>。<br>所以 <code>mov eax,值; ret</code> 对 bool / int / enum <b>全通用</b>。</blockquote>
+<h4>4.3 接入 Trainer</h4>
+<pre><code>// Game.cs
+public const string T_UNKNOWNODDS = &quot;MegaCrit.Sts2.Core.Odds.UnknownMapPointOdds&quot;;
+public ulong FnUnknownRoll = Method(T_UNKNOWNODDS, &quot;Roll&quot;);
+
+// Program.cs
+var mapOrig = g.FnUnknownRoll &gt;= 0x10000
+    ? Hook.InstallForceReturnHook(h, g.FnUnknownRoll, F(8), 3) : null;   // 未 JIT 就延迟安装
+// keys 加 (VK_NUMPAD8, false) → Num 8；names 加 &quot;未知点必宝箱&quot;</code></pre>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td><code>methods … UnknownMapPointOdds Roll</code></td><td>有地址（没有就先随便进一个 <code>?</code> 点）</td></tr>
+<tr><td>2</td><td>装完 <code>raw &lt;入口&gt; 16</code></td><td>前 5 字节 <code>E9 …</code></td></tr>
+<tr><td>3</td><td>地图上走进一个 <code>?</code> 点</td><td>直接进宝箱房</td></tr>
+<tr><td>4</td><td>连走 3 个 <code>?</code></td><td>每次都是宝箱</td></tr>
+<tr><td>5</td><td><code>Num 8</code> 关掉再走一个</td><td>恢复怪物/事件/商店</td></tr>
+</table>
+<blockquote>别和"地图上本来就有的宝箱点"搞混<br><code>MapPointType.Treasure</code> 是地图上画出来的宝箱；这个功能只影响 <b><code>?</code>（Unknown）</b> 解析出来的房间类型。</blockquote>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>枚举数错</td><td>返回了别的房间（比如 Shop）</td><td>按第 2 节三种办法重新确认</td></tr>
+<tr><td>类还没实例</td><td><code>types</code> 搜不到</td><td>延迟安装（方法地址不依赖实例）</td></tr>
+<tr><td>装了没反应</td><td>装的时候这个 <code>?</code> 已解析完</td><td>只对"下一次进点"生效</td></tr>
+<tr><td>被黑名单过滤</td><td>某些位置不允许宝箱</td><td><code>blacklist</code> 主要拦"连续两个宝箱"，一般无碍</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（方法层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>?</code> 点房间类型由 <code>UnknownMapPointOdds.Roll(blacklist, runState)</code> 返回</td><td>反编译：返回 <code>RoomType</code></td></tr>
+<tr><td><code>RoomType.Treasure</code> = <b>3</b></td><td>源码按顺序数：Monster0/Elite1/Boss2/Treasure3</td></tr>
+<tr><td>enum 与 bool 同走 <code>eax</code>，可复用同一模板</td><td>x64 ABI + JIT 约定</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<p>无（未实测）</p>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td><code>?</code> 点必出宝箱</td><td>走 3 个 <code>?</code> 点</td></tr>
+<tr><td>关掉恢复</td><td><code>Num 8</code> 关掉再走一个</td></tr>
+<tr><td>长局不崩</td><td>连走 5 个 <code>?</code> 点</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（float 返回）：16-复刻-卡牌奖励最高稀有度</li><li>下一篇（bool 返回 + 战斗逻辑）：18-复刻-敌人不额外行动</li><li>总纲：08-教程-20个功能总纲与方法论</li></ul>
+
+<h2 id="v">二十一、功能篇 10/20：敌人不额外行动</h2>
+<p style="color:#6b7280;font-size:13px">上接：17-复刻-未知点必给宝箱 · 下接：19-复刻-超级伤害</p>
+<blockquote>这一篇讲"拦战斗逻辑"<br>前面几个功能改的都是"数值/奖励"，这一篇改的是<b>行为判定</b>：<br>游戏在"敌人要不要再动一次"这个问题上会问一堆模型（遗物/怪物能力），<br>汇总点叫 <code>Hook.ShouldTakeExtraTurn</code>。让它<b>恒返回 false</b>，敌人就不会额外行动。<br>热键：<code>Num 9</code></blockquote>
+<hr>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>敌人不会额外获得回合/额外行动（原版叫 "Enemies Can't Move"）</td></tr>
+<tr><td>验收标准</td><td>① 有"额外行动"能力的敌人不再多动 ② 关掉后恢复</td></tr>
+<tr><td>热键</td><td><code>Num 9</code></td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// MegaCrit.Sts2.Core.Hooks/Hook.cs
+public static bool ShouldTakeExtraTurn(ICombatState combatState, Player player)
+{
+    foreach (AbstractModel item in IterateCombatHookListeners(combatState))
+        if (item.ShouldTakeExtraTurn(player)) return true;    // ← 任何一个模型说要，就返回 true
+    return false;
+}</code></pre>
+<ul><li>只要<b>任何</b>一个遗物/能力/怪物模型说"要额外回合"，它就返回 true。</li><li>我们让它<b>永远返回 false</b> ⇒ 谁都不能要额外行动。</li></ul>
+<blockquote>这个功能"作用对象"要看清<br>名字里带 <code>player</code>，但它是被"敌人回合调度"调用的（问"这个玩家这一侧要不要给额外行动"）。<br>也就是：<b>它影响的是"额外行动"这一个开门条件</b>，不是"敌人完全不行动"。<br>如果你要的是"敌人一步都不动"，那是另一条链（敌人 AI 的行动队列），需要另找方法——<br>这也是原版把功能命名成 "Enemies Can't Move" 却挂 <code>ShouldTakeExtraTurn</code> 时<b>效果可能和名字不完全一致</b>的原因。<br>⏳ 本节把"挂法"教给你，<b>行为边界需要你实测确认</b>（见第 5 节）。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① ILSpy 搜 &quot;ExtraTurn&quot;（Ctrl+F / All）
+   → 命中 Hook.ShouldTakeExtraTurn(ICombatState, Player) → bool
+② 顺手看谁调它：搜 &quot;ShouldTakeExtraTurn(&quot;
+   → 在回合调度/能力触发里被调用，决定&quot;要不要再来一次&quot;
+③ 确认返回 bool ⇒ 强制返回 false
+④ ClrMD 查地址（静态方法，进战斗后一般已 JIT）</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Hooks.Hook ShouldTakeExtraTurn</code></pre>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<h4>4.1 钩子（直接复用 bool 版本，返回 0）</h4>
+<pre><code>var extraTurnOrig = g.FnExtraTurn &gt;= 0x10000
+    ? Hook.InstallForceReturnHook(h, g.FnExtraTurn, F(9), 0)   // 0 = false
+    : null;</code></pre>
+<p>生成的机器码：</p>
+<pre><code>50                  push rax
+48 B8 &lt;&amp;flag&gt;       mov  rax,&amp;开关
+83 38 00            cmp  dword [rax],0
+74 07               je   原样
+58                  pop  rax
+B8 00 00 00 00      mov  eax,0        ; false
+C3                  ret
+原样: &lt;原 n 字节&gt; ; E9 跳回</code></pre>
+<h4>4.2 接入 Trainer</h4>
+<pre><code>// Game.cs
+public ulong FnExtraTurn;
+FnExtraTurn = Method(&quot;MegaCrit.Sts2.Core.Hooks.Hook&quot;, &quot;ShouldTakeExtraTurn&quot;);
+
+// Program.cs
+var extraTurnOrig = g.FnExtraTurn &gt;= 0x10000
+    ? Hook.InstallForceReturnHook(h, g.FnExtraTurn, F(9), 0)
+    : null;
+// keys 加 (VK_NUMPAD9, false) → Num 9
+// names 加 &quot;敌人不额外行动&quot;
+// 退出：Hook.Restore(h, g.FnExtraTurn, extraTurnOrig);</code></pre>
+<h3>5. 怎么验证（重点是"边界"）</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td><code>methods … ShouldTakeExtraTurn</code></td><td>有地址</td></tr>
+<tr><td>2</td><td>装完 <code>raw &lt;入口&gt; 16</code></td><td><code>E9 …</code></td></tr>
+<tr><td>3</td><td>找一个<b>本来会额外行动</b>的敌人（带"再来一次"类能力），打一回合</td><td>它不多动</td></tr>
+<tr><td>4</td><td>关掉 <code>Num 9</code> 再打同一类敌人</td><td>恢复多动</td></tr>
+<tr><td>5</td><td>观察"敌人普通行动"是否仍正常</td><td>若连普通行动也没了 ⇒ 说明这条链比你想要的更宽，需要改挂更精确的方法</td></tr>
+</table>
+<blockquote>别把它当"无敌"<br>这个功能<b>不减少敌人伤害</b>。它只改"要不要额外行动"。<br>想要"敌人完全不动"，得去 hook 敌人回合的行动队列（<code>MonsterModel.TakeTurn</code> 之类），<br>那属于进阶内容，本篇不展开（避免教你一个没验证过的写法）。</blockquote>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>以为它能让敌人"完全不动"</td><td>敌人照常攻击</td><td>认清它只管"额外行动"这一条</td></tr>
+<tr><td>装完没变化</td><td>当前敌人本来就没有额外行动能力</td><td>换一个有多动能力的敌人测</td></tr>
+<tr><td>关掉后仍不恢复</td><td>补丁没还原</td><td><code>Hook.Restore</code> 或重启游戏</td></tr>
+<tr><td>0xFFFF</td><td>未 JIT</td><td>进战斗打一回合再来</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（方法层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>Hook.ShouldTakeExtraTurn(ICombatState, Player)</code> 是"额外行动"的<b>唯一汇总点</b>（遍历所有模型）</td><td>反编译源码 <code>foreach … if (item.ShouldTakeExtraTurn(player)) return true;</code></td></tr>
+<tr><td>返回 bool ⇒ 强制返回 false 即可关闭</td><td>逻辑推导</td></tr>
+<tr><td>原版 Trainer 挂的就是这个方法</td><td>知识库 70-拆解-Plus20 Trainer 的 20 个功能与改法 的字符串提取结果</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<p>无（未实测）</p>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>有多动能力的敌人不再多动</td><td>找对应敌人打一回合对比</td></tr>
+<tr><td>普通行动不受影响</td><td>同一回合观察敌人是否仍正常攻击</td></tr>
+<tr><td>关掉恢复</td><td><code>Num 9</code> 关掉再打</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（enum 返回）：17-复刻-未知点必给宝箱</li><li>下一篇（改 decimal 参数）：19-复刻-超级伤害</li><li>原版功能名与方法的对应：70-拆解-Plus20 Trainer 的 20 个功能与改法</li><li>总纲：08-教程-20个功能总纲与方法论</li></ul>
+
+<h2 id="w">二十二、功能篇 11/20：超级伤害/一击必杀</h2>
+<p style="color:#6b7280;font-size:13px">上接：18-复刻-敌人不额外行动 · 下接：20-复刻-伤害倍率</p>
+<blockquote>这一篇教"改 decimal 参数"（最危险也最有用的一招）<br>15 篇教了<b>返回</b> decimal，这一篇教<b>改参数里的 decimal</b>：<br>伤害/价格这类数值在 x64 上都是"<code>rdx</code> 指向一块 16 字节的 decimal"，改它 = 改实际生效的数值。<br><b>必须带"对象门禁"</b>：只改敌人的伤害，否则你自己也会被 9999 打死。<br>热键：<code>Num 0</code></blockquote>
+<blockquote>2026-11-03 修正：原版挂的不是 <code>LoseHpInternal</code><br>我从样本 exe 里重新抽了 <code>define(address,…)</code>，原版挂的是<br><b><code>Hook::ModifyDamage</code></b>（两个重载），不是低一层的 <code>Creature::LoseHpInternal</code>。<br>两种挂法的差异、以及 <code>ModifyDamage</code> 的完整 ABI（decimal 返回值让参数右移一格）见 29-踩坑-五个真坑（静态类-残留补丁-未JIT-只写值-decimal右移）。<br>下面先讲<b>原版挂法</b>（推荐），最后附"低一层"的备选方案。</blockquote>
+<hr>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>你打出的任何伤害都变成 9999（基本一击必杀），且<b>不作用于玩家自己</b></td></tr>
+<tr><td>验收标准</td><td>① 用 1 费打击就能秒掉 234 血的敌人 ② 玩家自己受伤正常（不变成 9999） ③ 关掉恢复</td></tr>
+<tr><td>热键</td><td><code>Num 0</code></td></tr>
+</table>
+<h3>2. 原理：为什么选 <code>LoseHpInternal</code></h3>
+<pre><code>// MegaCrit.Sts2.Core.Entities.Creatures/Creature.cs
+public DamageResult LoseHpInternal(decimal amount, ValueProp props)   // ← 真正扣血的地方
+{
+    bool flag = CurrentHp &gt; 0 &amp;&amp; amount &gt;= (decimal)CurrentHp;
+    int currentHp = CurrentHp;
+    ...
+    CurrentHp = Math.Max(CurrentHp - num, 0);   // ← 扣血
+    ...
+}</code></pre>
+<ul><li>它<b>每个生物</b>（玩家/敌人）受伤都会走，参数 <code>amount</code> 是"这一下要扣多少血"。</li><li>x64 调用约定：<code>rcx</code> = <code>this</code>（受伤的那个 Creature）、<code>rdx</code> = <b>指向 decimal amount 的指针</b>、<code>r8d</code> = props 枚举。</li><li>我们的钩子：<b>如果 <code>rcx</code> 不是玩家 ⇒ 把 <code>[rdx]</code> 那 16 字节改成 9999</b>。</li></ul>
+<blockquote>为什么不直接 hook 原版的 <code>Hook.ModifyDamage</code><br>原版挂 <code>ModifyDamage</code> 更"正统"（能改卡面显示的数字），但它的签名有 10 个参数（4 个寄存器 + 6 个栈参数），<br>而且<b>玩家的伤害也会经过它</b>——一旦你写错门禁，自己就被秒了。<br><code>LoseHpInternal</code> 只有 2 个参数、<code>this</code> 直接是"受伤者"，<b>门禁最好写</b>，适合当教学的第一版。<br>等你熟练了再上 <code>ModifyDamage</code>（20 篇讲倍率时会提到它）。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① ILSpy 搜 &quot;LoseHp&quot;（Ctrl+F / All）
+   → 命中 Creature.LoseHpInternal(decimal amount, ValueProp props)
+   → 注释写着 &quot;Hooks and everything are all done in CreatureCmd.Damage,
+      so there needs to be a really good reason to want to call this&quot; ⇒ 确认它就是&quot;真正扣血&quot;那一层
+② 看参数：decimal + enum，两个参数 ⇒ rcx/rdx/r8d 清楚
+③ ClrMD 确认地址（战斗中一定已 JIT）</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Entities.Creatures.Creature LoseHpInternal</code></pre>
+<blockquote>ClrMD 可能列不出这个方法<br>本机实测：<code>Creature</code> 类里<b>靠前声明的方法</b>有时不在 <code>t.Methods</code> 里（ClrMD 的不完整枚举）。<br>如果 <code>methods</code> 没输出，按下面两条备选：<br>1. 用 <code>find</code> 命令<b>按机器码特征</b>扫描（本仓库工具支持）<br>2. 改挂 <code>CreatureCmd.Damage(...)</code>（公有静态方法，一定能查到）<br>这一条写在这里，是因为<b>"查不到"是常态，不要以为是自己做错了</b>。</blockquote>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<h4>4.0 ★ 原版挂法（推荐）：<code>Hook::ModifyDamage</code></h4>
+<p>找地址（注意它是<b>静态类</b>，堆里没实例，必须按模块类型表查，见 29 篇坑 1）：</p>
+<pre><code>// Game.cs
+var md = Methods(&quot;MegaCrit.Sts2.Core.Hooks.Hook&quot;, &quot;ModifyDamage&quot;);   // 两个重载
+FnModifyDamage1 = md.Count &gt; 0 ? md[0] : 0;
+FnModifyDamage2 = md.Count &gt; 1 ? md[1] : 0;</code></pre>
+<p>ABI（因为返回值是 decimal，<code>rcx</code> 被隐藏返回缓冲占用，参数整体右移）：</p>
+<pre><code>rcx = &amp;ret(decimal)   rdx = IRunState   r8 = ICombatState   r9 = target(受伤者)
+栈： [rsp+0x28]=dealer   [rsp+0x30]=&amp;damage(decimal)   [rsp+0x38]=props …</code></pre>
+<p>机器码（本项目最终版本，压 6 个寄存器后 <code>&amp;damage</code> 变成 <code>[rsp+0x60]</code>）：</p>
+<pre><code>50 53 51 52 41 50 41 51     push rax,rbx,rcx,rdx,r8,r9
+4C 8B 44 24 60              mov  r8,[rsp+0x60]      ; &amp;damage
+48 8B 1C 24                 mov  rbx,[rsp]          ; target（保存的 r9）
+48 39 CB                    cmp  rbx,玩家Creature
+74 xx                       je   玩家侧              ; ★ 门禁：玩家走另一条路
+41 C7 00 0F 27 00 00        mov  dword [r8],9999    ; 超级伤害
+41 C7 40 04 00 00 00 00     mov  dword [r8+4],0
+41 C7 40 08 00 00 00 00     mov  dword [r8+8],0
+41 C7 40 0C 00 00 00 00     mov  dword [r8+0xC],0</code></pre>
+<blockquote>为什么比挂 <code>LoseHpInternal</code> 好<br><code>ModifyDamage</code> 是<b>游戏自己算伤害的入口</b>，改它 ⇒ 卡面预览、力量/易伤等修正都会基于你改后的值重算；<br>挂更底层的 <code>LoseHpInternal</code> 只是"最后扣血那一步"，中间那些修正照旧，数值看起来会不一致。</blockquote>
+<h4>4.1 备选：<code>Creature::LoseHpInternal</code>（低一层，实现更简单）</h4>
+<pre><code>// rcx = 受伤的 Creature，rdx = &amp;decimal amount
+// 门禁：rcx != 玩家 ⇒ 写 9999</code></pre>
+<pre><code>C7 02 0F 27 00 00        mov dword [rdx],9999
+C7 42 04 00 00 00 00     mov dword [rdx+4],0
+C7 42 08 00 00 00 00     mov dword [rdx+8],0
+C7 42 0C 00 00 00 00     mov dword [rdx+0xC],0</code></pre>
+<p>缺点：绕过 <code>ModifyDamage</code> 里的各种修正，卡面显示与实际伤害不一致；优点：参数位置最简单（<code>rdx</code> 就是 <code>&amp;amount</code>）。</p>
+<h4>4.2 decimal 参数的内存布局（和 15 篇一样）</h4>
+<pre><code>rdx ──► +0x00 lo(int)   低 32 位
+        +0x04 mid(int)
+        +0x08 hi(int)
+        +0x0C flags(int)  scale 在 bit16~23</code></pre>
+<blockquote>三条命门<br>1. <b>必须 push/pop 所有被改的寄存器</b>（尤其 <code>rcx</code>：我们用它当门禁比较对象）<br>2. <b>必须在指针上写满 16 字节</b>（只写 lo，<code>mid/hi/flags</code> 残留会变成天文数字）<br>3. <b>必须门禁</b>：<code>target == 玩家</code> 时放行，否则自己也被秒</blockquote>
+<pre><code>// Hook.cs：改 decimal 参数的钩子
+public static byte[] InstallDecimalArgHook(IntPtr h, ulong methodAddr, ulong flagAddr,
+                                           ulong playerCreature, int newLo)
+{
+    var head = Read(h, methodAddr, 16);
+    int n = PrologueLen(head);
+    var original = new byte[n]; Array.Copy(head, 0, original, 0, n);
+    ulong cave = AllocNear(h, methodAddr, 0x1000);
+
+    var c = new List&lt;byte&gt;();
+    void B(params byte[] bs) =&gt; c.AddRange(bs);
+    void I32(int v) =&gt; c.AddRange(BitConverter.GetBytes(v));
+    void I64(ulong v) =&gt; c.AddRange(BitConverter.GetBytes(v));
+
+    B(0x50);                                  // push rax
+    B(0x48, 0xB8); I64(flagAddr);             // mov rax,&amp;开关
+    B(0x83, 0x38, 0x00);                      // cmp dword [rax],0
+    int jeFlag = c.Count; B(0x74, 0x00);      // je 原样（功能关）
+
+    B(0x48, 0xB8); I64(playerCreature);       // mov rax,玩家Creature
+    B(0x48, 0x39, 0xC1);                      // cmp rcx,rax       ← rcx = 受伤者
+    int jePlayer = c.Count; B(0x74, 0x00);    // je 原样（玩家自己别改！）
+
+    B(0xC7, 0x02); I32(newLo);                // mov dword [rdx],9999
+    B(0xC7, 0x42, 0x04); I32(0);              // mov dword [rdx+4],0
+    B(0xC7, 0x42, 0x08); I32(0);              // mov dword [rdx+8],0
+    B(0xC7, 0x42, 0x0C); I32(0);              // mov dword [rdx+0xC],0
+
+    int origAt = c.Count;
+    c[jeFlag + 1] = (byte)(origAt - (jeFlag + 2));   // 两条 je 都跳到&quot;原样&quot;
+    c[jePlayer + 1] = (byte)(origAt - (jePlayer + 2));
+
+    B(0x58);                                  // pop rax
+    foreach (var b in original) B(b);
+    int jmpAt = c.Count; B(0xE9); I32(0);
+    // …填 rel32 / 写代码洞 / Patch(入口)…
+    return original;
+}</code></pre>
+<blockquote>三条命门<br>1. <b>必须 <code>push rax</code> / <code>pop rax</code></b>：我们改了 rax，方法体可能还要用。<br>2. <b>必须在 <code>[rdx]</code> 上写 16 字节</b>：只写 lo 不够，<code>mid/hi/flags</code> 残留会让数值变成天文数字。<br>3. <b>必须门禁</b>：<code>cmp rcx, 玩家Creature</code> —— 否则玩家的受伤也会被改成 9999（自己秒自己）。</blockquote>
+<h4>4.3 接入 Trainer</h4>
+<pre><code>// Game.cs
+public ulong FnLoseHp;
+FnLoseHp = Method(Game.T_CREATURE, &quot;LoseHpInternal&quot;);     // 查不到就用 find/特征码或改挂 CreatureCmd.Damage
+
+// Program.cs
+var loseHpOrig = g.FnLoseHp &gt;= 0x10000
+    ? Hook.InstallDecimalArgHook(h, g.FnLoseHp, F(10), g.Creature, 9999)
+    : null;
+// keys 加 (VK_NUMPAD0, false) → Num 0
+// names 加 &quot;超级伤害&quot;</code></pre>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td>装完 <code>raw &lt;入口&gt; 16</code></td><td><code>E9 …</code></td></tr>
+<tr><td>2</td><td>用最便宜的 1 费攻击打敌人</td><td>敌人<b>直接死/掉 9999</b></td></tr>
+<tr><td>3</td><td>让敌人打你一下</td><td>你掉的是<b>正常伤害</b>（不是 9999）—— 这说明门禁生效</td></tr>
+<tr><td>4</td><td><code>Num 0</code> 关掉再打</td><td>恢复正常伤害</td></tr>
+<tr><td>5</td><td>反复开关 3 次</td><td>不崩</td></tr>
+</table>
+<blockquote>如果敌人没掉那么多<br>说明它先被"格挡"吃掉了。先把 11-复刻-无限护盾 里护盾钩子的开关关掉，<br>或者直接看 <code>CurrentHp</code> 的变化（<code>player</code>/<code>raw</code> 命令读敌人的血量）。</blockquote>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>玩家自己也被秒</td><td>一受击就死</td><td>门禁写反了（应 <code>je 原样</code>，不是改）</td></tr>
+<tr><td>敌人掉血变成天文数字/负数</td><td>只写了 lo</td><td>16 字节全写</td></tr>
+<tr><td>一开就崩</td><td>忘了 push/pop rax，或地址非法</td><td>检查安全闸 + 保存寄存器</td></tr>
+<tr><td>挂不上（0xFFFF）</td><td>方法没 JIT 或 ClrMD 枚举不全</td><td>用 <code>find</code> 特征码扫，或改挂 <code>CreatureCmd.Damage</code></td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（机制层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>Creature.LoseHpInternal(decimal, ValueProp)</code> 是"真正扣血"那一层</td><td>反编译注释明确说 hooks 在 <code>CreatureCmd.Damage</code>，本方法是底层</td></tr>
+<tr><td>x64 上 decimal 参数只传指针（<code>rdx</code>）</td><td>ABI；15 篇的返回值版本可对照</td></tr>
+<tr><td>改 16 字节即可改数值</td><td>decimal 布局（lo/mid/hi/flags）</td></tr>
+<tr><td>必须做 this 门禁</td><td>否则玩家同链路受伤会被一起改</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<table>
+<tr><th>结论</th><th>现象</th></tr>
+<tr><td>ClrMD 一定列得出 <code>LoseHpInternal</code></td><td>本机 <code>methods</code> 有时查不到（枚举不全），要备选方案</td></tr>
+</table>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>1 费攻击秒 234 血敌人</td><td>打一下看敌人血量</td></tr>
+<tr><td>玩家受伤不变 9999</td><td>让敌人打你</td></tr>
+<tr><td>关掉恢复 / 反复开关不崩</td><td><code>Num 0</code> 开关 3 次</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（bool 返回）：18-复刻-敌人不额外行动</li><li>下一篇（倍率 = 对 decimal 做乘法）：20-复刻-伤害倍率</li><li>decimal 返回值版本：15-复刻-卡牌奖励必升级</li><li>总纲：08-教程-20个功能总纲与方法论</li></ul>
+
+<h2 id="x">二十三、功能篇 12/20：伤害倍率</h2>
+<p style="color:#6b7280;font-size:13px">上接：19-复刻-超级伤害 · 下接：08-教程-20个功能总纲与方法论</p>
+<blockquote>19 篇是"把数值改成固定值"，这一篇是"把数值乘 N"<br>技术上多一步：<b>读 decimal → 乘 → 写回</b>。<br>只要数值是整数（<code>mid=hi=0</code>、<code>scale=0</code>），乘 <code>lo</code> 就够了——这是 90% 的伤害/金币场景。<br>真要处理小数（比如 ×1.5），就得调 <code>System.Decimal.op_Multiply</code>（本篇章末讲思路）。<br>热键：<code>Num .</code>（小键盘小数点）</blockquote>
+<hr>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>你造成的伤害 ×N（N 可配，默认 10）</td></tr>
+<tr><td>验收标准</td><td>① 打 6 点伤害的牌实际掉 60 ② 敌人打你<b>不</b>翻倍 ③ 关掉恢复</td></tr>
+<tr><td>热键</td><td><code>Num .</code></td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// 19 篇的同一层：Creature.LoseHpInternal(decimal amount, ValueProp props)
+// rcx = this(受伤者)   rdx = &amp;amount(decimal)   r8d = props
+CurrentHp = Math.Max(CurrentHp - num, 0);</code></pre>
+<p>差别只在代码洞里做什么：</p>
+<table>
+<tr><th>篇</th><th>代码洞里干的事</th></tr>
+<tr><td>19（超级伤害）</td><td><code>[rdx] = 9999</code>（覆盖）</td></tr>
+<tr><td><b>20（倍率）</b></td><td><code>eax = [rdx] * N; [rdx] = eax</code>（读-乘-写）</td></tr>
+</table>
+<h4>2.1 为什么可以先只乘 <code>lo</code></h4>
+<pre><code>decimal 的&quot;整数值&quot;一定满足：mid = 0, hi = 0, flags(scale) = 0
+  6     → lo=6,    mid=0, hi=0, flags=0
+  9999  → lo=9999, mid=0, hi=0, flags=0
+⇒ 乘一个整数 N，结果仍然只需要 lo 部分（只要不溢出 2^31）</code></pre>
+<blockquote>如果伤害可能是小数（例如 2.5），<code>lo</code> 里存的是 <b>25</b>，<code>scale=1</code>。<br>这时直接 <code>lo*10</code> 得到 250 —— 而 scale 还是 1 ⇒ 实际值 25.0，等于没变。<br>这种情况下要么把 scale 也改掉，要么走"调 op_Multiply"的正规路（见第 6 节）。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① 和 19 篇同一个目标：Creature.LoseHpInternal(decimal, ValueProp)
+   —— 因为它是&quot;真正扣血&quot;的最后一层，参数就是实际要扣的量
+② 确认 decimal 参数在 rdx（指向 16 字节）
+③ 想清楚&quot;只乘 lo 的适用条件&quot;（整数伤害）——这是这一步唯一需要动脑的地方</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Entities.Creatures.Creature LoseHpInternal</code></pre>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<h4>4.1 机器码：读-乘-写</h4>
+<pre><code>; 门禁：功能开关 + 只改敌人（rcx != 玩家Creature）
+8B 02                 mov  eax,[rdx]        ; eax = amount.lo
+69 C0 0A 00 00 00     imul eax,eax,10       ; eax *= 10        （N 放这里）
+89 02                 mov  [rdx],eax        ; 写回 lo
+C7 42 04 00 00 00 00  mov  dword [rdx+4],0  ; mid  = 0
+C7 42 08 00 00 00 00  mov  dword [rdx+8],0  ; hi   = 0
+C7 42 0C 00 00 00 00  mov  dword [rdx+0xC],0; flags= 0（scale=0，整数）</code></pre>
+<blockquote><code>imul eax,eax,imm32</code> 是 <code>69 C0 imm32</code>（6 字节），N 直接写在指令里 ⇒ 改倍率只要重建代码洞。</blockquote>
+<h4>4.2 钩子（在 19 篇的 <code>InstallDecimalArgHook</code> 上改 4 条指令）</h4>
+<pre><code>// 只要把 19 篇里&quot;写 9999&quot;那 4 条，换成&quot;读-乘-写&quot;
+B(0x8B, 0x02);                              // mov eax,[rdx]
+B(0x69, 0xC0); I32(multiplier);             // imul eax,eax,N
+B(0x89, 0x02);                              // mov [rdx],eax
+B(0xC7, 0x42, 0x04); I32(0);                // mov dword [rdx+4],0
+B(0xC7, 0x42, 0x08); I32(0);                // mov dword [rdx+8],0
+B(0xC7, 0x42, 0x0C); I32(0);                // mov dword [rdx+0xC],0</code></pre>
+<blockquote>三条命门（和 19 篇一样）<br>1. <code>push rax</code> / <code>pop rax</code>（我们用了 eax）<br>2. 16 字节都要处理（mid/hi/flags 清零，否则数值爆炸）<br>3. <b>必须门禁</b>：<code>cmp rcx, 玩家Creature</code> → 相等就跳过（否则敌人打你也翻倍）</blockquote>
+<h4>4.3 接入 Trainer</h4>
+<pre><code>// 和 19 篇共用同一个挂点，只是&quot;开哪个&quot;由开关决定
+// 方案 A：两个功能二选一（推荐，避免互相打架）
+//   F(10) = 超级伤害（写 9999）   F(11) = 伤害倍率（×N）
+// 方案 B：一个动作里先判断要覆盖还是要乘（代码洞稍长，但可以共存）
+
+var dmgMulOrig = g.FnLoseHp &gt;= 0x10000
+    ? Hook.InstallDecimalMulHook(h, g.FnLoseHp, F(11), g.Creature, 10) : null;
+// keys 加 (VK_DECIMAL, false) → Num .
+// names 加 &quot;伤害倍率 x10&quot;</code></pre>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td>装完 <code>raw &lt;入口&gt; 16</code></td><td><code>E9 …</code></td></tr>
+<tr><td>2</td><td>打一张"6 伤害"的牌</td><td>敌人掉 60</td></tr>
+<tr><td>3</td><td>让敌人打你</td><td>你掉<b>正常</b>伤害（门禁生效）</td></tr>
+<tr><td>4</td><td><code>Num .</code> 关掉再打</td><td>恢复正常</td></tr>
+<tr><td>5</td><td>连续开关 3 次</td><td>不崩</td></tr>
+</table>
+<h3>6. 进阶：真的要处理小数倍率（比如 ×1.5）</h3>
+<pre><code>思路：不自己算，直接调 .NET 的 decimal 乘法
+  ① 用 ClrMD 找到 System.Decimal.op_Multiply(decimal, decimal) 的地址
+  ② 代码洞里：准备两个 decimal（原值 + 倍率），按 x64 调用约定调它
+     decimal 返回走隐藏指针 ⇒ 还要先给结果留 16 字节缓冲、把指针放 rcx
+  ③ 把结果写回 [rdx]
+这条路的坑：需要一块可写的 16 字节缓冲（可以用我们 AllocFlags 那块内存的尾部）+
+             必须保存所有会被污染的寄存器。
+⇒ 新手建议：先用&quot;整数倍&quot;（本篇），等熟练了再上小数倍。</code></pre>
+<h3>7. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>乘完变成天文数字</td><td>mid/hi/flags 残留</td><td>16 字节全部重写</td></tr>
+<tr><td>×1.5 没效果</td><td>scale 没动（见 2.1）</td><td>用整数倍，或走 op_Multiply</td></tr>
+<tr><td>自己也翻倍</td><td>门禁漏了</td><td><code>cmp rcx,玩家Creature</code> + <code>je 原样</code></td></tr>
+<tr><td>溢出成负数</td><td>伤害太大（×N 后超过 int32）</td><td>N 调小，或先判断 <code>cmp eax,100000</code> 再乘</td></tr>
+</table>
+<h3>8. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（机制层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>LoseHpInternal</code> 的 <code>amount</code> 在 <code>rdx</code> 指向的 16 字节里</td><td>19 篇的 ABI 分析</td></tr>
+<tr><td>整数 decimal 的 <code>mid/hi/flags</code> 全 0，只需改 lo</td><td>decimal 布局</td></tr>
+<tr><td><code>imul eax,eax,imm32</code> 可直接做整数倍</td><td>x86-64 指令表</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<table>
+<tr><th>结论</th><th>现象</th></tr>
+<tr><td>只改 lo 就能实现小数倍率</td><td>scale 不变 ⇒ 实际值不变</td></tr>
+</table>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>×10 生效</td><td>打 6 伤害看敌人掉 60</td></tr>
+<tr><td>玩家不受影响</td><td>让敌人打你</td></tr>
+<tr><td>关掉恢复 / 反复开关不崩</td><td><code>Num .</code> 开关 3 次</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（覆盖成固定值）：19-复刻-超级伤害</li><li>decimal 返回值写法（倍率的兄弟）：15-复刻-卡牌奖励必升级</li><li>三种钩子总表：08-教程-20个功能总纲与方法论</li></ul>
+
+<h2 id="y">二十四、功能篇 13/20：防御倍率</h2>
+<p style="color:#6b7280;font-size:13px">上接：20-复刻-伤害倍率 · 下接：22-复刻-金币倍率</p>
+<blockquote>和 20 篇镜像：这次门禁反过来，对<b>玩家</b>那一侧做除法<br>20 篇：<code>rcx != 玩家</code> 时把伤害 ×N；这一篇：<code>rcx == 玩家</code> 时把伤害 ÷N。<br>除法要会写 <code>cdq; idiv</code>（有符号除法，否则负数伤害会算错）。热键：<code>Num +</code></blockquote>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>你受到的伤害 ÷4（可配），等于自带 75% 减伤</td></tr>
+<tr><td>验收标准</td><td>① 敌人打你 20 → 实际掉 5 ② 你打敌人伤害不变 ③ 关掉恢复</td></tr>
+<tr><td>热键</td><td><code>Num +</code></td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// 同一层：Creature.LoseHpInternal(decimal amount, ValueProp props)
+//   rcx = this(受伤者)   rdx = &amp;amount   r8d = props
+// 玩家受伤也会走这里（玩家也是一个 Creature）⇒ 门禁改成&quot;rcx == 玩家&quot;</code></pre>
+<p>另一种做法（更"正统"）：hook <code>Creature.DamageBlockInternal(decimal, ValueProp)</code> 放大"被格挡掉的伤害"，</p>
+<p>但那改的是护盾吸收量，不是减伤；本作原版 "Defense Multiplier" 的语义更接近减伤，故用除法版最直观。</p>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① 复用 19/20 篇定位的 Creature.LoseHpInternal（真正扣血那一层）
+② 想清楚方向：要&quot;少掉血&quot; ⇒ 把 amount 除小，而不是乘大
+③ 除法注意：decimal 的 lo 是有符号 int，必须用 idiv（不是 div）</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Entities.Creatures.Creature LoseHpInternal</code></pre>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<pre><code>; 门禁：功能开关开启 且 rcx == 玩家Creature
+8B 02                 mov  eax,[rdx]        ; eax = amount.lo
+99                    cdq                   ; 符号扩展到 edx:eax（idiv 前置动作）
+B9 04 00 00 00        mov  ecx,4             ; 除数 N（这里 4；也占用 rcx 的低位没关系，
+                                             ;   因为我们只在这里用一下，方法体的 rcx 已经不用了？→ 见&quot;坑&quot;）
+F7 F9                 idiv ecx              ; eax = eax / 4
+89 02                 mov  [rdx],eax
+C7 42 04 00 00 00 00  mov  dword [rdx+4],0
+C7 42 08 00 00 00 00  mov  dword [rdx+8],0
+C7 42 0C 00 00 00 00  mov  dword [rdx+0xC],0</code></pre>
+<blockquote>别用 ecx 当除数（上面的写法是错的示范）<br><code>rcx</code> 是被挂钩方法的 <code>this</code> 指针，我们改它 ⇒ 方法体拿错对象 ⇒ 崩。<br><b>正确做法</b>：用别的寄存器，比如 <code>mov r8d,4</code>（r8d 是 props 参数，也要保）<br>或者最简单：<b>把除数写死在代码洞里，用 <code>mov eax,N; cdq; idiv eax</code> 之前先 <code>push/pop</code> 保存</b>。</blockquote>
+<p>安全版本：</p>
+<pre><code>50                    push rax
+52                    push rdx
+; …门禁判断（用 rax 做比较，不改 rcx）…
+8B 02                 mov  eax,[rdx]
+B9 04 00 00 00        mov  ecx,4          ; ← 这里改的是 ecx，rcx 高位也被清了！
+; ↑ 所以必须在门禁比较&quot;之后&quot;才动 rcx，且动完要恢复 —— 见下</code></pre>
+<p>正确写法（不改 <code>rcx</code>）：</p>
+<pre><code>8B 02                 mov  eax,[rdx]      ; lo
+99                    cdq
+BB 04 00 00 00        mov  ebx,4          ; ← 用 ebx（先 push rbx 保存）
+F7 FB                 idiv ebx
+89 02                 mov  [rdx],eax
+5B                    pop  rbx</code></pre>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td>装完 <code>raw &lt;入口&gt; 16</code></td><td><code>E9 …</code></td></tr>
+<tr><td>2</td><td>让敌人打你</td><td>掉血变成原来的 1/4</td></tr>
+<tr><td>3</td><td>你打敌人</td><td>伤害不变</td></tr>
+<tr><td>4</td><td><code>Num +</code> 关掉</td><td>恢复</td></tr>
+</table>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>用 <code>ecx</code> 当除数</td><td>崩（rcx 是 this）</td><td>换 <code>ebx/esi</code>，且 push/pop</td></tr>
+<tr><td>用 <code>div</code> 不用 <code>idiv</code></td><td>负伤害/大数算错</td><td>用 <code>idiv</code>，前面加 <code>cdq</code></td></tr>
+<tr><td>除完 mid/hi 没清</td><td>数值异常</td><td>16 字节全处理</td></tr>
+<tr><td>门禁方向搞反</td><td>敌人变肉、你更脆</td><td>玩家侧用 <code>je</code>（相等才改）</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（机制）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>LoseHpInternal</code> 是玩家/敌人共用的扣血层</td><td>19 篇源码引用</td></tr>
+<tr><td><code>rcx</code> 是 this，绝不能当临时寄存器</td><td>x64 调用约定</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<p>无</p>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>受伤 ÷4 生效</td><td>让敌人打你对比伤害</td></tr>
+<tr><td>你打敌人不衰减</td><td>打一下看敌人掉血</td></tr>
+<tr><td>反复开关不崩</td><td><code>Num +</code> 开关 3 次</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（乘法）：20-复刻-伤害倍率</li><li>下一篇（金币倍率）：22-复刻-金币倍率</li><li>总纲：08-教程-20个功能总纲与方法论</li></ul>
+
+<h2 id="z">二十五、功能篇 14/20：金币倍率</h2>
+<p style="color:#6b7280;font-size:13px">上接：21-复刻-防御倍率 · 下接：23-复刻-商店免费</p>
+<blockquote>这一篇补最后一个"返回值类型"：<b>int（<code>eax</code>）</b><br>到这儿四种返回值全齐了：<code>bool/enum/int → eax</code>、<code>float → xmm0</code>、<code>decimal → rcx 隐藏指针</code>。<br>金币"奖励"是 <code>int</code> 属性，改它最简单：<b>入口 <code>imul eax,N; ret</code></b>。<br>热键：<code>Ctrl+Num 2</code></blockquote>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>战斗结算给的金币奖励 ×N（默认 10），且不超过上限</td></tr>
+<tr><td>验收标准</td><td>① 打完一场，金币涨得明显多 ② 关掉恢复 ③ 不崩</td></tr>
+<tr><td>热键</td><td><code>Ctrl+Num 2</code></td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// MegaCrit.Sts2.Core.Models/EncounterModel.cs
+public virtual int MinGoldReward { get; }      // ← int
+public virtual int MaxGoldReward { get; }      // ← int
+// 战斗结算时：gold = rng.Next(encounter.MinGoldReward, encounter.MaxGoldReward)</code></pre>
+<p>改这两个 <code>get</code> 的返回值 = 直接改"这场给多少钱"。</p>
+<blockquote>为什么改 getter 而不是改 <code>Player._gold</code><br>改 <code>_gold</code> 是 10-复刻-金币无限（锁值）；这个功能是"<b>奖励变多</b>"，<br>语义不同：一个是"钱不减少"，一个是"每次给更多"。原版就是两个独立功能。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① ILSpy 搜 &quot;GoldReward&quot; → 命中 EncounterModel.MinGoldReward / MaxGoldReward（virtual int）
+② 搜 &quot;MinGoldReward&quot; 的调用点 → 战斗结算处 rng.Next(min,max)
+③ 返回值是 int ⇒ 强制返回目标：imul / mov eax,值
+④ ClrMD：属性 getter 名是 get_MinGoldReward / get_MaxGoldReward</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Models.EncounterModel get_MinGoldReward
+dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Models.EncounterModel get_MaxGoldReward</code></pre>
+<blockquote>都是 virtual 方法<br>virtual 方法可能有多份实现（不同遭遇战子类 override）。<br><code>EncounterModel</code> 基类的 getter 只覆盖"没 override 的遭遇"；要全覆盖得挂<b>每个子类的 override</b>（麻烦）。<br>实用做法：先挂基类，实测够用就行；不够再按 <code>types Encounter</code> 列出子类逐个挂。</blockquote>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<pre><code>; 入口：return 原值 * 10
+; 需要&quot;先取原值再加/乘&quot; ⇒ 不能直接 ret，要先执行原方法体再改结果。
+; 简化版（推荐给新手）：直接返回一个固定倍数基值，例如 2000
+B8 D0 07 00 00        mov eax,2000
+C3                    ret</code></pre>
+<blockquote>想做成真正的"倍率"（原值×10），要在<b>方法出口</b>改 <code>eax</code>——这需要"尾部 hook"（找到所有 <code>ret</code> 并改写），<br>复杂度高很多。<b>先做"固定高值"版本</b>（<code>mov eax,2000; ret</code>），效果上等价于"每场给很多钱"。</blockquote>
+<h4>4.1 接入 Trainer</h4>
+<pre><code>// Game.cs
+public ulong FnMinGold, FnMaxGold;
+FnMinGold = Method(&quot;MegaCrit.Sts2.Core.Models.EncounterModel&quot;, &quot;get_MinGoldReward&quot;);
+FnMaxGold = Method(&quot;MegaCrit.Sts2.Core.Models.EncounterModel&quot;, &quot;get_MaxGoldReward&quot;);
+
+// Program.cs —— 两个都挂，返回同一个高值
+var minOrig = FnMinGold &gt;= 0x10000 ? Hook.InstallForceReturnHook(h, FnMinGold, F(12), 2000) : null;
+var maxOrig = FnMaxGold &gt;= 0x10000 ? Hook.InstallForceReturnHook(h, FnMaxGold, F(12), 2000) : null;
+// keys 加 (VK_NUMPAD2, ctrl:true) → Ctrl+Num 2；names 加 &quot;金币倍率&quot;</code></pre>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td><code>methods … get_MinGoldReward</code></td><td>有地址（没有就延迟安装）</td></tr>
+<tr><td>2</td><td>装完 <code>raw &lt;入口&gt; 16</code></td><td><code>E9 …</code></td></tr>
+<tr><td>3</td><td>打完一场拿金币</td><td>金币奖励明显变大（接近 2000）</td></tr>
+<tr><td>4</td><td><code>Ctrl+Num 2</code> 关掉再打</td><td>恢复原值</td></tr>
+</table>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>只挂了一个 getter</td><td>奖励区间变成 (min,原 max)，可能仍很小</td><td>min/max 都挂</td></tr>
+<tr><td>virtual override 没覆盖</td><td>某些遭遇没效果</td><td>挂子类的 override（<code>types Encounter</code> 找）</td></tr>
+<tr><td>返回 2000 但游戏显示 0</td><td>有上限/取整逻辑</td><td>换成 999 试试，或看结算代码</td></tr>
+<tr><td>装完金币没变</td><td>这场的奖励已算完</td><td>对下一场生效</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（方法层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td>金币奖励来自 <code>EncounterModel.MinGoldReward / MaxGoldReward</code>（int）</td><td>反编译源码</td></tr>
+<tr><td>int 返回值在 <code>eax</code>，<code>mov eax,值; ret</code> 即可</td><td>x64 ABI</td></tr>
+<tr><td>原版把"金币倍率"挂在遭遇战奖励上</td><td>70-拆解-Plus20 Trainer 的 20 个功能与改法</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<p>无</p>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>奖励金币显著变大</td><td>打一场看结算</td></tr>
+<tr><td>各遭遇都生效</td><td>打普通/精英各一场</td></tr>
+<tr><td>关掉恢复</td><td><code>Ctrl+Num 2</code></td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇：21-复刻-防御倍率</li><li>下一篇（商店价格）：23-复刻-商店免费</li><li>金币"不减少"是另一篇：10-复刻-金币无限</li><li>总纲：08-教程-20个功能总纲与方法论</li></ul>
+
+<h2 id="aa">二十六、功能篇 15/20：商店免费</h2>
+<p style="color:#6b7280;font-size:13px">上接：22-复刻-金币倍率 · 下接：24-复刻-最大能量</p>
+<blockquote>这是 15 篇（decimal 返回）的直接应用：<b>把价格返回 0</b><br>唯一的新知识是"<b>必须提前装</b>"——价格在<b>进去商店时就算好了</b>，不是点击时才算。<br>热键：<code>Ctrl+Num 3</code></blockquote>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>商店里所有商品价格为 0（卡牌/遗物/药水/删牌）</td></tr>
+<tr><td>验收标准</td><td>① 进商店，商品标价 0 ② 买完金币不减 ③ 关掉恢复原价</td></tr>
+<tr><td>热键</td><td><code>Ctrl+Num 3</code></td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// MegaCrit.Sts2.Core.Hooks/Hook.cs
+public static decimal ModifyMerchantPrice(IRunState runState, Player player, MerchantEntry entry, decimal result)
+{
+    decimal num = result;
+    foreach (AbstractModel item in IterateHookListeners(...))
+        num = item.ModifyMerchantPrice(player, entry, num);   // 会员卡等可以打折
+    return num;                                               // ← 最终价格
+}</code></pre>
+<p>⇒ 让它返回 <b>0</b>，所有商品免费。</p>
+<blockquote>时机：<b>进商店之前</b>就要装好<br>商品价格在"生成商店"时就算完并显示在 UI 上；进去以后再装钩子，价格不会重算。<br>所以热键要在<b>走进去之前</b>按（原版说明里也写着"进商店前先按"）。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① ILSpy 搜 &quot;MerchantPrice&quot; → 命中 Hook.ModifyMerchantPrice(IRunState, Player, MerchantEntry, decimal)
+② 返回 decimal ⇒ 用 15 篇的 InstallForceDecimalReturnHook，值填 0
+③ ClrMD 确认地址</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Hooks.Hook ModifyMerchantPrice</code></pre>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<pre><code>// 直接用 15 篇写的钩子，返回值 0m
+var priceOrig = g.FnMerchantPrice &gt;= 0x10000
+    ? Hook.InstallForceDecimalReturnHook(h, g.FnMerchantPrice, F(13), 0m) : null;
+// keys 加 (VK_NUMPAD3, ctrl:true) → Ctrl+Num 3；names 加 &quot;商店免费&quot;
+// 退出：Hook.Restore(h, g.FnMerchantPrice, priceOrig);</code></pre>
+<p>生成的机器码（decimal 0 = 四个 0）：</p>
+<pre><code>C7 01 00 00 00 00        mov dword [rcx],0        ; lo
+C7 41 04 00 00 00 00     mov dword [rcx+4],0      ; mid
+C7 41 08 00 00 00 00     mov dword [rcx+8],0      ; hi
+C7 41 0C 00 00 00 00     mov dword [rcx+0xC],0    ; flags
+48 89 C8                 mov rax,rcx
+C3                       ret</code></pre>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td><b>进商店前</b>按 <code>Ctrl+Num 3</code>（控制台显示 <code>[开] 商店免费</code>）</td><td>——</td></tr>
+<tr><td>2</td><td>进商店</td><td>所有商品标价 <code>0</code></td></tr>
+<tr><td>3</td><td>买一张卡</td><td>金币不减（配合 10 篇金币锁更直观）</td></tr>
+<tr><td>4</td><td>关掉后进下一家商店</td><td>价格恢复</td></tr>
+</table>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>进店后才开</td><td>价格还是原价</td><td>提前开；或退出商店再进</td></tr>
+<tr><td>有的商品不免费</td><td>某些条目走了别的定价路径</td><td>再挂 <code>MerchantEntry</code> 上的价格字段（进阶）</td></tr>
+<tr><td>买完崩</td><td>价格 0 导致某些校验异常</td><td>返回 1 而不是 0（几乎同样效果，更安全）</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（方法层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td>商店最终价格由 <code>Hook.ModifyMerchantPrice(...)</code> 返回的 decimal 决定</td><td>反编译：遍历模型累加后 return</td></tr>
+<tr><td>decimal 0 = 4 个 32 位 0</td><td>decimal 布局</td></tr>
+<tr><td>价格在生成商店时计算</td><td>UI 显示的是已算好的值（原版说明也要求"进店前按"）</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<p>无</p>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>商品标价 0 且能买</td><td>进商店看价 + 买一件</td></tr>
+<tr><td>提前装的时机</td><td>进店前开 vs 进店后开对比</td></tr>
+<tr><td>关掉恢复</td><td>关掉后进下一家店</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇：22-复刻-金币倍率</li><li>下一篇：24-复刻-最大能量</li><li>decimal 返回模板出处：15-复刻-卡牌奖励必升级</li></ul>
+
+<h2 id="ab">二十七、功能篇 16/20：最大能量</h2>
+<p style="color:#6b7280;font-size:13px">上接：23-复刻-商店免费 · 下接：25-复刻-药水槽数量</p>
+<blockquote>这一篇把 12 篇的一个坑讲透：<b>"上限"是算出来的，不是字段</b><br>12 篇里我们看到 <code>MaxEnergy =&gt; Hook.ModifyMaxEnergy(...)</code>；<br>这次直接把这个"算"的地方改掉：让 <code>ModifyMaxEnergy</code> 返回你想要的数。<br>热键：<code>Ctrl+Num 4</code></blockquote>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>每回合的最大能量变成 N（默认 10）</td></tr>
+<tr><td>验收标准</td><td>① 回合开始时能量球显示 <code>10/10</code> ② 打牌后仍按 10 结算 ③ 关掉恢复</td></tr>
+<tr><td>热键</td><td><code>Ctrl+Num 4</code></td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// MegaCrit.Sts2.Core.Entities.Players/PlayerCombatState.cs
+public int MaxEnergy =&gt; (int)Hook.ModifyMaxEnergy(_player.Creature.CombatState, _player, _player.MaxEnergy);
+//                     ↑ 每次问&quot;最大能量&quot;都现算 ⇒ 改 ModifyMaxEnergy 的返回值即可
+
+// MegaCrit.Sts2.Core.Hooks/Hook.cs
+public static decimal ModifyMaxEnergy(ICombatState combatState, Player player, decimal amount)
+{
+    decimal num = amount;
+    foreach (AbstractModel item in IterateCombatHookListeners(combatState))
+        num = item.ModifyMaxEnergy(player, num);       // 遗物可以 +1 能量
+    return num;                                         // ← 最终上限
+}</code></pre>
+<p>⇒ 让 <code>ModifyMaxEnergy</code> 返回 <b>10</b>，最大能量就是 10。</p>
+<blockquote>为什么改这里而不是改 <code>Player.MaxEnergy</code> 字段<br>字段是"角色基础值"（比如 3），而游戏真正用的是 <code>PlayerCombatState.MaxEnergy</code>（算出来的）。<br>改字段只能影响"没被遗物改过"的情况；改 <code>ModifyMaxEnergy</code> 才是<b>最终生效值</b>。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① 从 12 篇知道 MaxEnergy 是属性 =&gt; Hook.ModifyMaxEnergy(...)
+② ILSpy 搜 &quot;ModifyMaxEnergy&quot; → 命中 Hook.ModifyMaxEnergy(ICombatState, Player, decimal)
+③ 返回 decimal ⇒ 用 15 篇的 decimal 返回钩子，值填 10
+④ ClrMD 确认地址（战斗中已 JIT）</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Hooks.Hook ModifyMaxEnergy</code></pre>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<pre><code>// Game.cs
+public ulong FnMaxEnergy = Method(&quot;MegaCrit.Sts2.Core.Hooks.Hook&quot;, &quot;ModifyMaxEnergy&quot;);
+
+// Program.cs
+var maxEnergyOrig = g.FnMaxEnergy &gt;= 0x10000
+    ? Hook.InstallForceDecimalReturnHook(h, g.FnMaxEnergy, F(14), 10m) : null;
+// keys 加 (VK_NUMPAD4, ctrl:true) → Ctrl+Num 4；names 加 &quot;最大能量=10&quot;</code></pre>
+<p>生成的机器码（decimal 10 = lo=10, 其余 0）：</p>
+<pre><code>C7 01 0A 00 00 00        mov dword [rcx],10       ; lo = 10
+C7 41 04 00 00 00 00     mov dword [rcx+4],0
+C7 41 08 00 00 00 00     mov dword [rcx+8],0
+C7 41 0C 00 00 00 00     mov dword [rcx+0xC],0    ; flags=0 → 10
+48 89 C8                 mov rax,rcx
+C3                       ret</code></pre>
+<blockquote>和 12 篇（无限能量）配合<br>12 篇把"当前能量"锁死；24 篇把"上限"提高。两个一起开 = 每回合 10 点且用不完。<br>但注意：12 篇的锁值是"启动时读到的上限"，改了上限后要<b>重开一次 12 篇的锁</b>才会跟着变。</blockquote>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td>装完 <code>raw &lt;入口&gt; 16</code></td><td><code>E9 …</code></td></tr>
+<tr><td>2</td><td>进战斗，看能量球</td><td><code>10/10</code>（或 <code>x/10</code>）</td></tr>
+<tr><td>3</td><td>打几张牌</td><td>每次都能扣到 10 以内</td></tr>
+<tr><td>4</td><td><code>Ctrl+Num 4</code> 关掉，下一回合</td><td>恢复到原上限</td></tr>
+</table>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>改 <code>Player.MaxEnergy</code> 字段没效果</td><td>界面还是 3/4</td><td>改 <code>Hook.ModifyMaxEnergy</code>（本篇）</td></tr>
+<tr><td>显示 10 但只能打 3 费</td><td>12 篇的能量锁还锁在旧值</td><td>关掉再开一次 12 篇的锁</td></tr>
+<tr><td>一开就崩</td><td>用了错误的返回寄存器（decimal 写成 eax）</td><td>用 15 篇的 decimal 模板</td></tr>
+<tr><td>未 JIT</td><td>0xFFFF</td><td>进战斗打一回合再来</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（方法层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>PlayerCombatState.MaxEnergy</code> 是<b>计算属性</b>，最终值来自 <code>Hook.ModifyMaxEnergy</code></td><td>反编译：<code>=&gt; (int)Hook.ModifyMaxEnergy(...)</code></td></tr>
+<tr><td>字段 <code>Player.MaxEnergy</code> 只是"基础值"，不等于界面上限</td><td>12 篇实测：字段 3、界面 4</td></tr>
+<tr><td>decimal 返回 10 的机器码模板</td><td>15 篇</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<table>
+<tr><th>结论</th><th>现象</th></tr>
+<tr><td>改 <code>Player.MaxEnergy</code> 字段能改界面上限</td><td>12 篇实测过：显示不跟随</td></tr>
+</table>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>能量球显示 <code>x/10</code></td><td>进战斗看</td></tr>
+<tr><td>每回合都能拿到 10 点</td><td>连续两回合看</td></tr>
+<tr><td>关掉恢复</td><td><code>Ctrl+Num 4</code> 后下一回合</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇：23-复刻-商店免费</li><li>下一篇：25-复刻-药水槽数量</li><li>"上限是算出来的"第一次出现：12-复刻-无限能量</li></ul>
+
+<h2 id="ac">二十八、功能篇 17/20：药水槽数量</h2>
+<p style="color:#6b7280;font-size:13px">上接：24-复刻-最大能量 · 下接：26-复刻-最高分数</p>
+<blockquote>这一篇教"改 int 参数"（最简单的一种改参数）<br>11 篇（护盾）改的是 <code>edx</code> 里的 int 参数；这次目标方法叫 <code>SetMaxPotionCountInternal(int potionSlotCount)</code>，<br>同样在 <code>edx</code> 里 ⇒ 直接把 <code>edx</code> 改成 20。<b>而且它不碰任何 UI 调用，零崩溃风险。</b><br>热键：<code>Ctrl+Num 5</code></blockquote>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>药水槽上限变成 20（原版默认 3）</td></tr>
+<tr><td>验收标准</td><td>① 顶栏药水槽变成 20 格 ② 能捡 20 瓶药水 ③ 关掉后新开一局恢复 3</td></tr>
+<tr><td>热键</td><td><code>Ctrl+Num 5</code></td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// MegaCrit.Sts2.Core.Entities.Players/Player.cs（节选）
+public int MaxPotionSlotCount { get; private set; }
+internal void SetMaxPotionCountInternal(int potionSlotCount)   // ← 唯一设置入口
+{
+    MaxPotionSlotCount = potionSlotCount;
+    MaxPotionCountChanged?.Invoke(potionSlotCount);            // 发事件 → UI 自己刷
+}</code></pre>
+<ul><li>参数是 <code>int</code>，在 x64 上是 <b><code>edx</code></b>（第 2 个参数）。</li><li>方法内部会发事件 ⇒ <b>UI 自动更新，不用我们调刷新方法</b>。</li></ul>
+<blockquote>时机：<b>开新局/读档前</b>按（原版说明也这么写）<br>药水槽是在"创建玩家/读档"时初始化的。已经进游戏了再改，只会影响"下次初始化"。<br>所以要<b>先开钩子，再进游戏</b>（或读档）。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① ILSpy 搜 &quot;PotionSlot&quot; / &quot;MaxPotionCount&quot; → 命中 Player.SetMaxPotionCountInternal(int)
+② 确认它是唯一设置入口（搜调用点：构造函数 + 读档恢复）
+③ 参数 int ⇒ edx 直接改
+④ ClrMD 确认地址（Player 构造时就 JIT 了）</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Entities.Players.Player SetMaxPotionCountInternal</code></pre>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<p>用 11 篇的 setter 钩子（<code>InstallSetterHook</code>），但把"门禁"放宽成"所有人都改"：</p>
+<pre><code>// Hook.cs 里已有 InstallSetterHook(h, methodAddr, thisAddr, forcedValue, flagAddr)
+// 它会在 this == 指定对象 时把 edx 改成 forcedValue。
+// 这里我们干脆不门禁：this 传 0 → 钩子改成&quot;只判开关&quot;
+var potionSlotOrig = g.FnSetPotionSlots &gt;= 0x10000
+    ? Hook.InstallSetterHook(h, g.FnSetPotionSlots, g.Player, 20, F(15))
+    : null;</code></pre>
+<p>生成的机器码（和 11 篇一样，只是数值变 20）：</p>
+<pre><code>50                        push rax
+48 B8 &lt;&amp;flag&gt;             mov  rax,&amp;开关
+83 38 00                  cmp  dword [rax],0
+74 xx                     je   原样
+48 B8 &lt;玩家Player&gt;         mov  rax,玩家
+48 39 C1                  cmp  rcx,rax
+75 xx                     jne  原样
+BA 14 00 00 00            mov  edx,20          ; ★药水槽 = 20
+原样:
+58                        pop  rax
+&lt;原 n 字节&gt;
+E9 &lt;rel32&gt;                jmp  回 +n</code></pre>
+<blockquote>想"所有玩家都改"（多人）<br>把 <code>cmp rcx,rax / jne</code> 两条去掉即可（不门禁）。单机没必要。</blockquote>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td>开钩子（<code>Ctrl+Num 5</code>）</td><td>控制台 <code>[开] 药水槽=20</code></td></tr>
+<tr><td>2</td><td><b>重开一局</b>（或在主菜单读档）</td><td>顶栏药水槽 20 格</td></tr>
+<tr><td>3</td><td>捡几瓶药水</td><td>能超过 3 瓶</td></tr>
+<tr><td>4</td><td>关掉后重开一局</td><td>恢复 3 格</td></tr>
+</table>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>进游戏后才开</td><td>药水槽还是 3</td><td>先开钩子再进局/读档</td></tr>
+<tr><td>槽位显示 20 但捡不了</td><td>另有上限校验（如 <code>AddPotionFailed</code>）</td><td>再挂 <code>AddPotion</code> 相关校验（进阶）</td></tr>
+<tr><td>存档后重开又变 3</td><td>读档时用存档里的值覆盖</td><td>保持钩子常开（读档那一下就生效）</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（方法层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>Player.SetMaxPotionCountInternal(int)</code> 是药水槽上限的唯一设置入口</td><td>反编译：构造函数/读档处都调它</td></tr>
+<tr><td>方法内部会 <code>MaxPotionCountChanged?.Invoke(...)</code> ⇒ UI 自动刷</td><td>源码</td></tr>
+<tr><td>int 参数在 <code>edx</code></td><td>x64 调用约定（11 篇同款）</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<p>无</p>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>药水槽变 20 且能捡满</td><td>重开一局捡 5 瓶</td></tr>
+<tr><td>关掉后新局恢复 3</td><td>关掉重开</td></tr>
+<tr><td>读档也生效</td><td>钩子常开时退出再读档</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇：24-复刻-最大能量</li><li>下一篇：26-复刻-最高分数</li><li>setter 钩子模板出处：11-复刻-无限护盾</li></ul>
+
+<h2 id="ad">二十九、功能篇 18/20：最高分数</h2>
+<p style="color:#6b7280;font-size:13px">上接：25-复刻-药水槽数量 · 下接：27-复刻-分数倍率</p>
+<blockquote>这一篇除了改返回值，还讲一个<b>容易忽略的副作用</b>：分数会解锁"纪元"<br>原版说明里有一句："每次 run 只能解锁一个 Epoch，超出丢弃"。<br>也就是：分数调太高<b>不会</b>让你一次解锁一堆内容——游戏有保护。<br>热键：<code>Ctrl+Num 6</code></blockquote>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>一局结束时的分数变成一个大数（用于解锁/展示）</td></tr>
+<tr><td>验收标准</td><td>① 结算界面分数是个大数 ② 没有崩溃/卡死 ③ 关掉恢复真实分数</td></tr>
+<tr><td>热键</td><td><code>Ctrl+Num 6</code></td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// MegaCrit.Sts2.Core.Runs.Metrics/ScoreUtility.cs
+public static int CalculateScore(IRunState runState, bool won) { ... return score; }   // ← int
+public static int CalculateScore(SerializableRun run, bool won) { ... }               // 重载</code></pre>
+<p>⇒ 让 <code>CalculateScore</code> 返回一个大数（例如 999999）即可。</p>
+<blockquote>有两个重载，别搞混<br>一个吃 <code>IRunState</code>（本局内存态），一个吃 <code>SerializableRun</code>（存档态）。<br>结算界面通常用内存态那个；保险起见<b>两个都挂</b>。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① ILSpy 搜 &quot;CalculateScore&quot; → 命中 ScoreUtility 的两个重载
+② 返回 int ⇒ 强制返回目标
+③ 顺手看一眼调用点：结算界面/RunHistory 记录
+④ ClrMD 确认地址（结算时才算，平时可能未 JIT → 延迟安装）</code></pre>
+<pre><code>dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods MegaCrit.Sts2.Core.Runs.ScoreUtility CalculateScore</code></pre>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<pre><code>// 两个重载都要（ClrMD 会把同名的都列出来，注意区分参数个数）
+var scoreOrig1 = Hook.InstallForceReturnHook(h, FnScoreState, F(16), 999999);
+var scoreOrig2 = Hook.InstallForceReturnHook(h, FnScoreRun,  F(16), 999999);</code></pre>
+<p>生成的机器码：</p>
+<pre><code>B8 3F 42 0F 00        mov eax,999999
+C3                    ret</code></pre>
+<h4>4.1 怎么区分重载（关键技巧）</h4>
+<pre><code>methods 命令会打印：
+  CalculateScore native=0x7FF7xxxx       ← 第一条
+  CalculateScore native=0x7FF7yyyy       ← 第二条
+CLR 不打印参数表，所以：
+  ① 用 ILSpy 看源码里哪个是 (IRunState, bool)
+  ② 或者在 ClrMD 里读 ClrMethod 的签名（进阶：m.Signature）
+  ③ 最省事：两个都挂上，反正返回值一样</code></pre>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td>装完 <code>raw &lt;入口1&gt; 16</code> / <code>raw &lt;入口2&gt; 16</code></td><td>都是 <code>E9 …</code></td></tr>
+<tr><td>2</td><td>打完一局（或直接放弃本局）</td><td>结算分数 999999</td></tr>
+<tr><td>3</td><td>看历史记录（时间线）</td><td>分数也是大数</td></tr>
+<tr><td>4</td><td><code>Ctrl+Num 6</code> 关掉再打一局</td><td>恢复真实分数</td></tr>
+</table>
+<blockquote>别指望"一次解锁一堆"<br>分数过高时游戏仍按"每次 run 只解锁一个 Epoch"的规则走，多的会被丢弃（原版说明原文）。<br>这不是 bug，是游戏自身的保护逻辑。</blockquote>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>只挂了一个重载</td><td>结算分数没变（走的是另一个）</td><td>两个都挂</td></tr>
+<tr><td>未 JIT</td><td>0xFFFF</td><td>延迟安装（14 篇）</td></tr>
+<tr><td>分数太大导致溢出</td><td>结算界面显示负数</td><td>用 999999 这类"安全的大数"，别用 int.MaxValue</td></tr>
+<tr><td>关掉后历史记录没变</td><td>历史是当时写进去的</td><td>只影响"之后"的结算</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（方法层面）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td>分数由 <code>ScoreUtility.CalculateScore(IRunState, bool)</code>（及序列化重载）计算</td><td>反编译源码</td></tr>
+<tr><td>返回 int ⇒ <code>mov eax,值; ret</code></td><td>x64 ABI</td></tr>
+<tr><td>高分会受"每局只解锁一个 Epoch"限制</td><td>原版功能说明（70-拆解-Plus20 Trainer 的 20 个功能与改法）</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<p>无</p>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>结算分数 = 999999</td><td>跑完一局看结算</td></tr>
+<tr><td>两个重载都要挂</td><td>只挂一个对比</td></tr>
+<tr><td>长局不崩</td><td>连跑两局</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇：25-复刻-药水槽数量</li><li>下一篇（分数倍率）：27-复刻-分数倍率</li><li>总纲：08-教程-20个功能总纲与方法论</li></ul>
+
+<h2 id="ae">三十、功能篇 19/20：分数倍率</h2>
+<p style="color:#6b7280;font-size:13px">上接：26-复刻-最高分数 · 下接：28-复刻-游戏速度</p>
+<blockquote>这是"同一个方法、两种玩法"的典型：26 篇写死大数，这一篇乘 N<br>难点只有一个：<b>要拿到原返回值再乘</b> ⇒ 不能在入口 <code>ret</code>，要<b>在方法出口改 <code>eax</code></b>。<br>本篇讲"尾部 hook（trampoline at return）"的最小可行做法。<br>热键：<code>Ctrl+Num 7</code></blockquote>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>结算分数 = 原分数 ×10（保留原有计算，不改变"为什么得这么多分"）</td></tr>
+<tr><td>验收标准</td><td>① 结算分数是平时的 10 倍左右 ② 不崩 ③ 关掉恢复</td></tr>
+<tr><td>热键</td><td><code>Ctrl+Num 7</code></td></tr>
+</table>
+<h3>2. 原理：为什么不能照抄 26 篇</h3>
+<pre><code>26 篇（写死）：入口 mov eax,999999; ret        → 直接扔掉原逻辑
+27 篇（倍率）：要 eax = 原返回值 × 10           → 必须等原方法算完</code></pre>
+<p>方法算完的那一刻 = 执行 <code>ret</code> 的那一刻。所以要在 <b>每个 <code>ret</code> 之前</b>插一段"eax *= 10"。</p>
+<h4>2.1 找 <code>ret</code> 的两种办法</h4>
+<table>
+<tr><th>办法</th><th>做法</th><th>难度</th></tr>
+<tr><td><b>A. 扫指令</b></td><td>从入口往后扫，找到所有 <code>C3</code>(ret) / <code>C2 imm16</code>(ret n)，把每个 ret 前 5 字节改成 <code>jmp 代码洞</code>（代码洞里 <code>imul eax,eax,10; &lt;原 ret&gt;</code>）；<b>要自己写一个能正确切分指令的小解析器</b></td><td>中高（指令长度要算对）</td></tr>
+<tr><td><b>B. 换目标</b></td><td>不 hook <code>CalculateScore</code>，改 hook <b>更小、只算一部分</b> 的方法（例如 <code>ScoreUtility</code> 里各分项相加的地方）</td><td>中（要读懂分数构成）</td></tr>
+<tr><td><b>C. 合并到 26 篇</b></td><td>放弃"倍率"，直接用"写死大数"</td><td>低（推荐新手）</td></tr>
+</table>
+<blockquote>给零基础的建议<br><b>先做 C</b>（26 篇的写死版），它已经把"分数很高"这个目的达到了。<br>想做"原分 ×10"再上 A/B——这是本套教程里第一个"需要自己写指令扫描器"的功能，属于进阶。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① 目标方法同 26 篇：ScoreUtility.CalculateScore(IRunState, bool) → int
+② 判断&quot;能不能只改入口&quot;：不能（要保留原值）
+③ 决定策略：先做 C（合并到 26 篇），A/B 作为进阶留档
+④ 如果要做 A：需要一个&quot;指令长度表&quot;，至少覆盖 JIT 常见指令（见 08 篇的 InsnLen）</code></pre>
+<h3>4. 你该怎么做：代码怎么写（方案 A 的骨架）</h3>
+<pre><code>// 1) 从入口往后扫，收集所有整指令边界上的 C3 / C2
+List&lt;ulong&gt; FindRets(IntPtr h, ulong entry, int maxLen = 400)
+{
+    var rets = new List&lt;ulong&gt;();
+    ulong p = entry;
+    for (int i = 0; i &lt; maxLen; i++)
+    {
+        byte[] b = Read(h, p, 16);
+        int len = InsnLen(b, 0);                 // 08 篇的指令长度函数
+        if (len &lt;= 0) break;                     // 认不出就停（别硬扫）
+        if (b[0] == 0xC3) rets.Add(p);           // ret
+        if (b[0] == 0xC2 &amp;&amp; len == 3) rets.Add(p); // ret imm16
+        p += (ulong)len;
+    }
+    return rets;
+}
+
+// 2) 每个 ret 前插一段：jmp 代码洞 → imul eax,eax,10 → 原 ret → 回原位置
+//    注意：ret 只有 1 字节，我们至少要覆盖 5 字节
+//    ⇒ 只能改&quot;ret + 后面的填充字节(CC/90)&quot;，或者把 ret 之前的指令一起挪走</code></pre>
+<blockquote>这里有个硬约束<br><code>jmp rel32</code> 要 <b>5 字节</b>，而 <code>ret</code> 只有 <b>1 字节</b>。<br>所以"在 ret 前插 jmp"必须<b>吃掉 ret 前面至少 4 字节的完整指令</b>，把它们一起搬到代码洞里。<br>这就是为什么方案 A 需要"能正确切分指令"——<b>没有它就会把一条指令切成两半，游戏必崩。</b></blockquote>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td>用方案 C：<code>raw &lt;入口&gt; 16</code></td><td><code>E9 …</code>，结算分数 = 写死的值</td></tr>
+<tr><td>2</td><td>用方案 A：<code>raw &lt;每个ret-8&gt; 16</code></td><td>能看到自己写的 <code>E9</code></td></tr>
+<tr><td>3</td><td>跑完一局</td><td>分数 ≈ 原分 × 10</td></tr>
+<tr><td>4</td><td>关掉</td><td>恢复</td></tr>
+</table>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>指令切分错</td><td><b>必崩</b>（执行到半条指令）</td><td>用 08 篇的 InsnLen，认不出就放弃这个 ret</td></tr>
+<tr><td>改到"不该改的 ret"</td><td>别的分支算错</td><td>只改真正的返回值路径；或改用方案 B</td></tr>
+<tr><td><code>ret imm16</code> 漏了</td><td>某些分支没乘</td><td>把 <code>C2</code> 也识别</td></tr>
+<tr><td>多处 ret 重复改</td><td>同一段被改两次</td><td>改之前先记录已处理的地址</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（机制）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td><code>jmp rel32</code> 固定 5 字节，<code>ret</code> 只有 1 字节</td><td>x86-64 指令编码</td></tr>
+<tr><td>要在出口改返回值就必须搬移被覆盖的指令</td><td>上述约束</td></tr>
+<tr><td>08 篇的 <code>InsnLen</code> 能覆盖 JIT 序言常见指令，但对<b>函数体中段</b>不够</td><td>本项目实测（它只用于序言）</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<table>
+<tr><th>结论</th><th>现象</th></tr>
+<tr><td>直接对 <code>ret</code> 处写 5 字节 jmp</td><td>会覆盖前面半条指令 ⇒ 崩</td></tr>
+</table>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>方案 A 能让分数 ×10</td><td>跑完一局对比</td></tr>
+<tr><td>指令扫描器不漏</td><td>用几个已知方法（如 <code>set_Block</code>）反推核对</td></tr>
+<tr><td>长局不崩</td><td>连跑 3 局</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇（写死版）：26-复刻-最高分数</li><li>下一篇（写值，不用钩子）：28-复刻-游戏速度</li><li>指令长度表：08-教程-20个功能总纲与方法论</li></ul>
+
+<h2 id="af">三十一、功能篇 20/20：游戏速度</h2>
+<p style="color:#6b7280;font-size:13px">上接：27-复刻-分数倍率 · 下接：08-教程-20个功能总纲与方法论</p>
+<blockquote>这是全系列唯一<b>不用钩子</b>的功能，也是唯一"我们要主动调游戏方法"的功能<br>前面 19 个都是"拦住游戏，改它的输入/输出"。<br>这个功能反过来：<b>我们主动调用 <code>Engine.set_TimeScale(double)</code></b>，让 Godot 引擎整体变快/变慢。<br>手段是"代码洞 + 一次远程调用"，但要放在<b>每帧都跑的方法</b>里（否则调一次就够了吗？—— 够，但重进场景会被重置）。<br>热键：<code>Ctrl+Num 8</code></blockquote>
+<h3>1. 目标</h3>
+<table>
+<tr><th>项</th><th>内容</th></tr>
+<tr><td>要做的事</td><td>全局游戏速度：1x（正常）/ 2x / 4x / 0.5x</td></tr>
+<tr><td>验收标准</td><td>① 动画、结算明显变快 ② 时间显示（若开）变快 ③ 关掉回 1x</td></tr>
+<tr><td>热键</td><td><code>Ctrl+Num 8</code></td></tr>
+</table>
+<h3>2. 原理</h3>
+<pre><code>// 游戏里本来就有的加速键（NGame.cs）
+double value = Math.Round(Engine.TimeScale + offset, 1);
+Engine.TimeScale = value;                       // ← Godot 的全局时间缩放
+this.AddChildSafely(NFullscreenTextVfx.Create($&quot;TimeScale:{Engine.TimeScale}&quot;));</code></pre>
+<ul><li><code>Engine.TimeScale</code> 是 <b>Godot 引擎的静态属性</b>，底层调用原生方法 <code>Engine.set_TimeScale(double)</code>。</li><li>它影响<b>所有</b> <code>_Process/_PhysicsProcess</code> 的 delta ⇒ 动画、计时都会变快/变慢。</li><li>我们只要"调一次"就生效，不需要每帧调。</li></ul>
+<blockquote>为什么原版这个功能"没有 AA 补丁"<br>因为它不需要 hook 任何游戏方法——<b>它就是调引擎 API</b>。<br>知识库 70-拆解-Plus20 Trainer 的 20 个功能与改法 里也标注了：这一项大概率是"直接写值/调方法"。</blockquote>
+<h3>3. 我是怎么做的：怎么找出这个方法的（真实路径）</h3>
+<pre><code>① ILSpy 搜 &quot;TimeScale&quot; → 命中 NGame.cs 里的加速/减速键处理
+② 看清它调的是 Engine.TimeScale（Godot 的静态属性）
+③ 在 ILSpy 里展开 Godot.Engine → 找到 set_TimeScale(double)
+④ ClrMD 找 set_TimeScale 的地址（它是 GodotSharp 程序集里的静态方法）</code></pre>
+<pre><code># GodotSharp 的方法在堆里不一定有实例 ⇒ 用模块类型表查
+dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; types Godot.Engine
+dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; methods Godot.Engine set_TimeScale</code></pre>
+<blockquote>找不到 <code>Godot.Engine</code>？<br>ClrMD 的类型表有时列不到（本项目遇到过：堆里没实例的类型要靠模块类型表兜底）。<br>备选方案：<b>hook 游戏自己的加速键处理方法</b>（<code>NGame</code> 里处理 <code>Ctrl+Num8</code> 的那个方法），<br>在它里面改 <code>offset</code> 参数；或直接找 <code>NGame</code> 的实例，调它的方法。<br>再不行就用"写值"的老办法：先正常按一次游戏自带的加速键，用 CE/本工具扫 <code>TimeScale</code> 的实际数值，<br>然后<b>每次都写那个值</b>（Godot 把 TimeScale 存在原生侧，扫得到就能写）。</blockquote>
+<h3>4. 你该怎么做：代码怎么写</h3>
+<h4>4.1 调一个"参数是 double"的静态方法</h4>
+<p>x64 上 <code>double</code> 参数走 <b><code>xmm0</code></b>：</p>
+<pre><code>; 调 Engine.set_TimeScale(2.0)
+; （set_TimeScale 没有 this，因为是静态方法）
+48 B8 00 00 00 00 00 00 00 40   mov rax,0x4000000000000000   ; 2.0 的 double 位模式
+66 48 0F 6E C0                  movq xmm0,rax
+48 B8 &lt;set_TimeScale 地址&gt;       mov rax,&lt;addr&gt;
+FF D0                           call rax</code></pre>
+<blockquote>double 位模式：<code>1.0 = 0x3FF0000000000000</code>、<code>2.0 = 0x4000000000000000</code>、<code>4.0 = 0x4010000000000000</code>、<code>0.5 = 0x3FE0000000000000</code><br>拿不准就用 <code>BitConverter.DoubleToInt64Bits(2.0).ToString("X")</code> 现算。</blockquote>
+<h4>4.2 放在哪里执行</h4>
+<p>两种做法：</p>
+<table>
+<tr><th>做法</th><th>怎么实现</th><th>说明</th></tr>
+<tr><td><b>A. 每帧钩子里顺手调</b>（推荐）</td><td>在已有的帧钩子（<code>NTargetManager._Process</code>）里加一个动作：<code>CheckAddr = &amp;一个"期望倍率"的变量</code>，值不对就调 <code>set_TimeScale</code> 并把自己写成"已应用"</td><td>场景切换/重进战斗后会被重置，这样能自动补回</td></tr>
+<tr><td>B. 按热键时调一次</td><td>热键触发时用 <code>CreateRemoteThread</code> 在游戏里调一次</td><td>简单，但重进场景可能失效</td></tr>
+</table>
+<p>方案 A 的代码洞片段（接在 08 篇的帧钩子动作格式里）：</p>
+<pre><code>; if (期望倍率 != 已应用值) { Engine.set_TimeScale(期望倍率); 已应用值 = 期望倍率; }
+48 B8 &lt;期望倍率地址&gt;        mov rax,&amp;want          ; double
+F2 0F 10 00                 movsd xmm0,[rax]
+48 B8 &lt;已应用地址&gt;          mov rax,&amp;applied
+F2 0F 10 08                 movsd xmm1,[rax]
+66 0F 2E C8                 ucomisd xmm1,xmm0
+7A xx                       jp  跳过               ; 处理 NaN
+74 xx                       je  跳过
+F2 0F 11 00                 movsd [rax],xmm0       ; applied = want
+48 B8 &lt;set_TimeScale&gt;       mov rax,&lt;addr&gt;
+FF D0                       call rax
+跳过:</code></pre>
+<blockquote>这条链的前提<br><code>call</code> 的目标必须是<b>真方法地址</b>（不是 <code>0xFFFF…</code>）。Godot 的 <code>set_TimeScale</code> 是 P/Invoke 到原生层的薄封装，<br>一般已 JIT；拿不到就按第 3 节的备选方案走"写值"。</blockquote>
+<h3>5. 怎么验证</h3>
+<table>
+<tr><th>步</th><th>操作</th><th>期望</th></tr>
+<tr><td>1</td><td><code>methods Godot.Engine set_TimeScale</code></td><td>有地址</td></tr>
+<tr><td>2</td><td>按 <code>Ctrl+Num 8</code> 切到 2x</td><td>动画/结算明显变快</td></tr>
+<tr><td>3</td><td>再按切 4x / 0.5x</td><td>明显更快/更慢</td></tr>
+<tr><td>4</td><td>关掉回 1x</td><td>恢复正常</td></tr>
+<tr><td>5</td><td>进下一场战斗</td><td>倍率仍保持（方案 A 会自动补）</td></tr>
+</table>
+<h3>6. 坑</h3>
+<table>
+<tr><th>坑</th><th>现象</th><th>解法</th></tr>
+<tr><td>重进场景后失效</td><td>又变回 1x</td><td>用方案 A（每帧检查并补）</td></tr>
+<tr><td>调到 0 或负数</td><td>游戏卡死/不动</td><td>限制在 0.1~4 之间</td></tr>
+<tr><td><code>Engine.TimeScale</code> 找不到</td><td><code>types Godot.Engine</code> 空</td><td>用第 3 节备选：hook 游戏自己的加速键方法，或扫值写值</td></tr>
+<tr><td>调完音频不同步</td><td>正常现象（音频不走 TimeScale）</td><td>无解，属引擎行为</td></tr>
+</table>
+<h3>7. 三类结论</h3>
+<h4><span class="tag ok">✅</span>已验证（机制）</h4>
+<table>
+<tr><th>结论</th><th>证据</th></tr>
+<tr><td>游戏自带加速键改的就是 <code>Engine.TimeScale</code></td><td><code>NGame.cs</code>：<code>Engine.TimeScale = Math.Round(Engine.TimeScale + offset, 1)</code></td></tr>
+<tr><td>double 参数走 <code>xmm0</code></td><td>x64 ABI</td></tr>
+<tr><td>这个功能不需要 hook 游戏方法</td><td>原版 20 功能表里它没有 AA 补丁（70-拆解-Plus20 Trainer 的 20 个功能与改法）</td></tr>
+</table>
+<h4><span class="tag bad">❌</span>已证伪</h4>
+<p>无</p>
+<h4><span class="tag warn">⏳</span>待验证</h4>
+<table>
+<tr><th>结论</th><th>怎么验</th></tr>
+<tr><td>调到 2x 明显变快</td><td>切倍率看动画速度</td></tr>
+<tr><td>重进战斗仍保持</td><td>打完一场看倍率</td></tr>
+<tr><td>调 0.5x 不卡死</td><td>切到 0.5 观察</td></tr>
+</table>
+<h3>关联</h3>
+<ul><li>上一篇：27-复刻-分数倍率</li><li>回到总纲（三种钩子 + 六步法）：08-教程-20个功能总纲与方法论</li><li>子库索引：00-杀戮尖塔2 索引 MOC</li></ul>
+
+<h2 id="ag">三十二、踩坑：静态类/残留补丁/未JIT/只写值/decimal 右移</h2>
+<p style="color:#6b7280;font-size:13px">上接：08-教程-20个功能总纲与方法论 · 下接：19-复刻-超级伤害</p>
+<blockquote>这篇是"把教程跑成成品"过程中撞出来的坑，全部有现场证据<br>前 20 篇教程讲的是"原理与挂法"，但真做一个能用的 trainer 时，会在这五处卡住。<br>每一条都给出：<b>现象 → 为什么 → 怎么改 → 怎么自查</b>。</blockquote>
+<hr>
+<h3>坑 1 ★ 静态类的方法，堆里查不到（影响最大）</h3>
+<h4>现象</h4>
+<p><code>Hook::ModifyDamage</code>、<code>Hook::ModifyCardRewardUpgradeOdds</code>、<code>Hook::ShouldTakeExtraTurn</code>、</p>
+<p><code>Hook::ModifyMerchantPrice</code>、<code>Hook::ModifyMaxEnergy</code>、<code>ScoreUtility::CalculateScore</code></p>
+<p>——这些方法明明存在，<code>methods</code> 命令却<b>一个都查不出来</b>，trainer 里全显示"未JIT"。</p>
+<h4>为什么</h4>
+<pre><code>// 我原来的取法：从&quot;堆里该类型的第一个实例&quot;拿到 ClrType
+if (!Heap.TryGetValue(typeName, out var list) || list.Count == 0) return 结果为空;
+foreach (var m in list[0].Type.Methods) { ... }</code></pre>
+<p><code>MegaCrit.Sts2.Core.Hooks.Hook</code> 是 <b>static class</b>，<code>MegaCrit.Sts2.Core.Runs.ScoreUtility</code> 也是</p>
+<p>⇒ <b>它们永远不会有实例</b> ⇒ <code>Heap[typeName]</code> 是空的 ⇒ 拿不到 <code>ClrType</code> ⇒ 查不到方法。</p>
+<h4>怎么改（关键三行）</h4>
+<pre><code>ClrType TypeOf(string typeName)
+{
+    if (Heap.TryGetValue(typeName, out var l) &amp;&amp; l.Count &gt; 0) return l[0].Type;   // ① 有实例就用实例
+    foreach (var m in Runtime.EnumerateModules())                                // ② 没有就查模块类型表
+    {
+        var t = m.GetTypeByName(typeName);
+        if (t != null) return t;
+    }
+    return null;
+}</code></pre>
+<blockquote>为什么"模块类型表"能查到<br><code>EnumerateModules()</code> 列出已加载的托管模块（这里就是 <code>sts2.dll</code>），<br><code>GetTypeByName()</code> 直接读<b>元数据类型定义表</b>——和有没有实例无关，静态类也在里面。</blockquote>
+<h4>自查</h4>
+<pre><code># 如果这条命令有输出，但你的程序查不到 ⇒ 就是踩了这个坑
+dotnet run --project D:\sts2\clr\sts2clr -- &lt;pid&gt; allmethods MegaCrit.Sts2.Core.Hooks.Hook</code></pre>
+<p>真实输出（本机）：</p>
+<pre><code>MegaCrit.Sts2.Core.Hooks.Hook::ModifyDamage native=0x7FF8E56DE460
+MegaCrit.Sts2.Core.Hooks.Hook::ModifyDamageInternal native=0x7FF8E56DEAE0</code></pre>
+<hr>
+<h3>坑 2 ★ 残留补丁：强杀 trainer 后，游戏里还留着 jmp</h3>
+<h4>现象</h4>
+<p>新开 trainer，除了一两个功能，其余全部"待机/安装失败"；更奇怪的是<b>旧功能还在生效</b>。</p>
+<h4>为什么</h4>
+<p>内存补丁<b>不落盘</b>，但<b>也不会因为 trainer 退出而消失</b>。如果 trainer 是被强杀/崩溃的，</p>
+<p>它没走到"还原"那一步 → 方法入口仍然是 <code>E9 &lt;rel32&gt;</code>（jmp 到已经没人管的代码洞）。</p>
+<p><b>现场证据</b>（只读 dump 一个正在跑的游戏进程）：</p>
+<pre><code>Creature::set_Block       入口 = E9 AB E8 49 00 90 …     ← 已经被打过补丁
+Creature::LoseHpInternal  入口 = E9 5B 7E 4C 00 56 …     ← 也被打过补丁</code></pre>
+<p><code>E9</code> 就是 <code>jmp</code>。这时新实例读入口算"序言长度"会失败（第一条指令就是 5 字节 jmp），或者我们主动检测到 <code>E9</code> 就放弃。</p>
+<h4>怎么改</h4>
+<ol><li><b>检测</b>：装钩子前先看首字节，<code>0xE9</code> 就直接报"挂点已被占用"，不要硬写。</li><li><b>提示</b>：让 UI 明确显示"挂点被占用 → 重启游戏"，而不是笼统"待机"。</li><li><b>恢复</b>：正常关窗口时逐个 <code>Restore</code>（本项目已做）；强杀无法挽回，只能重启游戏。</li></ol>
+<pre><code>var head = Read(h, patchAddr, 16);
+if (head[0] == 0xE9) { 提示(&quot;挂点已被占用，请重启游戏&quot;); return null; }</code></pre>
+<blockquote>副作用：新旧补丁混在一起会"看起来能用一半"<br>旧补丁还在改血量，新补丁的"无限血"却没装上 —— 用户会以为"这个功能坏了"。<br>所以<b>一定要把原因显示出来</b>，别只说"待机"。</blockquote>
+<hr>
+<h3>坑 3 ★ 未 JIT：.NET 是"用到才编译"</h3>
+<h4>现象</h4>
+<p>新开一局，<code>PotionRewardOdds::Roll</code>、<code>CalculateScore</code>、<code>ShouldTakeExtraTurn</code> 全是"未JIT"。</p>
+<p>过一会儿（打完一场 / 进奖励面板）它们就变成可用。</p>
+<h4>为什么</h4>
+<p><code>NativeCode == 0xFFFFFFFFFFFFFFFF</code> 就是"这个方法还没被编译成机器码"。</p>
+<p>奖励、结算、敌人回合调度这类方法，<b>只有走到那个流程才会第一次 JIT</b>。</p>
+<h4>怎么改：延迟安装 + 清缓存重试</h4>
+<pre><code>// 主循环里每 3 秒扫一遍&quot;还没装上的&quot;
+if (Environment.TickCount64 - lastRetry &gt; 3000) {
+    lastRetry = Environment.TickCount64;
+    g.InvalidateTypes();          // ★ 关键：清掉 ClrType 缓存，否则一直读到旧的 0xFFFF
+    g.Resolve();
+    foreach (var f in feats) if (!f.Ready) TryInstall(f);
+}</code></pre>
+<blockquote>不清缓存会怎样<br><code>ClrType</code> 会被缓存，<code>ClrMethod.NativeCode</code> 读到的可能还是旧值 ⇒ 明明已经 JIT 了，你的程序仍然认为"未JIT"，永远不装。</blockquote>
+<hr>
+<h3>坑 4 ★ 帧钩子的"只写值"模式（刷新方法查不到时的退路）</h3>
+<h4>现象</h4>
+<p>能量/星星的刷新方法 <code>NEnergyCounter::RefreshLabel</code> / <code>NStarCounter::RefreshVisibility</code></p>
+<p>在 ClrMD 的方法枚举里<b>查不到</b>（和坑 1 同类，但这次是"私有的、枚举不全"），</p>
+<p>于是帧动作因为"CallFn 地址非法"整组作废。</p>
+<h4>怎么改：允许 CallFn = 0</h4>
+<pre><code>// 校验放宽：只要有&quot;要写的地方&quot;，就允许不调刷新方法
+if (Bad(a.CheckAddr) || (a.WriteAddr == 0 &amp;&amp; Bad(a.CallFn))) { 跳过; }
+
+// 生成机器码时：CallFn 有效才发 call，否则只写值
+if (!Bad(a.CallFn) &amp;&amp; !Bad(a.CallThis)) { ... movups 保存 xmm0 ... call rax ... }</code></pre>
+<p>什么时候可以只写值：</p>
+<table>
+<tr><th>功能</th><th>只写值够不够</th></tr>
+<tr><td>星星</td><td>✅ 够——<code>NStarCounter._Process</code> <b>每帧自己刷数字</b></td></tr>
+<tr><td>能量</td><td>⚠️ 值够打牌就行，但<b>显示的数字要等下一次事件</b>才更新</td></tr>
+<tr><td>血量</td><td>❌ 不够——<code>NTopBarHp</code> 纯事件驱动，必须调刷新方法（或用 setter 钩子）</td></tr>
+</table>
+<hr>
+<h3>坑 5 ★ decimal 返回值会让参数整体右移（ModifyDamage 的 ABI）</h3>
+<h4>现象</h4>
+<p>按"普通方法"的思路去 <code>ModifyDamage</code> 里找 <code>&amp;damage</code>，位置全错，改不到伤害。</p>
+<h4>为什么</h4>
+<pre><code>public static decimal ModifyDamage(IRunState runState, ICombatState combatState,
+                                   Creature target, Creature dealer, decimal damage, ...)</code></pre>
+<p>C# 的 <code>decimal</code> 是 16 字节结构体 ⇒ x64 上<b>返回值</b>要靠"调用者给的缓冲"，</p>
+<p>约定把<b>缓冲指针放进 <code>rcx</code></b>，于是<b>所有参数整体右移一格</b>：</p>
+<pre><code>rcx = &amp;ret(decimal)        ← 不是 runState！
+rdx = IRunState
+r8  = ICombatState
+r9  = target（受伤者）      ★ 门禁就靠它
+栈：[rsp+0x28] = dealer
+    [rsp+0x30] = &amp;damage(decimal)   ★ 伤害值在这里
+    [rsp+0x38] = props
+    [rsp+0x40] = cardSource
+    [rsp+0x48] = hookType
+    [rsp+0x50] = previewMode
+    [rsp+0x58] = out modifiers</code></pre>
+<h4>怎么改（本项目最终用的机器码）</h4>
+<p>压 6 个寄存器后，栈参数偏移整体 +0x30 ⇒ <code>&amp;damage = [rsp+0x60]</code>：</p>
+<pre><code>50 53 51 52 41 50 41 51        push rax,rbx,rcx,rdx,r8,r9
+4C 8B 44 24 60                 mov  r8,[rsp+0x60]     ; &amp;damage
+4D 85 C0                       test r8,r8 / je 结束
+48 8B 1C 24                    mov  rbx,[rsp]         ; target（刚压进去的 r9）
+48 B9 &lt;玩家Creature&gt;            mov  rcx,玩家
+48 39 CB                       cmp  rbx,rcx
+74 ..                          je   玩家侧
+; 敌方侧
+cmp dword [flagSuper],0 / jne → mov dword [r8],9999 + 清零 4/8/0xC   ; 超级伤害
+cmp dword [flagMul],0   / jne → eax=[r8]; imul eax,eax,N; 写回      ; 伤害倍率
+; 玩家侧
+cmp dword [flagDef],0   / jne → eax=[r8]; cdq; idiv N; 写回         ; 防御倍率
+; 还原 6 个寄存器 → 补回原指令 → jmp 回</code></pre>
+<blockquote>两条重载都要挂<br>原版样本里就是两条：<code>ModifyDamage(IRunState,ICombatState,…)</code> 和 <code>(IRunState,CombatState,…)</code>。<br>只挂一个，另一半调用路径不受影响 ⇒ 表现为"有时候生效有时候不生效"。</blockquote>
+<hr>
+<h3>附：状态列怎么写才有用</h3>
+<table>
+<tr><th>写法</th><th>用户能做什么</th></tr>
+<tr><td>统一写"待机"</td><td>❌ 什么也做不了</td></tr>
+<tr><td><code>未JIT</code></td><td>知道要等场景触发，会等</td></tr>
+<tr><td><code>缺地址</code></td><td>知道是我方查不到方法（坑 1/4）</td></tr>
+<tr><td><code>挂点被占用</code></td><td>知道要<b>重启游戏</b>（坑 2）</td></tr>
+<tr><td><code>安装失败</code></td><td>知道我代码有 bug，会报给我</td></tr>
+</table>
+<blockquote>一句话总结<br>做一个能用的 trainer，<b>"能不能挂上"比"挂得对不对"更常出问题</b>：<br>先保证"每种失败都有明确原因"，再谈功能逻辑。</blockquote>
+<h3>关联</h3>
+<ul><li>方法论总纲：08-教程-20个功能总纲与方法论</li><li>伤害三项的正确挂法：19-复刻-超级伤害</li><li>原版样本的方法清单：70-拆解-Plus20 Trainer 的 20 个功能与改法</li><li>子库索引：00-杀戮尖塔2 索引 MOC</li></ul>
+
+<div class="foot">出处：<code>obsidian-游戏逆向知识库\06-杀戮尖塔2\</code> 的 70/71/72/73 篇（本页为同步全量版）<br>
+静态分析，全程未运行样本 · 生成 2026-10-31</div>
+</div></body></html>

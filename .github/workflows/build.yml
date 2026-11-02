@@ -1,0 +1,47 @@
+name: build
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Build console core
+        run: dotnet build src/sts2trainer/sts2trainer.csproj -c Release
+
+      - name: Publish UI (self-contained single file)
+        run: >
+          dotnet publish src/sts2trainer-ui/sts2trainer-ui.csproj -c Release -r win-x64
+          --self-contained true
+          -p:PublishSingleFile=true
+          -p:IncludeNativeLibrariesForSelfExtract=true
+          -p:EnableCompressionInSingleFile=true
+          -o dist
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: STS2Trainer-win-x64
+          path: |
+            dist/STS2Trainer.exe
+            dist/使用说明.txt
+
+      - name: Attach to release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/STS2Trainer.exe
+            dist/使用说明.txt

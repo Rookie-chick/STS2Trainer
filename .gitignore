@@ -1,0 +1,23 @@
+# 构建产物
+bin/
+obj/
+*.user
+*.suo
+
+# 发布产物：单文件 exe 约 70MB，走 Releases 分发，不进仓库
+dist/*.exe
+dist/*.pdb
+
+# 本地调试输出
+*.log
+*.err
+*.tmp
+
+# IDE
+.vs/
+.idea/
+.vscode/
+
+# 系统
+Thumbs.db
+desktop.ini
